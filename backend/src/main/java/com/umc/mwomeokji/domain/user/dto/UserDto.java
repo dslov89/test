@@ -7,14 +7,14 @@ public class UserDto {
 
     @Getter
     @RequiredArgsConstructor
-    public static class SignUpRequest{
+    public static class SignUpRequest {
         private final String name;
         private final String email;
     }
 
     @Getter
     @RequiredArgsConstructor
-    public static class SignUpResponse{
+    public static class SignUpResponse {
         private final String name;
         private final String email;
     }

@@ -19,7 +19,7 @@ public class UserController {
     private final UserServiceImpl userServiceImpl;
 
     @PostMapping
-    public ResponseEntity<SignUpResponse> signUp(@RequestBody SignUpRequest signUpRequest){
+    public ResponseEntity<SignUpResponse> signUp(@RequestBody SignUpRequest signUpRequest) {
         return ResponseEntity.status(CREATED).body(userServiceImpl.signUp(signUpRequest));
     }
 }

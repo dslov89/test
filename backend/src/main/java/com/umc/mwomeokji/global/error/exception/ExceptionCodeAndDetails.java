@@ -10,8 +10,10 @@ public enum ExceptionCodeAndDetails {
     INVALID_INPUT_VALUE(400, "0002", "유효하지 않은 입력입니다."),
     METHOD_NOT_ALLOWED(405, "0003", "허용되지 않은 메소드 접근입니다. 올바른 HTTP Methods 를 입력해주세요."),
 
-    // 1000: USER
-    DUPLICATED_USER_EMAIL(400, "1001", "이미 존재하는 회원 이메일입니다.")
+    // 1000: dish
+    NOT_FOUND_DISH(404, "1001", "해당하는 id 의 메뉴를 찾을 수 없습니다.")
+
+    // 2000: question
 
     ;
     private final int status;

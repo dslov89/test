@@ -23,17 +23,17 @@ public class QuestionController {
     private final QuestionService questionService;
 
     @GetMapping
-    public ResponseEntity<List<String>> getAllQuestions() {
-        List<String> questionsList = new ArrayList<>(Stream.of("가벼운 식사를 원하시나요?", "시원한 음식은 어떠신가요?").collect(Collectors.toList()));
-        return ResponseEntity.status(OK).body(questionsList);
+    public ResponseEntity<List<String>> getAllQuestions(){
+        List<String> questionList = new ArrayList<>(Stream.of("question1","question2").collect(Collectors.toList()));
+        return ResponseEntity.status(OK).body(questionList);
     }
 
     @GetMapping("/dishes")
-    public ResponseEntity<Map<String, List<String>>> getAllQuestionsAndDishes() {
-        Map<String, List<String>> questionsAndDishes = Map.of(
-                "가벼운 식사를 원하시나요?", new ArrayList<>(Stream.of("샐러드", "샌드위치").collect(Collectors.toList())),
-                "시원한 음식은 어떠신가요?", new ArrayList<>(Stream.of("냉면", "냉모밀").collect(Collectors.toList()))
+    public ResponseEntity<Map<String, List<String>>> getAllQuestionAndDishes(){
+        Map<String, List<String>> questionAndDishes = Map.of(
+                "question1", new ArrayList<>(Stream.of("").collect(Collectors.toList())),
+                "question2", new ArrayList<>(Stream.of("").collect(Collectors.toList()))
         );
-        return ResponseEntity.status(OK).body(questionsAndDishes);
+        return ResponseEntity.status(OK).body(questionAndDishes);
     }
 }

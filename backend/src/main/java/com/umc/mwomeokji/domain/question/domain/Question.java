@@ -24,7 +24,7 @@ public class Question extends BaseEntity {
     private String question;
 
     @Builder
-    public Question(String category, String question) {
+    public Question(String category, String question){
         this.category = category;
         this.question = question;
     }

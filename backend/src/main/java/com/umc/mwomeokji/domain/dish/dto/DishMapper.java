@@ -4,7 +4,7 @@ import com.umc.mwomeokji.domain.dish.domain.Dish;
 import org.mapstruct.Mapper;
 import com.umc.mwomeokji.domain.dish.dto.DishDto.*;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface DishMapper {
 
     DishesNameResponse toDishesNameResponse(Dish dish);

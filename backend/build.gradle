@@ -37,7 +37,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
 
 	// Test
+	testImplementation 'io.rest-assured:rest-assured:4.4.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'com.google.guava:guava:31.1-jre'
 }
 
 tasks.named('test') {

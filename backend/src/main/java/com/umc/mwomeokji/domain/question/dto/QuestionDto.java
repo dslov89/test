@@ -8,12 +8,12 @@ public class QuestionDto {
     @Getter
     @RequiredArgsConstructor
     public static class QuestionsNameResponse {
-        private final String Question;
+        private final String question;
     }
 
     @Getter
     @RequiredArgsConstructor
     public static class QuestionAndDishesResponse {
-        private final String Catogory;
+        private final String category;
     }
 }

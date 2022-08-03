@@ -49,7 +49,7 @@ class DishServiceImplTest {
         given(dishRepository.findAll()).willReturn(dishList);
 
         // when
-        List<DishDto.DishesNameResponse> dishesNameResponseList = dishService.getAllDishesName();
+        List<DishDto.DishNameResponse> dishesNameResponseList = dishService.getAllDishesName();
 
         // then
         assertThat(dishesNameResponseList).hasSize(2);

@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import java.util.List;
-
 
 import static org.springframework.http.HttpStatus.OK;
 
@@ -20,8 +18,14 @@ import static org.springframework.http.HttpStatus.OK;
 public class QuestionController {
 
     private final QuestionService questionService;
+
     @GetMapping
     public ResponseEntity<List<QuestionsNameResponse>> getAllQuestions(){
         return ResponseEntity.status(OK).body(questionService.getAllQuestionsName());
+    }
+
+    @GetMapping("/dishes")
+    public ResponseEntity<List<QuestionAndDishesResponse>> getQuestionAndDishes() {
+        return ResponseEntity.status(OK).body(questionService.getQuestionAndDishes());
     }
 }

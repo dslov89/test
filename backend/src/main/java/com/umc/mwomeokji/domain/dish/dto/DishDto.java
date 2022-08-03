@@ -7,7 +7,7 @@ public class DishDto {
 
     @Getter
     @RequiredArgsConstructor
-    public static class DishesNameResponse {
+    public static class DishNameResponse {
         private final Long id;
         private final String name;
     }

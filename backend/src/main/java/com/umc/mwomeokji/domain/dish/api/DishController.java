@@ -21,7 +21,7 @@ public class DishController {
     private final DishService dishService;
 
     @GetMapping("/name")
-    public ResponseEntity<List<DishesNameResponse>> getAllDishesName() {
+    public ResponseEntity<List<DishNameResponse>> getAllDishesName() {
         return ResponseEntity.status(OK).body(dishService.getAllDishesName());
     }
 

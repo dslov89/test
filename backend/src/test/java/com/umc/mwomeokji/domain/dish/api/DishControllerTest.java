@@ -35,16 +35,16 @@ class DishControllerTest {
     @Test
     void get_all_dishes_name() throws Exception {
         // given
-        DishDto.DishesNameResponse dishesNameResponse1 = new DishDto.DishesNameResponse(1L, "초밥");
-        DishDto.DishesNameResponse dishesNameResponse2 = new DishDto.DishesNameResponse(2L, "냉면");
-        List<DishDto.DishesNameResponse> dishesNameResponseList = Stream.of(dishesNameResponse1, dishesNameResponse2).collect(Collectors.toList());
+        DishDto.DishNameResponse dishNameResponse1 = new DishDto.DishNameResponse(1L, "초밥");
+        DishDto.DishNameResponse dishNameResponse2 = new DishDto.DishNameResponse(2L, "냉면");
+        List<DishDto.DishNameResponse> dishesNameResponseList = Stream.of(dishNameResponse1, dishNameResponse2).collect(Collectors.toList());
         given(dishService.getAllDishesName()).willReturn(dishesNameResponseList);
 
         // when, then
         mockMvc.perform(get("/dishes/name"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value(dishesNameResponse1.getName()))
-                .andExpect(jsonPath("$[1].name").value(dishesNameResponse2.getName()))
+                .andExpect(jsonPath("$[0].name").value(dishNameResponse1.getName()))
+                .andExpect(jsonPath("$[1].name").value(dishNameResponse2.getName()))
                 .andDo(print());
         verify(dishService, atMostOnce()).getAllDishesName();
     }

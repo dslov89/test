@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DishService {
 
-    List<DishesNameResponse> getAllDishesName();
+    List<DishNameResponse> getAllDishesName();
 
     DishDetailsResponse getDishDetails(Long id);
 }

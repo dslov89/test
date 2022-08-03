@@ -1,6 +1,5 @@
 package com.umc.mwomeokji.domain.question.application;
 
-import com.umc.mwomeokji.domain.dish.exception.NotFoundDishException;
 import com.umc.mwomeokji.domain.question.dao.QuestionRepository;
 import com.umc.mwomeokji.domain.question.domain.Question;
 import com.umc.mwomeokji.domain.question.dto.QuestionDto.QuestionAndDishesResponse;
@@ -27,5 +26,14 @@ public class QuestionServiceImpl implements QuestionService{
     public List<QuestionsNameResponse> getAllQuestionsName(){
         List<Question> questionList = questionRepository.findAll();
         return questionList.stream().map(question -> questionMapper.toQuestionNameResponse(question)).collect(Collectors.toList());
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<QuestionAndDishesResponse> getQuestionAndDishes() {
+        List<Question> questionList = questionRepository.findAll();
+        List<QuestionAndDishesResponse> questionAndDishesResponseList = questionList.stream().map(question ->
+                        questionMapper.toQuestionAndDishesResponse(question, question.getQuestionDishList())).collect(Collectors.toList());
+        return questionAndDishesResponseList;
     }
 }

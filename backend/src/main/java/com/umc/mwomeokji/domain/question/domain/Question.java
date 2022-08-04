@@ -1,5 +1,6 @@
 package com.umc.mwomeokji.domain.question.domain;
 
+import com.umc.mwomeokji.domain.QuestionDish.domain.QuestionDish;
 import com.umc.mwomeokji.global.entity.BaseEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -21,15 +22,11 @@ public class Question extends BaseEntity {
     @Column(nullable = false)
     private String question;
 
-    @Column(nullable = false)
-    private String category;
-
     @OneToMany(mappedBy = "question", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, orphanRemoval = true)
     private List<QuestionDish> questionDishList = new ArrayList<>();
 
     @Builder
-    public Question(String question, String category) {
+    public Question(String question) {
         this.question = question;
-        this.category = category;
     }
 }

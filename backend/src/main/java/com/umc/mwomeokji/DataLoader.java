@@ -59,9 +59,10 @@ public class DataLoader {
 
         // 임시 초기 질문리스트
         final List<Question> questionList = Arrays.asList(
-                Question.builder().question("혹시 멕시코, 동남아 요리 등 이색적인 메뉴는 어떠신가요?").build(),
-                Question.builder().question("혹시 매운 음식은 괜찮으신가요?").build(),
-                Question.builder().question("면 요리는 어떠신가요?").build()
+                Question.builder().question("시원한 음식은 어떠신가요?").build(),
+                Question.builder().question("면 종류를 드시겠습니까?").build(),
+                Question.builder().question("육류는 어떠신가요?").build(),
+                Question.builder().question("해산물은 좋아하시나요?").build()
         );
 
         questionRepository.saveAll(questionList);

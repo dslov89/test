@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
-// @Profile("local")
+@Profile("local")
 @RequiredArgsConstructor
 public class LocalDataController {
 

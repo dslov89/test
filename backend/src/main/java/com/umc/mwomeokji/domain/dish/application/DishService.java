@@ -9,4 +9,7 @@ public interface DishService {
     List<DishNameResponse> getAllDishesName();
 
     DishDetailsResponse getDishDetails(Long id);
+
+    DishDetailsResponse getDishRandom();
+
 }

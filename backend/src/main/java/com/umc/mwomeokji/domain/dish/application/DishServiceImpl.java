@@ -31,9 +31,15 @@ public class DishServiceImpl implements DishService{
     @Override
     @Transactional(readOnly = true)
     public DishDetailsResponse getDishDetails(Long id) {
-        return dishMapper.toDishDetailsResponse(
-                dishRepository.findById(id)
-                        .orElseThrow(NotFoundDishException::new)
-        );
+        return dishMapper.toDishDetailsResponse(dishRepository.findById(id).orElseThrow(NotFoundDishException::new));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public DishDetailsResponse getDishRandom() {
+        long qty = dishRepository.count();
+        long idx = (long)(Math.random() * qty)+ 1;
+
+        return dishMapper.toDishDetailsResponse(dishRepository.findById(idx).orElseThrow(NotFoundDishException::new));
     }
 }

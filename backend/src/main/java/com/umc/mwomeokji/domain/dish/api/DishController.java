@@ -29,4 +29,9 @@ public class DishController {
     public ResponseEntity<DishDetailsResponse> getDishDetails(@PathVariable Long id) {
         return ResponseEntity.status(OK).body(dishService.getDishDetails(id));
     }
+    @GetMapping("/random")
+    public ResponseEntity<DishDetailsResponse> getDishRandom() {
+        return ResponseEntity.status(OK).body(dishService.getDishRandom());
+    }
+
 }

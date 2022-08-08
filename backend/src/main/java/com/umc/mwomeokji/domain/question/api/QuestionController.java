@@ -23,9 +23,4 @@ public class QuestionController {
     public ResponseEntity<List<QuestionsNameResponse>> getAllQuestions(){
         return ResponseEntity.status(OK).body(questionService.getAllQuestionsName());
     }
-
-    @GetMapping("/dishes")
-    public ResponseEntity<List<QuestionAndDishesResponse>> getQuestionAndDishes() {
-        return ResponseEntity.status(OK).body(questionService.getQuestionAndDishes());
-    }
 }

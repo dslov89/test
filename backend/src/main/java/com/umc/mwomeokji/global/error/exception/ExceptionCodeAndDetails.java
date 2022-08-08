@@ -9,11 +9,13 @@ public enum ExceptionCodeAndDetails {
     NOT_FOUND_ERROR_CODE(500, "0001", "발생한 에러의 에러코드를 찾을 수 없습니다."),
     INVALID_INPUT_VALUE(400, "0002", "유효하지 않은 입력입니다."),
     METHOD_NOT_ALLOWED(405, "0003", "허용되지 않은 메소드 접근입니다. 올바른 HTTP Methods 를 입력해주세요."),
+    INVALID_JSON_FORMAT(400, "0004", "유효하지 않은 json 형식입니다. 입력을 확인해주세요."),
 
     // 1000: dish
-    NOT_FOUND_DISH(404, "1001", "해당하는 id 의 메뉴를 찾을 수 없습니다.")
+    NOT_FOUND_DISH(404, "1001", "해당하는 id 의 메뉴를 찾을 수 없습니다."),
 
     // 2000: question
+    NOT_FOUND_QUESTION(404, "2001", "해당하는 id 의 질문을 찾을 수 없습니다.")
 
     ;
     private final int status;

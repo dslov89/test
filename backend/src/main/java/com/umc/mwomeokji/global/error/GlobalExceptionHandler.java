@@ -1,8 +1,10 @@
 package com.umc.mwomeokji.global.error;
 
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.umc.mwomeokji.global.error.exception.BusinessException;
 import com.umc.mwomeokji.global.error.exception.ExceptionCodeAndDetails;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,6 +19,13 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ExceptionResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         ExceptionResponse response = ExceptionResponse.create(ExceptionCodeAndDetails.INVALID_INPUT_VALUE, e.getBindingResult());
+        return ResponseEntity.status(BAD_REQUEST).body(response);
+    }
+
+    // request message 의 형식이 올바르지 않아 정상적으로 읽어올 수 없는 경우 발생
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ExceptionResponse> handleHttpMessageNotReadableException(HttpMessageNotReadableException e) {
+        ExceptionResponse response = ExceptionResponse.create(ExceptionCodeAndDetails.INVALID_JSON_FORMAT);
         return ResponseEntity.status(BAD_REQUEST).body(response);
     }
 
@@ -35,9 +44,12 @@ public class GlobalExceptionHandler {
     }
 
     // 그 밖에 직접 handling 하지 않은 모든 예외가 모이는 곳
+    /*
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ExceptionResponse> handleException(Exception e) {
         ExceptionResponse response = ExceptionResponse.create(ExceptionCodeAndDetails.NOT_FOUND_ERROR_CODE);
         return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
     }
+
+     */
 }

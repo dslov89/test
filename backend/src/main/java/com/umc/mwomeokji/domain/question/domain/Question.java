@@ -1,6 +1,6 @@
 package com.umc.mwomeokji.domain.question.domain;
 
-import com.umc.mwomeokji.domain.QuestionDish.domain.QuestionDish;
+import com.umc.mwomeokji.domain.questiondish.domain.QuestionDish;
 import com.umc.mwomeokji.global.entity.BaseEntity;
 import lombok.AccessLevel;
 import lombok.Builder;

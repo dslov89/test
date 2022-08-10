@@ -4,13 +4,13 @@ import com.umc.mwomeokji.domain.dish.application.DishService;
 import com.umc.mwomeokji.domain.dish.dto.DishDto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
 
 @RequiredArgsConstructor
@@ -19,6 +19,13 @@ import static org.springframework.http.HttpStatus.OK;
 public class DishController {
 
     private final DishService dishService;
+
+    @PostMapping
+    public ResponseEntity<DishDetailsResponse> save(
+            @Valid @RequestPart(name = "request") DishPostRequest request,
+            @RequestPart(required = false, name = "image") MultipartFile multipartFile) {
+        return ResponseEntity.status(CREATED).body(dishService.saveDish(request, multipartFile));
+    }
 
     @GetMapping("/name")
     public ResponseEntity<List<DishNameResponse>> getAllDishesName() {
@@ -29,9 +36,9 @@ public class DishController {
     public ResponseEntity<DishDetailsResponse> getDishDetails(@PathVariable Long id) {
         return ResponseEntity.status(OK).body(dishService.getDishDetails(id));
     }
+
     @GetMapping("/random")
     public ResponseEntity<DishDetailsResponse> getDishRandom() {
         return ResponseEntity.status(OK).body(dishService.getDishRandom());
     }
-
 }

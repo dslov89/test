@@ -2,5 +2,5 @@ spring:
   profiles:
     group:
       "prod": ""
-      "local": "local"
+      "local": "local, aws"
     active: local

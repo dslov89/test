@@ -36,6 +36,10 @@ dependencies {
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
 	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
 
+	// AWS
+	implementation platform('com.amazonaws:aws-java-sdk-bom:1.12.277')
+	implementation 'com.amazonaws:aws-java-sdk-s3'
+
 	// Test
 	testImplementation 'io.rest-assured:rest-assured:4.4.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

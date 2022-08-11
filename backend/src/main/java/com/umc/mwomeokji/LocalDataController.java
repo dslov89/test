@@ -1,5 +1,6 @@
 package com.umc.mwomeokji;
 
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ public class LocalDataController {
 
     private final DataLoader dataLoader;
 
+    @Operation(summary = "데이터 초기화 API", description = "로컬 테스트환경에서 데이터베이스를 초기화하기 위한 API 입니다.")
     @GetMapping("/data/setting")
     public ResponseEntity<String> dataSetting() {
         dataLoader.loadData();

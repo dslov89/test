@@ -25,7 +25,8 @@ public class DishServiceImpl implements DishService{
 
     @Override
     public DishDetailsResponse saveDish(DishPostRequest request, MultipartFile multipartFile) {
-        Dish dish = save(request, multipartFile);
+        String imageUrl = fileService.uploadImage(multipartFile);
+        Dish dish = dishRepository.save(dishMapper.toEntity(request, imageUrl));
         return dishMapper.toDishDetailsResponse(dish);
     }
 
@@ -48,10 +49,5 @@ public class DishServiceImpl implements DishService{
         long qty = dishRepository.count();
         long idx = (long)(Math.random() * qty)+ 1;
         return dishMapper.toDishDetailsResponse(dishRepository.findById(idx).orElseThrow(NotFoundDishException::new));
-    }
-
-    private Dish save(DishPostRequest request, MultipartFile multipartFile) {
-        if (multipartFile == null) return dishRepository.save(dishMapper.toEntity(request));
-        else return dishRepository.save(dishMapper.toEntity(request, fileService.uploadImage(multipartFile)));
     }
 }

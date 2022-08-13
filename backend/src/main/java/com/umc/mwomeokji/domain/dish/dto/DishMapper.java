@@ -9,8 +9,6 @@ public interface DishMapper {
 
     Dish toEntity(DishPostRequest dishPostRequest, String imageUrl);
 
-    Dish toEntity(DishPostRequest dishPostRequest);
-
     DishNameResponse toDishNameResponse(Dish dish);
 
     DishDetailsResponse toDishDetailsResponse(Dish dish);

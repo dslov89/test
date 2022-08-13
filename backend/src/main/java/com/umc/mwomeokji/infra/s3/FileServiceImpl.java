@@ -4,8 +4,13 @@ import com.amazonaws.AmazonServiceException;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.umc.mwomeokji.global.error.exception.BusinessException;
+import com.umc.mwomeokji.infra.s3.exception.AmazonException;
+import com.umc.mwomeokji.infra.s3.exception.FileException;
 import lombok.RequiredArgsConstructor;
+import org.apache.tika.Tika;
+import org.apache.tika.mime.MimeType;
+import org.apache.tika.mime.MimeTypeException;
+import org.apache.tika.mime.MimeTypes;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -21,33 +26,76 @@ import static com.umc.mwomeokji.global.error.exception.ExceptionCodeAndDetails.*
 public class FileServiceImpl implements FileService {
 
     private final AmazonS3 amazonS3;
+    private final Tika tika = new Tika();
 
     @Value("${cloud.aws.s3.bucket-name}")
     private String bucketName;
 
+    @Value("${cloud.aws.cloudfront.url}")
+    private String cloudfrontImageUrlFormat;
+
+    @Value("${cloud.aws.s3.user-default-image}")
+    private String userDefaultImageUrl;
+
     @Override
     public String uploadImage(MultipartFile multipartFile) {
-        ObjectMetadata metadata = new ObjectMetadata();
-        metadata.setContentLength(multipartFile.getSize());
-        metadata.setContentType(MediaType.IMAGE_PNG_VALUE);
-        String fileName = UUID.randomUUID().toString();
+        if (multipartFile == null){
+            return makeCloudFrontUrl(userDefaultImageUrl);
+        }
+        fileExtensionValidator(multipartFile);
+        ObjectMetadata objectMetadata = generateObjectMetadata(multipartFile);
+        String fileName = generateFileName(multipartFile);
         try {
-            amazonS3.putObject(bucketName, fileName, multipartFile.getInputStream(), metadata);
+            amazonS3.putObject(bucketName, fileName, multipartFile.getInputStream(), objectMetadata);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new BusinessException(FILE_IO_EXCEPTION);
+            throw new FileException(FILE_IO_EXCEPTION);
         } catch (AmazonServiceException e) {
             e.printStackTrace();
-            throw new BusinessException(AMAZON_SERVICE_EXCEPTION);
+            throw new AmazonException(AMAZON_SERVICE_EXCEPTION);
         } catch (SdkClientException e) {
             e.printStackTrace();
-            throw new BusinessException(SDK_CLIENT_EXCEPTION);
+            throw new AmazonException(SDK_CLIENT_EXCEPTION);
         }
-        return fileName;
+        return makeCloudFrontUrl(fileName);
     }
 
     @Override
     public void deleteImage(String fileName) {
         amazonS3.deleteObject(bucketName, fileName);
+    }
+
+    private String makeCloudFrontUrl(String fileName) {
+        return String.format(cloudfrontImageUrlFormat, fileName);
+    }
+
+    private void fileExtensionValidator(MultipartFile multipartFile) {
+        try {
+            String MIMEType = tika.detect(multipartFile.getBytes());
+            if(!MIMEType.startsWith("image")) {
+                throw new FileException(FILE_EXTENSION_EXCEPTION);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new FileException(FILE_IO_EXCEPTION);
+        }
+    }
+
+    private ObjectMetadata generateObjectMetadata(MultipartFile multipartFile) {
+        ObjectMetadata objectMetadata = new ObjectMetadata();
+        objectMetadata.setContentLength(multipartFile.getSize());
+        objectMetadata.setContentType(MediaType.IMAGE_PNG_VALUE);
+        return objectMetadata;
+    }
+
+    private String generateFileName(MultipartFile multipartFile) {
+        try {
+            String fileName = UUID.randomUUID().toString();
+            MimeType mimeType = MimeTypes.getDefaultMimeTypes().forName(tika.detect(multipartFile.getBytes()));
+            return fileName + mimeType.getExtension();
+        } catch (MimeTypeException | IOException e) {
+            e.printStackTrace();
+            throw new FileException(FILE_EXTENSION_EXCEPTION);
+        }
     }
 }

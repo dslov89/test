@@ -91,6 +91,6 @@ class DishServiceImplTest {
         // when, then
         assertThatThrownBy(() -> dishService.getDishDetails(1L))
                 .isInstanceOf(NotFoundDishException.class)
-                .hasMessage("해당하는 id 의 메뉴를 찾을 수 없습니다.");
+                .hasMessage("해당하는 메뉴를 찾을 수 없습니다.");
     }
 }

@@ -4,11 +4,13 @@ import com.umc.mwomeokji.acceptance.AcceptanceTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
+@Disabled
 public class DishAcceptanceTest extends AcceptanceTest {
 
     @Autowired

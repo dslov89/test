@@ -45,9 +45,35 @@ public class DishServiceImpl implements DishService{
 
     @Override
     @Transactional(readOnly = true)
+    public DishDetailsResponse getDishDetails(DishGetByNameRequest request) {
+        List<Dish> dishList = dishRepository.findByName(removeBlank(request.getName()));
+        if (dishList.isEmpty()) {
+            throw new NotFoundDishException();
+        }
+        return dishMapper.toDishDetailsResponse(selectOneFromList(dishList));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public DishesCountResponse getDishesCount() {
+        Long count = dishRepository.count();
+        return dishMapper.toDishesCountResponse(count);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public DishDetailsResponse getDishRandom() {
         long qty = dishRepository.count();
         long idx = (long)(Math.random() * qty)+ 1;
         return dishMapper.toDishDetailsResponse(dishRepository.findById(idx).orElseThrow(NotFoundDishException::new));
+    }
+
+    private String removeBlank(String str) {
+        return str.replaceAll(" ", "");
+    }
+
+    private Dish selectOneFromList(List<Dish> dishList) {
+        double randomIdx = Math.random() * dishList.size();
+        return dishList.get((int)randomIdx);
     }
 }

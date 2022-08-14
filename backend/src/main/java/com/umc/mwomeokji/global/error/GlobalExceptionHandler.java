@@ -5,6 +5,7 @@ import com.umc.mwomeokji.global.error.exception.BusinessException;
 import com.umc.mwomeokji.global.error.exception.ExceptionCodeAndDetails;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.validation.BindException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,6 +19,13 @@ public class GlobalExceptionHandler {
     // @Valid 에 대한 binding error 발생 시 발생
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ExceptionResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+        ExceptionResponse response = ExceptionResponse.create(ExceptionCodeAndDetails.INVALID_INPUT_VALUE, e.getBindingResult());
+        return ResponseEntity.status(BAD_REQUEST).body(response);
+    }
+
+    // @Valid 에 대한 binding error 발생 시 발생
+    @ExceptionHandler(BindException.class)
+    public ResponseEntity<ExceptionResponse> handleBindException(BindException e) {
         ExceptionResponse response = ExceptionResponse.create(ExceptionCodeAndDetails.INVALID_INPUT_VALUE, e.getBindingResult());
         return ResponseEntity.status(BAD_REQUEST).body(response);
     }

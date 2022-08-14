@@ -34,11 +34,11 @@ public class DataLoader {
         Dish 백반 = dishRepository.save(Dish.builder().name("백반").build());
         Dish 김밥 = dishRepository.save(Dish.builder().name("김밥").build());
         Dish 비빔밥 = dishRepository.save(Dish.builder().name("비빔밥").build());
-        Dish 볶음밥_한식 = dishRepository.save(Dish.builder().name("볶음밥").build());
+        Dish 볶음밥_한식 = dishRepository.save(Dish.builder().name("볶음밥(한식)").build());
         Dish 덮밥_한식 = dishRepository.save(Dish.builder().name("덮밥").build());
         Dish 컵밥 = dishRepository.save(Dish.builder().name("컵밥").build());
         Dish 죽 = dishRepository.save(Dish.builder().name("죽").build());
-        Dish 막국수 = dishRepository.save(Dish.builder().name("막국수").build());
+        Dish 메밀국수 = dishRepository.save(Dish.builder().name("메밀국수").build());
         Dish 비빔국수 = dishRepository.save(Dish.builder().name("비빔국수").build());
         Dish 잔치국수 = dishRepository.save(Dish.builder().name("잔치국수").build());
         Dish 칼국수 = dishRepository.save(Dish.builder().name("칼국수").build());
@@ -53,10 +53,13 @@ public class DataLoader {
         Dish 보쌈= dishRepository.save(Dish.builder().name("보쌈").build());
         Dish 순대= dishRepository.save(Dish.builder().name("순대").build());
         Dish 족발 = dishRepository.save(Dish.builder().name("족발").build());
+        Dish 찜닭 = dishRepository.save(Dish.builder().name("찜닭").build());
         Dish 닭갈비 = dishRepository.save(Dish.builder().name("닭갈비").build());
         Dish 곱창 = dishRepository.save(Dish.builder().name("곱창").build());
         Dish 치킨 = dishRepository.save(Dish.builder().name("치킨").build());
-        Dish 닭발= dishRepository.save(Dish.builder().name("닭발").build());
+        Dish 닭발 = dishRepository.save(Dish.builder().name("닭발").build());
+        Dish 육회 = dishRepository.save(Dish.builder().name("육회").build());
+        Dish 만두 = dishRepository.save(Dish.builder().name("만두").build());
         Dish 게장 = dishRepository.save(Dish.builder().name("게장").build());
         Dish 생선찜 = dishRepository.save(Dish.builder().name("생선찜").build());
         Dish 생선구이 = dishRepository.save(Dish.builder().name("생선구이").build());
@@ -76,11 +79,12 @@ public class DataLoader {
         Dish 된장찌개 = dishRepository.save(Dish.builder().name("된장찌개").build());
         Dish 순두부찌개 = dishRepository.save(Dish.builder().name("순두부찌개").build());
         Dish 부대찌개 = dishRepository.save(Dish.builder().name("부대찌개").build());
-        Dish 떡볶이 = dishRepository.save(Dish.builder().name("떡볶이").build());
+        Dish 떡볶이_쌀떡 = dishRepository.save(Dish.builder().name("떡볶이(밀떡)").build());
+        Dish 떡볶이_밀떡 = dishRepository.save(Dish.builder().name("떡볶이(쌀떡)").build());
         Dish 라면 = dishRepository.save(Dish.builder().name("라면").build());
         Dish 쫄면 = dishRepository.save(Dish.builder().name("쫄면").build());
-        Dish 튀김_분식 = dishRepository.save(Dish.builder().name("튀김").build());
-        Dish 샤부샤부 = dishRepository.save(Dish.builder().name("샤부샤부").build());
+        Dish 튀김_분식 = dishRepository.save(Dish.builder().name("튀김(분식)").build());
+        Dish 샤브샤브 = dishRepository.save(Dish.builder().name("샤브샤브").build());
         Dish 초밥 = dishRepository.save(Dish.builder().name("초밥").build());
         Dish 돈부리 = dishRepository.save(Dish.builder().name("돈부리").build());
         Dish 돈가스 = dishRepository.save(Dish.builder().name("돈가스").build());
@@ -88,6 +92,7 @@ public class DataLoader {
         Dish 오코노미야끼 = dishRepository.save(Dish.builder().name("오코노미야끼").build());
         Dish 타코야끼 = dishRepository.save(Dish.builder().name("타코야끼").build());
         Dish 고로케 = dishRepository.save(Dish.builder().name("고로케").build());
+        Dish 야끼소바 = dishRepository.save(Dish.builder().name("야끼소바").build());
         Dish 라멘 = dishRepository.save(Dish.builder().name("라멘").build());
         Dish 우동 = dishRepository.save(Dish.builder().name("우동").build());
         Dish 냉소바 = dishRepository.save(Dish.builder().name("냉소바").build());
@@ -106,24 +111,24 @@ public class DataLoader {
         Dish 파스타 = dishRepository.save(Dish.builder().name("파스타").build());
         Dish 짜장면 = dishRepository.save(Dish.builder().name("짜장면").build());
         Dish 짬뽕 = dishRepository.save(Dish.builder().name("짬뽕").build());
-        // Dish 우동_중식 = dishRepository.save(Dish.builder().name("우동").build()); -> 나 진짜 처음들어보는데 중국음식점에 우동을 먹으러 가 본 사람 있어?
-        Dish 볶음밥_중식 = dishRepository.save(Dish.builder().name("볶음밥").build());
+        Dish 볶음밥_중식 = dishRepository.save(Dish.builder().name("볶음밥(중식)").build());
         Dish 짜장밥 = dishRepository.save(Dish.builder().name("짜장밥").build());
         Dish 짬뽕밥 = dishRepository.save(Dish.builder().name("짬뽕밥").build());
         Dish 잡채밥 = dishRepository.save(Dish.builder().name("잡채밥").build());
         Dish 마파두부 = dishRepository.save(Dish.builder().name("마파두부").build());
-        Dish 탕수육 = dishRepository.save(Dish.builder().name("탕수육(사이드)").build());
-        Dish 깐풍기 = dishRepository.save(Dish.builder().name("깐풍기(사이드)").build());
-        Dish 유린기 = dishRepository.save(Dish.builder().name("유린기(사이드)").build());
-        Dish 군만두 = dishRepository.save(Dish.builder().name("군만두(사이드)").build());
-        // Dish 물만두 = dishRepository.save(Dish.builder().name("물만두").build()); -> 일단 스프레드시트 답변 대기
+        Dish 탕수육 = dishRepository.save(Dish.builder().name("탕수육").build());
+        Dish 깐풍기 = dishRepository.save(Dish.builder().name("깐풍기").build());
+        Dish 유린기 = dishRepository.save(Dish.builder().name("유린기").build());
+        Dish 꿔바로우 = dishRepository.save(Dish.builder().name("꿔바로우").build());
+        Dish 군만두 = dishRepository.save(Dish.builder().name("군만두").build());
+        Dish 물만두 = dishRepository.save(Dish.builder().name("물만두").build());
+        Dish 딤섬 = dishRepository.save(Dish.builder().name("딤섬").build());
+        Dish 양꼬치 = dishRepository.save(Dish.builder().name("양꼬치").build());
         Dish 깐풍새우 = dishRepository.save(Dish.builder().name("깐풍새우").build());
         Dish 깐쇼새우 = dishRepository.save(Dish.builder().name("깐쇼새우").build());
         Dish 마라샹궈 = dishRepository.save(Dish.builder().name("마라샹궈").build());
         Dish 마라탕 = dishRepository.save(Dish.builder().name("마라탕").build());
         Dish 훠궈 = dishRepository.save(Dish.builder().name("훠궈").build());
-        Dish 꿔바로우 = dishRepository.save(Dish.builder().name("꿔바로우").build());
-        Dish 양꼬치 = dishRepository.save(Dish.builder().name("양꼬치").build());
         Dish 쌀국수 = dishRepository.save(Dish.builder().name("쌀국수").build());
         Dish 볶음쌀국수 = dishRepository.save(Dish.builder().name("볶음쌀국수").build());
         Dish 인도식카레 = dishRepository.save(Dish.builder().name("인도식카레").build());
@@ -131,9 +136,7 @@ public class DataLoader {
         Dish 부리또 = dishRepository.save(Dish.builder().name("부리또").build());
         Dish 포케 = dishRepository.save(Dish.builder().name("포케").build());
         Dish 샐러드 = dishRepository.save(Dish.builder().name("샐러드").build());
-        Dish 찜닭 = dishRepository.save(Dish.builder().name("찜닭").build());
         Dish 그릭요거트 = dishRepository.save(Dish.builder().name("그릭요거트").build());
-        Dish 야끼소바 = dishRepository.save(Dish.builder().name("야끼소바").build());
 
         Question 질문1 = questionRepository.save(Question.builder().question("기름진 음식은 어떠신가요?").build());
         Question 질문2 = questionRepository.save(Question.builder().question("간단한 식사는 어떠신가요? ").build());
@@ -150,8 +153,8 @@ public class DataLoader {
                 치킨.getId(), 전.getId(), 돈가스.getId(), 라멘.getId(), 피자.getId(), 감바스.getId(), 짜장면.getId(), 짬뽕.getId(), 볶음밥_중식.getId(),
                 짜장밥.getId(), 짬뽕밥.getId(), 탕수육.getId(), 깐풍기.getId(), 유린기.getId(), 군만두.getId(), 깐풍새우.getId(), 깐쇼새우.getId(),
                 꿔바로우.getId());
-        List<Long> dishesIds2 = Arrays.asList(김밥.getId(), 컵밥.getId(), 죽.getId(), 떡볶이.getId(), 잔치국수.getId(), 볶음밥_한식.getId(),
-                떡볶이.getId(), 라면.getId(), 쫄면.getId(), 초밥.getId(), 고로케.getId(), 우동.getId(), 냉소바.getId(), 물냉면.getId(),
+        List<Long> dishesIds2 = Arrays.asList(김밥.getId(), 컵밥.getId(), 죽.getId(), 떡볶이_밀떡.getId(), 잔치국수.getId(), 볶음밥_한식.getId(),
+                떡볶이_밀떡.getId(), 라면.getId(), 쫄면.getId(), 초밥.getId(), 고로케.getId(), 우동.getId(), 냉소바.getId(), 물냉면.getId(),
                 토스트.getId(), 핫도그.getId(), 부리또.getId(), 포케.getId(), 샐러드.getId(), 그릭요거트.getId());
         List<Long> dishesIds3 = Arrays.asList(쌀국수.getId(), 볶음쌀국수.getId(), 인도식카레.getId(), 타코.getId(), 포케.getId(), 부리또.getId());
         List<Long> dishesIds4 = Arrays.asList(나가사키짬뽕.getId(), 짬뽕.getId(), 짬뽕밥.getId(), 마라샹궈.getId(), 마라탕.getId(), 훠궈.getId());
@@ -159,13 +162,13 @@ public class DataLoader {
                 밀면.getId(), 라면.getId(), 쫄면.getId(), 라멘.getId(), 우동.getId(), 냉소바.getId(), 나가사키짬뽕.getId(), 파스타.getId(),
                 짜장면.getId(), 짬뽕.getId(), 쌀국수.getId(), 볶음쌀국수.getId(), 야끼소바.getId());
         List<Long> dishesIds6 = Arrays.asList(돈가스.getId(), 탕수육.getId(), 깐풍기.getId(), 유린기.getId());
-        List<Long> dishesIds7 = Arrays.asList(국밥.getId(), 떡국.getId(), 수제비.getId(), 갈비탕.getId(), 삼계탕.getId(), 샤부샤부.getId(), 쌀국수.getId());
-        List<Long> dishesIds8 = Arrays.asList(떡볶이.getId(),토스트.getId(),핫도그.getId(),샌드위치.getId());
+        List<Long> dishesIds7 = Arrays.asList(국밥.getId(), 떡국.getId(), 수제비.getId(), 갈비탕.getId(), 삼계탕.getId(), 샤브샤브.getId(), 쌀국수.getId());
+        List<Long> dishesIds8 = Arrays.asList(떡볶이_밀떡.getId(),토스트.getId(),핫도그.getId(),샌드위치.getId());
         List<Long> dishesIds9 = Arrays.asList(떡갈비.getId(), 불고기.getId(), 소갈비.getId(), 삼겹살.getId(),  보쌈.getId(), 족발.getId(), 곱창.getId(),
                 치킨.getId(), 닭발.getId(), 게장.getId(), 생선찜.getId(), 생선구이.getId(), 조개구이.getId(), 감자탕.getId(), 삼계탕.getId(), 스테이크.getId(),
                 바비큐.getId(), 파스타.getId(), 깐풍새우.getId(), 깐쇼새우.getId());
         List<Long> dishesIds10 = Arrays.asList(백반.getId(), 김밥.getId(), 비빔밥.getId(), 컵밥.getId(), 잔치국수.getId(), 비빔국수.getId(), 잔치국수.getId(),
-                물냉면.getId(), 비빔냉면.getId(), 국밥.getId(), 떡볶이.getId(), 라면.getId(), 쫄면.getId(), 타코야끼.getId(), 고로케.getId(), 우동.getId(),
+                물냉면.getId(), 비빔냉면.getId(), 국밥.getId(), 떡볶이_밀떡.getId(), 라면.getId(), 쫄면.getId(), 타코야끼.getId(), 고로케.getId(), 우동.getId(),
                 냉소바.getId(), 토스트.getId(), 핫도그.getId(), 샌드위치.getId(), 햄버거.getId(), 짜장면.getId(), 짬뽕.getId(), 우동.getId(), 볶음밥_중식.getId(),
                 짜장밥.getId(), 짬뽕밥.getId(), 마라탕.getId(), 샐러드.getId());
 

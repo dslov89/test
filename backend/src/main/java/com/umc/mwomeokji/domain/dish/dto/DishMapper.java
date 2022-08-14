@@ -12,4 +12,6 @@ public interface DishMapper {
     DishNameResponse toDishNameResponse(Dish dish);
 
     DishDetailsResponse toDishDetailsResponse(Dish dish);
+
+    DishesCountResponse toDishesCountResponse(Long count);
 }

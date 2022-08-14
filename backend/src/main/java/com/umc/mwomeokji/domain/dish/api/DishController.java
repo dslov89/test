@@ -39,10 +39,22 @@ public class DishController {
         return ResponseEntity.status(OK).body(dishService.getAllDishesName());
     }
 
-    @Operation(summary = "메뉴 상세 정보 조회 API", description = "요청한 메뉴의 상세 정보를 조회하기 위한 API 입니다.")
+    @Operation(summary = "메뉴 상세 정보 조회 API", description = "요청한 id에 해당하는 메뉴의 상세 정보를 조회하기 위한 API 입니다.")
     @GetMapping("/{id}")
     public ResponseEntity<DishDetailsResponse> getDishDetails(@PathVariable Long id) {
         return ResponseEntity.status(OK).body(dishService.getDishDetails(id));
+    }
+
+    @Operation(summary = "메뉴 총 개수 조회 API", description = "데이터베이스에 저장되어 있는 메뉴의 총 개수를 조회하기 위한 API 입니다.")
+    @GetMapping("/count")
+    public ResponseEntity<DishesCountResponse> getDishesCount() {
+        return ResponseEntity.status(OK).body(dishService.getDishesCount());
+    }
+
+    @Operation(summary = "메뉴 상세 정보 조회 API", description = "요청한 이름에 해당하는 메뉴의 상세 정보를 조회하기 위한 API 입니다.")
+    @GetMapping
+    public ResponseEntity<DishDetailsResponse> getDishDetails(@Valid @RequestBody DishGetByNameRequest request) {
+        return ResponseEntity.status(OK).body(dishService.getDishDetails(request));
     }
 
     @Operation(summary = "랜덤 메뉴 조회 API", description = "임의의 한 메뉴의 상세 정보를 조회하기 위한 API 입니다.")

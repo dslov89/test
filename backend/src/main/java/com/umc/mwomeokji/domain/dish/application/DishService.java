@@ -13,6 +13,10 @@ public interface DishService {
 
     DishDetailsResponse getDishDetails(Long id);
 
+    DishDetailsResponse getDishDetails(DishGetByNameRequest request);
+
+    DishesCountResponse getDishesCount();
+
     DishDetailsResponse getDishRandom();
 
 }

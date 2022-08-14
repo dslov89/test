@@ -14,10 +14,10 @@ public enum ExceptionCodeAndDetails {
     FILE_EXTENSION_EXCEPTION(400, "0006", "올바르지 않은 파일 확장자입니다."),
 
     // 1000: dish
-    NOT_FOUND_DISH(404, "1001", "해당하는 id 의 메뉴를 찾을 수 없습니다."),
+    NOT_FOUND_DISH(404, "1001", "해당하는 메뉴를 찾을 수 없습니다."),
 
     // 2000: question
-    NOT_FOUND_QUESTION(404, "2001", "해당하는 id 의 질문을 찾을 수 없습니다."),
+    NOT_FOUND_QUESTION(404, "2001", "해당하는 질문을 찾을 수 없습니다."),
 
 
     // 9000: AWS

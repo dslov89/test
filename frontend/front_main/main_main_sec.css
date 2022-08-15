@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background-color:#FFFEFB;
+    /*
+    font-family: 'NanumSquareAcb';
+    font-family: 'NanumSquareAceb';
+    font-family: 'NanumSquareAcl';
+    font-family: 'NanumSquareAcr';
+    */
+    
+  }
+
+
+
+.main_main_sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main_main_sec_logo{
+    height: 11.25rem;
+    width: 13.75rem;
+    margin-top: 10.063rem;
+    
+}
+
+#main_main_sec_logo2{
+    height: 4.375rem;
+    width: 13.75rem;
+    margin-top: 2rem;
+    margin-left: 43.125rem;
+    margin-right: 43.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#494646;
+    font-family: 'NanumSquareAcb';
+    font-size: 1.563rem;
+    background-color: #E9EB94;
+    border-radius: 50px;
+}
+
+.main_main_sec_tut{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:5.3rem;
+
+    width: 60rem;
+    height:34rem;
+    border-radius: 32px;
+    background-color: #E9E9E9;
+
+    
+}
+#main_main_sec_tut_box1{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    width: 60rem;
+    height:8.5rem;
+    position: relative;
+    z-index: 1;
+   
+    border-radius: 32px 32px 0px 0px;
+    background-color: #E9E9E9;
+    
+
+}
+
+
+#main_main_sec_tut_box2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60rem;
+    height:8.5rem;
+    position: relative;
+    z-index: 2;
+    background-color: #E9E9E9;
+    
+
+}
+#main_main_sec_tut_box3{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60rem;
+    height:8.5rem;
+    position: relative;
+    z-index: 3;
+    
+    background-color: #E9E9E9;
+  
+}
+#main_main_sec_tut_box4{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60rem;
+    height:8.5rem;
+    position: relative;
+    z-index: 4;
+    border-radius: 0px 0px 32px 32px;
+    
+    background-color: #E9E9E9;
+   
+}
+
+/* what's your food? 내린 글자 안보이게 하는 빈 박스 */
+.main_main_sec_tut_box6{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60rem;
+    height:8.5rem;
+    position: relative;
+    z-index: 8;
+}
+
+
+#main_main_sec_tut_text1{
+    background-color: #E9E9E9;
+    position: relative;
+    top:5.063rem;
+    color:#E9E9E9;
+
+    font-family: 'NanumSquareAceb';
+    font-size: 4.063rem;
+    letter-spacing: 0.3em;
+    -webkit-text-stroke:0.094rem #646464;
+
+}
+
+#main_main_sec_tut_text2{
+    background-color: #E9E9E9;
+    position: relative;
+    top:5.063rem;
+    color:#E9E9E9;
+
+    font-family: 'NanumSquareAceb';
+    font-size: 4.063rem;
+    letter-spacing: 0.3em;
+    -webkit-text-stroke:0.094rem #646464;
+
+}
+
+#main_main_sec_tut_text3-2{
+    background-color: #E9E9E9;
+    position: relative;
+    top:5.063rem;
+    left: 0.875rem;
+    color:#E9E9E9;
+
+    font-family: 'NanumSquareAceb';
+    font-size: 4.063rem;
+    letter-spacing: 0.3em;
+    -webkit-text-stroke:0.094rem #646464;
+}
+#main_main_sec_tut_text3-1{
+    background-color: #E9E9E9;
+    position: relative;
+    top:4.563rem;
+    left: -0.875rem;
+    color:#E9E9E9;
+    font-weight:680;
+    font-size: 4.063rem;
+    font-family:'Montserrat', sans-serif;
+    letter-spacing: 0.2em;
+    text-shadow: 0.125rem 0 #646464, 0 -0.125rem #646464, -0.125rem 0 #646464, 0  0.125rem #646464;
+    
+}
+
+#main_main_sec_tut_text4{
+    background-color: #E9E9E9;
+    position: relative;
+    top:4.563rem;
+    color:#E9E9E9;
+    font-weight:680;
+    font-size: 4.063rem;
+    font-family:'Montserrat', sans-serif;
+    letter-spacing: 0.2em;
+    text-shadow: 0.125rem 0 #646464, 0 -0.125rem #646464, -0.125rem 0 #646464, 0  0.125rem #646464;
+    
+}
+
+
+
+
+/* --------------------------------------------------스크롤바 css-------------------------------------------------- */
+
+#main_main_sec_bar1-1{
+    background-color:transparent;
+    width: 0.625rem;
+    height: 0.625rem;
+    position: relative;
+    bottom:29rem;
+    left: 38rem;
+    z-index: 3;
+    border-radius: 32px;
+}
+
+#main_main_sec_bar1-2{
+    background-color:transparent;
+    width: 0.625rem;
+    height: 5.125rem;
+    position: relative;
+    bottom: 28.5rem;
+    left: 38rem;
+    border-radius: 32px;
+}
+
+#main_main_sec_bar2-1{
+    background-color:transparent;
+    width: 0.625rem;
+    height: 1.375rem;
+    position: relative;
+    bottom: 34.75rem;
+    left: 38rem;
+    /* display: flex; */
+    border-radius: 32px;
+}
+#main_main_sec_bar2-2{
+    background-color:transparent;
+    width: 0.625rem;
+    height:  0.625rem;
+    position: relative;
+    bottom: 34.25rem;
+    left: 38rem;
+    z-index: 3;
+   /* display: flex; */
+    border-radius: 32px;
+}
+
+#main_main_sec_bar2-3{
+    background-color:transparent;
+    width: 0.625rem;
+    height: 3.25rem;
+    position: relative;
+    bottom: 33.75rem;
+    left: 38rem;
+    /* display: flex; */
+    border-radius: 32px;
+}
+
+#main_main_sec_bar3-1{
+    background-color:transparent;
+    width: 0.625rem;
+    height:  3.25rem;
+    position: relative;
+    bottom: 40rem;
+    left: 38rem;
+    /* display: flex; */
+    border-radius: 32px;
+}
+
+#main_main_sec_bar3-2{
+    background-color:transparent;
+    width: 0.625rem;
+    height:  0.625rem;
+    position: relative;
+    bottom: 39.5rem;
+    left: 38rem;
+   
+   /* display: flex; */
+    border-radius: 32px;
+}
+
+#main_main_sec_bar3-3{
+    background-color:transparent;
+    width: 0.625rem;
+    height: 1.375rem;
+    position: relative;
+    bottom:39rem;
+    left: 38rem;
+    /* display: flex; */
+    border-radius: 32px;
+}
+
+#main_main_sec_bar4-1{
+    background-color:transparent;
+    width: 0.625rem;
+    height:  5.125rem;
+    position: relative;
+    bottom: 45.25rem;
+    left: 38rem;
+    border-radius: 32px;
+}
+
+#main_main_sec_bar4-2{
+    background-color:transparent;
+    width: 0.625rem;
+    height: 0.625rem;
+    position: relative;
+    bottom: 44.75rem;
+    left: 38rem;
+  
+    border-radius: 32px;
+}
+
+/* ------------------------------------------------------스크롤바 css 끝------------------------------------------------------ */
+
+/* ------------------------------------------------------스크롤 css 시작------------------------------------------------------ */
+#main_main_sec_tut_scroll{
+    width: 60rem;
+    height:34rem;
+    position: absolute;
+    top: 33.3rem;
+    background-color:transparent ;
+    z-index: 10;
+    border-radius: 36px;
+    overflow: hidden overlay;
+   
+}
+#main_main_sec_tut_scroll::-webkit-scrollbar {
+    width: 10px;
+    
+}
+
+#main_main_sec_tut_scroll::-webkit-scrollbar-thumb {
+    background: transparent; /* 스크롤바의 색상 */
+
+}
+
+#main_main_sec_tut_scroll::-webkit-scrollbar-track {
+    background: transparent;  /*스크롤바 뒷 배경 색상*/
+}
+
+
+.main_main_sec_tut_scroll_empty{
+    background-color: transparent;
+    width: 60rem;
+    height:68rem;
+    border-radius: 32px;
+}
+
+/* ----------------------------------------------------스크롤 css 끝 ----------------------------------------------------*/
+
+/* ----------------------------------------------------이미지 css 시작-------------------------------------------------- */
+#main_main_sec_tut_img1{
+    visibility: hidden;
+    width: 6.25rem;
+    height: 2.813rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 14rem;
+
+    background-color: transparent;
+}
+
+#main_main_sec_tut_img21{
+    visibility: hidden;
+    width: 2.875rem;
+    height: 3.875rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 11.625rem;
+   
+    background-color: transparent;
+}
+
+#main_main_sec_tut_img22{
+    visibility: hidden;
+    width: 3.125rem;
+    height: 3.125rem;
+    position: absolute;
+    top: 3.25rem;
+    left: 44.688rem;
+   
+    background-color: transparent;
+}
+
+#main_main_sec_tut_img23{
+    visibility: hidden;
+    width: 3.25rem;
+    height: 3.375rem;
+    position: absolute;
+    top: 2.875rem;
+    left: 50.313rem;
+
+    background-color: transparent;
+}
+
+
+#main_main_sec_tut_img3{
+    visibility: hidden;
+    width: 3.026rem;
+    height: 2.934rem;
+    position: absolute;
+    top: 2.875rem;
+    left: 13.5rem;
+
+    background-color: transparent;
+}
+
+#main_main_sec_tut_img4{
+    
+    visibility: hidden;
+    width: 15.25rem;
+    height: 2.938rem;
+    position: absolute;
+    top: 4.25rem;
+    left: 37.938rem;
+    z-index: 5;
+    background-color: transparent;
+}
+/* ----------------------------------------------------이미지 css 끝-------------------------------------------------- */
+
+/* ------------------------------------------------------nav,footer------------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* head */
+
+#nav_container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFEFB;
+  font-family: "NanumSquareAcr";
+  font-weight: 400;
+}
+
+#empty{
+  height: 1px;
+  width: 100%;
+  background-color: #9b9b9b;
+}
+
+#empty2{
+  height: 1px;
+  width: 100%;
+  background-color: #9b9b9b;
+  position: absolute;
+  top:80px;
+} 
+
+.nav_start,
+.nav_end {
+  display: flex;
+  align-items: center;
+  
+}
+
+.nav_start {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  
+}
+
+.nav_start span {
+  color: #494646;
+  font-weight: 800;
+  padding-left: 20px;
+  font-size: 20px;
+  font-family: "NanumSquareExtraBold";
+}
+
+.nav_end {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px;
+  margin-bottom: 21px;
+  border: 1px #9b9b9b;
+}
+
+#nav_search {
+  padding: 10px 20px 4px 15px;
+}
+
+#nav_input {
+  width: 122px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: #e9eb94;
+  margin-right: 15px;
+}
+
+.nav_end span {
+  padding: 7px 20px;
+  margin: 5px 23px 0px 23px;
+  color: #666666;
+  font-size: 14px;
+}
+
+.nav_end span:hover {
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.nav_menu_container {
+  height: 80px;
+}
+
+ul.nav_menu_container > div {
+  display: inline-block;
+  height: 100%;
+  width: 90px;
+  align-items: center;
+  margin: 0 5px;
+}
+
+ul.nav_menu_container > div > li {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding: 7px 20px;
+  margin: 25px 0px 0px 0px;
+  color: #646464;
+  font-size: 14px;
+  width: 100%;
+}
+
+ul.nav_menu_container > div:hover > li {
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+  
+}
+ul.nav_menu_container > div > li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 49px;
+  left: -26px;
+  z-index: 1;
+  color: #646464;
+  font-size: 14px;
+}
+ul.nav_menu_container > div:hover > li ul.submenu {
+  display: block;
+ 
+}
+ul.nav_menu_container > div > li ul.submenu > li {
+  display: flex;
+  width: 140px;
+  padding: 5px 10px;
+  background: #FFFEFB;
+  border-left: 1px solid #9b9b9b;
+  border-right: 1px solid #9b9b9b;
+  
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+ul.nav_menu_container > div > li ul.submenu > li:hover {
+  background: #646464;
+  color: white;
+}
+
+.last_menu {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid #9b9b9b;
+}
+
+/* footer */
+
+footer {
+  height: 272px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  background-color: #e06437;
+  padding: 0 10vw;
+}
+
+.foot_start {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.foot_start img {
+  height: 70px;
+  width: 101px;
+  background-color: transparent;
+
+}
+
+#foot_mmg {
+  color: white;
+  padding: 0 15px;
+  font-size: 20px;
+  font-family: "NanumSquareExtraBold";
+  font-weight: 800;
+  background-color: transparent;
+
+}
+
+#foot_mail {
+  font-family: "Montserrat";
+  color: #1f1818;
+  background-color: white;
+  border-radius: 15px;
+  width: 220px;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.foot_start span {
+  margin-top: 20px;
+}
+
+.foot_end {
+  float: right;
+  margin-top: 5px;
+  background-color: transparent;
+
+}
+
+.foot_end a {
+  padding: 5px;
+  background-color: transparent;
+
+}
+
+.foot_end_img {
+  background-color: #e06437;
+}
+
+@media (max-width: 800px) {
+  .nav_end {
+    display: none;
+  }
+
+  .foot_end {
+    float: left;
+    margin-top: 10px;
+  }
+}

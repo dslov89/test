@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMG</title>
+    <link rel="stylesheet" href="main_main_sec.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    
+</head>
+<body>
+  <nav id="nav_container">
+    <div class="nav_start">
+      <img alt="mmg-logo" src="img_nav/nav_logo.svg" />
+      <span>뭐 먹지?</span>
+    </div>
+    <div class="nav_end">
+      <div id="nav_search"><img alt="search" src="img_nav/Ic_Search.svg" /></div>
+      <input id = "nav_input" type="text">
+        <div>
+          <ul class="nav_menu_container">
+            <div class="menuBox">
+              <li class="menu1">
+                소개
+                <ul class="menu1_s submenu">
+                  <li>하나</li>
+                  <li class="last_menu">둘</li>
+                </ul>
+              </li>
+            </div>
+            <div class="menuBox">
+              <li class="menu2">
+                뭐 먹지?
+                <ul class="menu2_s submenu">
+                  <li>스무고개</li>
+                  <li>가위바위보</li>
+                  <li>맛집 리스트</li>
+                  <li class="last_menu">What's your food?</li>
+                </ul>
+              </li>
+            </div>
+            <div class="menuBox">
+              <li class="menu3">
+                고객센터
+                <ul class="menu3_s submenu">
+                  <li>하나</li>
+                  <li>둘</li>
+                  <li class="last_menu">셋</li>
+                </ul>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div id ="empty2"></div>
+      </div>
+    </div>
+  </nav>
+  <div id ="empty"></div>
+  
+    <div class="main_main_sec">
+        <div>
+            <img id="main_main_sec_logo" src="img_main/main_main_logo.svg" alt = "logo">
+        </div>
+        <div>
+            <h1 id = "main_main_sec_logo2">뭐 먹지?</h1>
+        </div>
+        <div class="main_main_sec_tut">
+            <div id = "main_main_sec_tut_box1" >
+                <h2 id = "main_main_sec_tut_text1">스무고개</h2>
+                <img id="main_main_sec_tut_img1" src="img_main/main_main_sec_tut_box1.svg" alt = "twenty">
+            </div>
+            <div id = "main_main_sec_tut_box2">
+                <h2 id = "main_main_sec_tut_text2">가위바위보</h2>
+                <img id="main_main_sec_tut_img21" src="img_main/main_main_sec_tut_rps_s.svg" alt = "rps_s">
+                <img id="main_main_sec_tut_img22" src="img_main/main_main_sec_tut_rps_r.svg" alt = "rps_r">
+                <img id="main_main_sec_tut_img23" src="img_main/main_main_sec_tut_rps_p.svg" alt = "rps_p">
+            </div>
+            <div id = "main_main_sec_tut_box3">
+                <h2 id = "main_main_sec_tut_text3-1">Pick </h2>
+                <h2 id = "main_main_sec_tut_text3-2">맛집</h2>
+                <img id="main_main_sec_tut_img3" src="img_main/main_main_sec_tut_rlist.svg" alt = "rlist">
+            </div>
+            <div id = "main_main_sec_tut_box4">
+                <h2 id = "main_main_sec_tut_text4">What's your food?</h2>
+                <img id="main_main_sec_tut_img4" src="img_main/main_main_sec_tut_random.svg" alt = "random">
+            </div>
+        </div>
+       
+        <div class = "main_main_sec_tut_box6"></div>
+        <div>
+            <div id = 'main_main_sec_bar1-1'></div>
+            <div id = 'main_main_sec_bar1-2' ></div>
+            <div id = 'main_main_sec_bar2-1'></div>
+            <div id = 'main_main_sec_bar2-2' ></div>
+            <div id = 'main_main_sec_bar2-3' ></div>
+            <div id = 'main_main_sec_bar3-1'></div>
+            <div id = 'main_main_sec_bar3-2' ></div>
+            <div id = 'main_main_sec_bar3-3' ></div>
+            <div id = 'main_main_sec_bar4-1'></div>
+            <div id = 'main_main_sec_bar4-2' ></div>
+        </div>
+        <div id = "main_main_sec_tut_scroll" onscroll ="getScrollPoistion()" >
+            <div class="main_main_sec_tut_scroll_empty" ></div>
+        </div> 
+    </div>
+
+    <footer>
+      <div class="foot_start">
+        <img alt="mmg-logo" src="img_foot/foot_logo.svg" />
+        <span id="foot_mmg">뭐 먹지?</span>
+        <span id="foot_mail">MMG_official@gmail.com</span>
+      </div>
+      <div class="foot_end">
+        <a><img class = "foot_end_img" alt="instagram" src="img_foot/insta.svg" /></a>
+        <a><img class = "foot_end_img" alt="kakaotalk" src="img_foot/kakao.svg" /></a>
+        <a><img class = "foot_end_img" alt="blog" src="img_foot/blog.svg" /></a>
+      </div>
+    </footer>
+    
+
+    <script src="main_main_sec.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb;NON_KEYWORDS=USER
+    url: jdbc:h2:mem:testdb;NON_KEYWORDS=USER;MODE=MySQL
     driver-class-name: org.h2.Driver
     username: sa
     password:
@@ -11,11 +11,12 @@ spring:
       enabled: true
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: true
         format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
 logging:
   level:
     org:

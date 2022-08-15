@@ -10,9 +10,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.Arrays;
 
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.atMostOnce;
@@ -35,16 +33,14 @@ public class QuestionControllerTest {
     @Test
     void get_all_questions() throws Exception{
         // given
-        QuestionDto.QuestionsNameResponse questionsNameResponse1 = new QuestionDto.QuestionsNameResponse("먹고싶은 음식은?");
-        QuestionDto.QuestionsNameResponse questionsNameResponse2 = new QuestionDto.QuestionsNameResponse("자장면 먹고싶나요?");
-        List<QuestionDto.QuestionsNameResponse> questionsNameResponseList = Stream.of(questionsNameResponse1, questionsNameResponse2).collect(Collectors.toList());
+        QuestionDto.QuestionsNameResponse questionsNameResponseList = new QuestionDto.QuestionsNameResponse(Arrays.asList("먹고싶은 음식은?", "자장면 먹고싶나요?"));
         given(questionService.getAllQuestionsName()).willReturn(questionsNameResponseList);
         // when, then
 
         mockMvc.perform(get("/questions"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].question").value(questionsNameResponse1.getQuestion()))
-                .andExpect(jsonPath("$[1].question").value(questionsNameResponse2.getQuestion()))
+                .andExpect(jsonPath("$.question.[0]").value("먹고싶은 음식은?"))
+                .andExpect(jsonPath("$.question.[1]").value("자장면 먹고싶나요?"))
                 .andDo(print());
         verify(questionService, atMostOnce()).getAllQuestionsName();
     }

@@ -1,7 +1,7 @@
 package com.umc.mwomeokji.acceptance.dish;
 
-import com.umc.mwomeokji.domain.dish.dao.DishRepository;
-import com.umc.mwomeokji.domain.dish.domain.Dish;
+import com.umc.mwomeokji.domain.dish.dish.dao.DishRepository;
+import com.umc.mwomeokji.domain.dish.dish.domain.Dish;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,5 +1,6 @@
-package com.umc.mwomeokji.domain.dish.domain;
+package com.umc.mwomeokji.domain.dish.dish.domain;
 
+import com.umc.mwomeokji.domain.dish.category.domain.Category;
 import com.umc.mwomeokji.global.entity.BaseEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -20,6 +21,10 @@ public class Dish extends BaseEntity {
     @Column(nullable = false)
     private String name;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
+
     private String imageUrl;
 
     private String videoUrl1;
@@ -29,8 +34,9 @@ public class Dish extends BaseEntity {
     private String videoUrl3;
 
     @Builder
-    public Dish(String name, String imageUrl, String videoUrl1, String videoUrl2, String videoUrl3) {
+    public Dish(String name, Category category, String imageUrl, String videoUrl1, String videoUrl2, String videoUrl3) {
         this.name = name;
+        this.category = category;
         this.imageUrl = imageUrl;
         this.videoUrl1 = videoUrl1;
         this.videoUrl2 = videoUrl2;

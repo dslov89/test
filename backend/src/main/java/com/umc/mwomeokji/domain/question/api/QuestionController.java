@@ -24,7 +24,13 @@ public class QuestionController {
 
     @Operation(summary = "모든 질문 조회 API", description = "저장된 모든 질문을 조회하기 위한 API 입니다.")
     @GetMapping
-    public ResponseEntity<List<QuestionsNameResponse>> getAllQuestions(){
+    public ResponseEntity<QuestionsNameResponse> getAllQuestions(){
         return ResponseEntity.status(OK).body(questionService.getAllQuestionsName());
+    }
+
+    @Operation(summary = "질문 - 메뉴 쌍 조회 API", description = "저장된 모든 질문 - 메뉴 쌍을 조회하기 위한 API 입니다.")
+    @GetMapping("/dishes")
+    public ResponseEntity<List<QuestionAndDishesResponse>> getQuestionDishes() {
+        return ResponseEntity.status(OK).body(questionService.getQuestionAndDishes());
     }
 }

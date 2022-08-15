@@ -46,12 +46,11 @@ public class QuestionServiceImplTest {
         given(questionRepository.findAll()).willReturn(questionList);
 
         // when
-        List<QuestionDto.QuestionsNameResponse> questionsNameResponseList = questionService.getAllQuestionsName();
+        QuestionDto.QuestionsNameResponse questionsNameResponseList = questionService.getAllQuestionsName();
 
         // then
-        assertThat(questionsNameResponseList).hasSize(2);
-        assertThat(questionsNameResponseList).extracting("question")
-                .containsExactly("시원한 음식은 어떠신가요?","면 종류를 드시겠습니까?");
+        assertThat(questionsNameResponseList.getQuestion()).hasSize(2);
+        assertThat(questionsNameResponseList.getQuestion()).containsExactly("시원한 음식은 어떠신가요?","면 종류를 드시겠습니까?");
         then(questionRepository).should(times(1)).findAll();
     }
 }

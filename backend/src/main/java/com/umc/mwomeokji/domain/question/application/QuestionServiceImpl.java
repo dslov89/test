@@ -23,9 +23,8 @@ public class QuestionServiceImpl implements QuestionService{
 
     @Override
     @Transactional(readOnly = true)
-    public List<QuestionsNameResponse> getAllQuestionsName(){
-        List<Question> questionList = questionRepository.findAll();
-        return questionList.stream().map(question -> questionMapper.toQuestionNameResponse(question)).collect(Collectors.toList());
+    public QuestionsNameResponse getAllQuestionsName(){
+        return questionMapper.toQuestionsNameResponse(questionRepository.findAll());
     }
 
     @Override

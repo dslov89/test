@@ -1,7 +1,8 @@
 package com.umc.mwomeokji.domain.dish.api;
 
-import com.umc.mwomeokji.domain.dish.application.DishService;
-import com.umc.mwomeokji.domain.dish.dto.DishDto;
+import com.umc.mwomeokji.domain.dish.dish.api.DishController;
+import com.umc.mwomeokji.domain.dish.dish.application.DishService;
+import com.umc.mwomeokji.domain.dish.dish.dto.DishDto;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,13 +55,14 @@ class DishControllerTest {
     void get_dish_details() throws Exception{
         // given
         DishDto.DishDetailsResponse dishDetailsResponse
-                = new DishDto.DishDetailsResponse(1L, "피자", "피자 이미지", "피자 영상 1", "피자 영상 2", "피자 영상 3");
+                = new DishDto.DishDetailsResponse(1L, "피자", "양식" ,"피자 이미지", "피자 영상 1", "피자 영상 2", "피자 영상 3");
         given(dishService.getDishDetails(anyLong())).willReturn(dishDetailsResponse);
 
         // when, then
         mockMvc.perform(get("/dishes/{id}", 1))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").value(dishDetailsResponse.getName()))
+                .andExpect(jsonPath("$.category").value(dishDetailsResponse.getCategory()))
                 .andExpect(jsonPath("$.imageUrl").value(dishDetailsResponse.getImageUrl()))
                 .andExpect(jsonPath("$.videoUrl1").value(dishDetailsResponse.getVideoUrl1()))
                 .andExpect(jsonPath("$.videoUrl2").value(dishDetailsResponse.getVideoUrl2()))

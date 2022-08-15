@@ -32,10 +32,4 @@ public class QuestionDishController {
         questionDishService.saveQuestionDishes(request);
         return ResponseEntity.status(CREATED).body("성공적으로 저장되었습니다.");
     }
-
-    @Operation(summary = "질문 - 메뉴 쌍 조회 API", description = "저장된 모든 질문 - 메뉴 쌍을 조회하기 위한 API 입니다.")
-    @GetMapping
-    public ResponseEntity<List<QuestionDto.QuestionAndDishesResponse>> getQuestionDishes() {
-        return ResponseEntity.status(OK).body(questionService.getQuestionAndDishes());
-    }
 }

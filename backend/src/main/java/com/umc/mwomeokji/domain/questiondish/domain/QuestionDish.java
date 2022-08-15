@@ -1,6 +1,6 @@
 package com.umc.mwomeokji.domain.questiondish.domain;
 
-import com.umc.mwomeokji.domain.dish.domain.Dish;
+import com.umc.mwomeokji.domain.dish.dish.domain.Dish;
 import com.umc.mwomeokji.domain.question.domain.Question;
 import lombok.AccessLevel;
 import lombok.Builder;

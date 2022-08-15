@@ -5,7 +5,7 @@ import com.umc.mwomeokji.domain.question.dto.QuestionDto.*;
 import java.util.List;
 public interface QuestionService {
 
-    List<QuestionsNameResponse> getAllQuestionsName();
+    QuestionsNameResponse getAllQuestionsName();
 
     List<QuestionAndDishesResponse> getQuestionAndDishes();
 }

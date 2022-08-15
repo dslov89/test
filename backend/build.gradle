@@ -62,3 +62,8 @@ task copySubmodule(type: Copy){
 	include '*.yml'
 	into './src/main/resources'
 }
+
+// disable plain.jar
+jar {
+	enabled = false
+}

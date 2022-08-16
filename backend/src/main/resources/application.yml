@@ -1,6 +1,6 @@
 spring:
   profiles:
     group:
-      "prod": ""
+      "prod": "prod, aws"
       "local": "local, aws"
     active: local

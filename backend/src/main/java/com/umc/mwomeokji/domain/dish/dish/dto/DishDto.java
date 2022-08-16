@@ -1,4 +1,4 @@
-package com.umc.mwomeokji.domain.dish.dto;
+package com.umc.mwomeokji.domain.dish.dish.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +26,13 @@ public class DishDto {
 
     @Getter
     @RequiredArgsConstructor
+    public static class DishGetByCategoriesRequest {
+        @NotBlank(message = "카테고리는 null 이거나 빈 칸일 수 없습니다.")
+        private final String category;
+    }
+
+    @Getter
+    @RequiredArgsConstructor
     public static class DishNameResponse {
         private final Long id;
         private final String name;
@@ -36,6 +43,7 @@ public class DishDto {
     public static class DishDetailsResponse {
         private final Long id;
         private final String name;
+        private final String category;
         private final String imageUrl;
         private final String videoUrl1;
         private final String videoUrl2;

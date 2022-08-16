@@ -19,6 +19,9 @@ public enum ExceptionCodeAndDetails {
     // 2000: question
     NOT_FOUND_QUESTION(404, "2001", "해당하는 질문을 찾을 수 없습니다."),
 
+    // 3000: category
+    NOT_FOUND_CATEGORY(404, "3001", "해당하는 카테고리를 찾을 수 없습니다."),
+
 
     // 9000: AWS
     AMAZON_SERVICE_EXCEPTION(500, "9001", "요청은 정상적으로 전달되었으나, AWS 내부 문제로 작업이 처리되지 않았습니다."),

@@ -1,9 +1,8 @@
-package com.umc.mwomeokji.domain.dish.api;
+package com.umc.mwomeokji.domain.dish.dish.api;
 
-import com.umc.mwomeokji.domain.dish.application.DishService;
-import com.umc.mwomeokji.domain.dish.dto.DishDto.*;
+import com.umc.mwomeokji.domain.dish.dish.application.DishService;
+import com.umc.mwomeokji.domain.dish.dish.dto.DishDto.*;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +31,6 @@ public class DishController {
         return ResponseEntity.status(CREATED).body(dishService.saveDish(request, multipartFile));
     }
 
-    @RequestBody()
     @Operation(summary = "메뉴 이름 조회 API", description = "저장된 모든 메뉴의 이름을 조회하기 위한 API 입니다.")
     @GetMapping("/name")
     public ResponseEntity<List<DishNameResponse>> getAllDishesName() {
@@ -53,13 +51,19 @@ public class DishController {
 
     @Operation(summary = "메뉴 상세 정보 조회 API", description = "요청한 이름에 해당하는 메뉴의 상세 정보를 조회하기 위한 API 입니다.")
     @GetMapping
-    public ResponseEntity<DishDetailsResponse> getDishDetails(@Valid @RequestBody DishGetByNameRequest request) {
+    public ResponseEntity<DishDetailsResponse> getDishDetails(@Valid @RequestParam(value = "name") DishGetByNameRequest request) {
         return ResponseEntity.status(OK).body(dishService.getDishDetails(request));
     }
 
-    @Operation(summary = "랜덤 메뉴 조회 API", description = "임의의 한 메뉴의 상세 정보를 조회하기 위한 API 입니다.")
+    @Operation(summary = "(카테고리)랜덤 메뉴 조회 API",
+            description = "카테고리와 함께 요청하면, 카테고리에 해당하는 임의의 한 메뉴의 상세 정보를 조회합니다." +
+                          "그렇지 않다면, 임의의 한 메뉴의 상세 정보를 조회합니다.")
     @GetMapping("/random")
-    public ResponseEntity<DishDetailsResponse> getDishRandom() {
-        return ResponseEntity.status(OK).body(dishService.getDishRandom());
+    public ResponseEntity<DishDetailsResponse> getDishCategoriesRandom(
+            @Valid @RequestParam(value = "category", required = false) List<DishGetByCategoriesRequest> request) {
+        if (request == null) {
+            return ResponseEntity.status(OK).body(dishService.getDishRandom());
+        }
+        return ResponseEntity.status(OK).body(dishService.getDishCategoriesRandom(request));
     }
 }

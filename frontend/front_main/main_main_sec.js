@@ -233,6 +233,7 @@ function includeHTML() {
       }
     }
   }
+
   
   
   function clickScroll(){
@@ -251,5 +252,4 @@ function includeHTML() {
     else if (y>450){
         // location.href='random_category_sec.html' 여기에 랜덤 html 연결
     }
-
   }

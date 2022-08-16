@@ -30,6 +30,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
 
 	// Lombok
 	compileOnly 'org.projectlombok:lombok'
@@ -61,4 +62,9 @@ task copySubmodule(type: Copy){
 	from '../2022-mwomeokji-secret'
 	include '*.yml'
 	into './src/main/resources'
+}
+
+// disable plain.jar
+jar {
+	enabled = false
 }

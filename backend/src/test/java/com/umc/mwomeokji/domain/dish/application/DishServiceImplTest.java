@@ -1,10 +1,12 @@
 package com.umc.mwomeokji.domain.dish.application;
 
-import com.umc.mwomeokji.domain.dish.dao.DishRepository;
-import com.umc.mwomeokji.domain.dish.domain.Dish;
-import com.umc.mwomeokji.domain.dish.dto.DishDto;
-import com.umc.mwomeokji.domain.dish.dto.DishMapper;
-import com.umc.mwomeokji.domain.dish.exception.NotFoundDishException;
+import com.umc.mwomeokji.domain.dish.category.domain.Category;
+import com.umc.mwomeokji.domain.dish.dish.application.DishServiceImpl;
+import com.umc.mwomeokji.domain.dish.dish.dao.DishRepository;
+import com.umc.mwomeokji.domain.dish.dish.domain.Dish;
+import com.umc.mwomeokji.domain.dish.dish.dto.DishDto;
+import com.umc.mwomeokji.domain.dish.dish.dto.DishMapper;
+import com.umc.mwomeokji.domain.dish.dish.exception.NotFoundDishException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -43,8 +45,8 @@ class DishServiceImplTest {
     @Test
     void get_all_dishes_name() {
         // given
-        Dish dish1 = Dish.builder().name("마라탕").build();
-        Dish dish2 = Dish.builder().name("피자").build();
+        Dish dish1 = Dish.builder().name("마라탕").category(Category.builder().category("중식").build()).build();
+        Dish dish2 = Dish.builder().name("피자").category(Category.builder().category("양식").build()).build();
         List<Dish> dishList = Stream.of(dish1, dish2).collect(Collectors.toList());
         given(dishRepository.findAll()).willReturn(dishList);
 
@@ -63,6 +65,7 @@ class DishServiceImplTest {
         // given
         Dish dish = Dish.builder()
                 .name("오코노미야키")
+                .category(Category.builder().category("일식").build())
                 .imageUrl("대충 오코노미야키 이미지")
                 .videoUrl1("오코노미야키 영상 1")
                 .videoUrl2("오코노미야키 영상 2")
@@ -75,6 +78,7 @@ class DishServiceImplTest {
 
         // then
         assertThat(dishDetailsResponse.getName()).isEqualTo(dish.getName());
+        assertThat(dishDetailsResponse.getCategory()).isEqualTo(dish.getCategory().getCategory());
         assertThat(dishDetailsResponse.getImageUrl()).isEqualTo(dish.getImageUrl());
         assertThat(dishDetailsResponse.getVideoUrl1()).isEqualTo(dish.getVideoUrl1());
         assertThat(dishDetailsResponse.getVideoUrl2()).isEqualTo(dish.getVideoUrl2());

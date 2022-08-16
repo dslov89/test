@@ -3,7 +3,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-  
+
     /*
     font-family: 'NanumSquareAcb';
     font-family: 'NanumSquareAceb';
@@ -121,7 +121,11 @@
     height:8.5rem;
     position: relative;
     z-index: 8;
+
+
     background-color:white;
+
+
 }
 
 

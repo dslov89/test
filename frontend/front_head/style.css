@@ -92,7 +92,7 @@ ul.nav_menu_container {
 ul.nav_menu_container > div {
   display: inline-block;
   height: 100%;
-  width: 90px;
+  width: 95px;
   align-items: center;
   margin: 0 5px;
 }
@@ -116,8 +116,8 @@ ul.nav_menu_container > div:hover > li {
 ul.nav_menu_container > div > li ul.submenu {
   display: none;
   position: absolute;
-  top: 49px;
-  left: -26px;
+  top: 48.4px;
+  left: -23px;
   z-index: 1;
   color: #646464;
   font-size: 14px;
@@ -146,6 +146,11 @@ ul.nav_menu_container > div > li ul.submenu > li:hover {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-bottom: 1px solid #9b9b9b;
+}
+
+#nav_hr {
+  border: 0;
+  border-top: 1px solid #9b9b9b;
 }
 
 /* footer */
@@ -204,6 +209,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .nav_start span {
+    display: none;
+  }
+
   .nav_end {
     display: none;
   }

@@ -1,6 +1,6 @@
-package com.umc.mwomeokji.domain.dish.application;
+package com.umc.mwomeokji.domain.dish.dish.application;
 
-import com.umc.mwomeokji.domain.dish.dto.DishDto.*;
+import com.umc.mwomeokji.domain.dish.dish.dto.DishDto.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -18,5 +18,7 @@ public interface DishService {
     DishesCountResponse getDishesCount();
 
     DishDetailsResponse getDishRandom();
+
+    DishDetailsResponse getDishCategoriesRandom(List<DishGetByCategoriesRequest> request);
 
 }

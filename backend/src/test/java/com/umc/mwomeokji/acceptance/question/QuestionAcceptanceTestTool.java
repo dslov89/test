@@ -1,12 +1,9 @@
 package com.umc.mwomeokji.acceptance.question;
 
-import com.umc.mwomeokji.domain.dish.domain.Dish;
 import com.umc.mwomeokji.domain.question.dao.QuestionRepository;
 import com.umc.mwomeokji.domain.question.domain.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class QuestionAcceptanceTestTool {

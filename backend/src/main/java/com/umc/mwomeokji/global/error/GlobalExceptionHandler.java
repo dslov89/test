@@ -1,6 +1,5 @@
 package com.umc.mwomeokji.global.error;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.umc.mwomeokji.global.error.exception.BusinessException;
 import com.umc.mwomeokji.global.error.exception.ExceptionCodeAndDetails;
 import org.springframework.http.ResponseEntity;

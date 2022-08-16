@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# secrets #
+application-aws.yml
+application-prod.yml

@@ -1,4 +1,4 @@
-package com.umc.mwomeokji.domain.dish.exception;
+package com.umc.mwomeokji.domain.dish.dish.exception;
 
 import com.umc.mwomeokji.global.error.exception.BusinessException;
 

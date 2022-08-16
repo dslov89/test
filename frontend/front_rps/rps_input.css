@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+back_button {
+  position: relative;
+  margin-right: 65vw;
+  margin-top: 2vh;
+}
+
+.image {
+  background-color: white;
+  border: 0ch;
+  text-align: center;
+}
+
+#num_container {
+  display: flex;
+  margin: 0 auto;
+  margin-top: -4vh;
+}
+
+#plate_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.3vh;
+}
+
+#num {
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-size: 1.875rem;
+  color: #494646;
+}
+
+#minus_button {
+  margin-right: 30px;
+}
+
+#plus_button {
+  margin-left: 30px;
+}
+
+#plate_container_hr {
+  width: 464px;
+  border: 0px;
+  border-top: 2px solid #e9e9e9;
+  margin: 0 auto;
+}
+
+#inputItem {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 5vh;
+}
+
+.item_box {
+  width: 240px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh auto;
+  flex-direction: column;
+}
+
+.item_container {
+  width: 220px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 25px;
+  background-color: #fffefb;
+  filter: drop-shadow(0px 2px 4px rgba(73, 70, 70, 0.2));
+  border: 1px solid #9b9b9b;
+}
+
+.rps_img {
+  margin: 0 auto;
+  padding-top: 24px;
+  width: 60px;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.rps_name {
+  margin: 0 auto;
+  margin-top: 18px;
+  background-color: transparent;
+  border: 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  width: 147px;
+  font-family: "NanumSquareAcr";
+  font-weight: 700;
+  font-size: 14px;
+  color: #666666;
+}
+
+.rps_name::placeholder {
+  font-family: "NanumSquareAcr";
+  font-weight: 700;
+  font-size: 14px;
+  color: #666666;
+}
+
+.rps_menu {
+  margin: 0 auto;
+  margin-top: 14px;
+  background-color: #f9f8ec;
+  border: 0;
+  border-radius: 50px;
+  height: 35px;
+  width: 146px;
+  text-align: center;
+  outline: none;
+  font-family: "NanumSquareAcr";
+  font-weight: 700;
+  font-size: 14px;
+  color: #494646;
+}
+
+.rps_menu::placeholder {
+  font-family: "NanumSquareAcr";
+  font-weight: 700;
+  font-size: 14px;
+  color: #494646;
+}
+
+.item_container button {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding-top: 23px;
+  padding-left: 210px;
+}
+
+.edit_img {
+  display: block;
+  visibility: hidden;
+}
+
+.check_img {
+  display: block;
+  margin-top: 16px;
+}
+
+#next_img {
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+}
+
+#top_button {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  display: none;
+  z-index: 9999;
+}

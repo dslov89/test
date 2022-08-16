@@ -1,0 +1,41 @@
+body {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+back_button {
+  position: relative;
+  margin-right: 65vw;
+  margin-top: 2vh;
+}
+
+.image {
+  background-color: white;
+  border: 0ch;
+  text-align: center;
+}
+
+#rps_loading_img {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+#rps_loading_text {
+  margin: 0 auto;
+  color: #666666;
+  font-weight: 400;
+  font-size: 2.68vh;
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  margin-top: 3vh;
+  font-family: "NanumSquareAcr";
+}

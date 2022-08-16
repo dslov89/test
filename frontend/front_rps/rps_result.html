@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rps</title>
+    <link rel="stylesheet" href="./rps_result.css" />
+    <link rel="stylesheet" href="../front_head/style.css" />
+    <script src="./rps_result.js"></script>
+    <script src="../front_head/includeHTML.js"></script>
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="container">
+      <div include-html="../front_head/nav.html"></div>
+      <back_button>
+        <button
+          type="button"
+          class="image"
+          onClick="location.href='./rps_input.html'"
+        >
+          <img
+            src="./img_rps/arrow_back.svg"
+            style="width: auto; height: 8vh"
+          />
+        </button>
+      </back_button>
+      <div>
+        <img id="rps" style="width: auto; height: 15vh" />
+      </div>
+      <div>
+        <img
+          id="rps_enjoy"
+          src="./img_rps/rps_result_enjoy.svg"
+          style="width: auto; height: 4vh"
+        />
+      </div>
+      <div id="img_container">
+        <img
+          src="./img_rps/rps_result_deco_left.svg"
+          style="width: auto; height: 23.5vh"
+        />
+        <div id="menu_box">
+          <div id="menu_container">
+            <img id="menu_img" src="./img_rps/rps_main_sec_logo.svg" />
+            <div id="menu"></div>
+            <img
+              src="./img_rps/rps_result_plate.svg"
+              style="width: auto; height: 15vh"
+            />
+          </div>
+        </div>
+        <img
+          src="./img_rps/rps_result_deco_right.svg"
+          style="width: auto; height: 23.5vh"
+        />
+      </div>
+      <div id="name"><span>승!</span></div>
+      <img
+        id="name_deco"
+        src="./img_rps/rps_result_winner_deco.svg"
+        style="width: auto; height: 3vh"
+      />
+      <share_button>
+        <button type="button" class="image">
+          <img
+            src="./img_rps/rps_result_share.svg"
+            style="width: auto; height: 8vh"
+          />
+        </button>
+      </share_button>
+    </div>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

@@ -16,8 +16,8 @@ window.onload = function () {
     ).innerHTML = `<div id="name">'${people}' <span>승!</span></div>`;
   }
 
-  if (localStorage.getItem("menuUrl") != null) {
-    var menuUrl = localStorage.getItem("menuUrl");
-    document.getElementById("menu_img").src = menuUrl;
-  }
+  // if (localStorage.getItem("menuUrl") != null) {
+  //   var menuUrl = localStorage.getItem("menuUrl");
+  //   document.getElementById("menu_img").src = menuUrl;
+  // }
 };

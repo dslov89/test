@@ -240,11 +240,11 @@ function includeHTML() {
     var ContainerElement = document.getElementById("main_main_sec_tut_scroll");
     var y = ContainerElement.scrollTop;
 
-    if (y>0&&y<150){
-        // location.href='random_category_sec.html' 여기에 스무고개 html 연결
+    if (y>=0&&y<150){
+        location.href='../front_twenty/twenty_main.html' //여기에 스무고개 html 연결
     }
     else if (y>=150&&y<300){
-        // location.href='random_category_sec.html' 여기에 가위바위보 html 연결
+        location.href='../front_rps/rps_main.html' //여기에 가위바위보 html 연결 
     }
     else if (y>=300&&y<450){
         // location.href='random_category_sec.html' 여기에 맛집 html 연결

@@ -1,0 +1,67 @@
+
+body{
+  height: 7vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  height: 10vh;
+display: flex;
+flex-direction: column;
+}
+cross_img{
+position: relative;
+right: 300px;
+top: 10px;
+}
+
+main_text {
+  margin-top: 10px; 
+  text-align: center;
+}
+
+small_text{
+  margin: 0 auto;
+  font-size: 14px;
+  width: 300px;
+  position: relative;
+  margin-top: 40px;
+  font-family: "NanumSquareAcr";
+  color: gray;
+}
+main_logo{
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+
+
+.image {
+  background-color: transparent;
+  border: 0ch;
+  text-align: center;
+
+  width: 10px;
+
+}
+
+#start_botton {
+  text-align: center;
+  /*width: 100%;*/
+  margin-bottom: 0px;
+  position: relative;
+  top: 50px;
+
+}
+
+#logo_word {
+  text-align: center;
+  /*width: 100%;*/
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}

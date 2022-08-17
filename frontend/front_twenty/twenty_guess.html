@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" con tent="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess</title>
+    <link rel="stylesheet" href="./twenty_guess.css">
+    <script src="./twenty_guess.js"> </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+      />
+    <script src="..\front_head\includeHTML.js"></script>
+    <link rel="stylesheet" href="..\front_head\style.css" />
+    <link rel="stylesheet" href="../front_head/style.css" />
+</head>
+
+
+<body>
+    <div include-html="..\front_head\nav.html"></div>
+    <script> includeHTML(); </script>
+    <div class="container">
+    
+        <!--상단 로고 오늘은 뭐먹지-->
+        
+        <top_botton>
+            <button type="button" class="image" id = "back_botton" onclick='count("minus"), guess_back()' onClick="history.back()" width="auto", height="40">
+                <img  src=".\img_file_twenty\twenty_guess_sec_arrow_back.svg" width="auto", height="50">
+            </button>
+    
+            <button type="button" class="image" id = "reset_botton" onClick="location.href='./twenty_main.html'";">
+                <img  src=".\img_file_twenty\twenty_guess_reset.svg" width="auto", height="50"> 
+            </button>
+        </top_botton>
+    
+        <number id='guess_number' style="font-family:'Montserrat', sans-serif">
+            00.
+        </number>
+        <number_bottom style="font-family: NanumSquareAcr">
+            질문 내용을 적어주세요
+        </number_bottom>
+        <guess_button>
+            <button_background>
+                <img  src=".\img_file_twenty\twenty_guess_guess_background.svg" width="auto", height="50">
+                <guess_text id='guess_text'>
+                    Q. 어떻게 하길 원하세요?
+                </guess_text>
+            </button_background>
+        </guess_button>
+    
+        <bar>
+            <img  src=".\img_file_twenty\twenty_guess_bar.svg" width="660">
+        </bar>
+    
+        <d>
+            <button type="button" class="image" class="guess_img" id = "guess_botton_a"
+                    onclick='start(), next_guess(),like(), count("plus")'>
+                <img class="botton_hover" src=".\img_file_twenty\twenty_guess_answer_background.svg" width="auto", height="50">
+                <answer_text style="position:absolute; left:130px; top:15px;">
+                    예
+                </answer_text>
+            </button>
+        </d>
+    
+    
+        <d>
+            <button type="button" class="image" class="guess_img" id = "guess_botton_b"
+                    onclick='start(), next_guess(), dislike(), count("plus")' >
+                <img class="botton_hover" src=".\img_file_twenty\twenty_guess_answer_background.svg" width="auto", height="50">
+                <answer_text style="position:absolute; left:115px; top:15px;">
+                    아니오
+                </answer_text>
+            </button>
+        </d>
+    
+        <d>
+            <button type="button" class="image" class="guess_img" id = "guess_botton_c"
+                     onclick='next_guess(), normal(), count("plus")'>
+                <img class="botton_hover" src=".\img_file_twenty\twenty_guess_answer_background.svg" width="auto", height="50">
+                <answer_text style="position:absolute; left:110px; top:15px;">
+                    상관없음
+                </answer_text>
+            </button>
+        </d>
+    
+
+    
+        <skip>
+            <button class="image"  id="skip_guess" onclick="choose()">
+                <img id="skipd" src=".\img_file_twenty\twenty_guess_choose_more.svg" width="800", height="auto">
+            </button>        
+        </skip>  
+
+
+        
+    
+    </div>
+    
+
+</body>
+<!--
+        <e onclick="changeimage(),choose() ">
+            <img id="skipd" src=".\img_file_twenty\twenty_guess_choose_more.svg"> 
+        </e>      
+-->

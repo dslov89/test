@@ -2,6 +2,7 @@ package com.umc.mwomeokji.global.error;
 
 import com.umc.mwomeokji.global.error.exception.BusinessException;
 import com.umc.mwomeokji.global.error.exception.ExceptionCodeAndDetails;
+import org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
@@ -14,6 +15,13 @@ import static org.springframework.http.HttpStatus.*;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    // request 의 파일 용량이 10MB 를 초과하는 경우, 혹은 백엔드로의 request 용량이 20MB 를 초과하는 경우 발생
+    @ExceptionHandler(SizeLimitExceededException.class)
+    public ResponseEntity<ExceptionResponse> handleSizeLimitExceededException(SizeLimitExceededException e) {
+        ExceptionResponse response = ExceptionResponse.create(ExceptionCodeAndDetails.FILE_SIZE_EXCEPTION);
+        return ResponseEntity.status(BAD_REQUEST).body(response);
+    }
 
     // @Valid 에 대한 binding error 발생 시 발생
     @ExceptionHandler(MethodArgumentNotValidException.class)

@@ -12,6 +12,7 @@ public enum ExceptionCodeAndDetails {
     INVALID_JSON_FORMAT(400, "0004", "유효하지 않은 json 형식입니다. 입력을 확인해주세요."),
     FILE_IO_EXCEPTION(500, "0005", "파일 입출력 과정에서 에러가 발생했습니다."),
     FILE_EXTENSION_EXCEPTION(400, "0006", "올바르지 않은 파일 확장자입니다."),
+    FILE_SIZE_EXCEPTION(400, "0007", "파일 용량은 최대 10MB, 백엔드로의 request 최대 용량은 20MB 를 넘을 수 없습니다."),
 
     // 1000: dish
     NOT_FOUND_DISH(404, "1001", "해당하는 메뉴를 찾을 수 없습니다."),

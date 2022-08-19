@@ -186,7 +186,7 @@ function hrefLink() {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.imageUrl);
+      console.log(data);
       localStorage.setItem("menuUrl", data.imageUrl);
     })
     .catch(function (error) {

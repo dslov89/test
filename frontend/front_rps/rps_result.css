@@ -45,7 +45,7 @@ back_button {
 
 #menu_img {
   margin: 0 auto;
-  border-radius: 40%;
+  border-radius: 50px;
   border: none;
   object-fit: cover;
   width: 150px;

@@ -16,8 +16,16 @@ window.onload = function () {
     ).innerHTML = `<div id="name">'${people}' <span>승!</span></div>`;
   }
 
-  // if (localStorage.getItem("menuUrl") != null) {
-  //   var menuUrl = localStorage.getItem("menuUrl");
-  //   document.getElementById("menu_img").src = menuUrl;
-  // }
+  var menuImg = localStorage.getItem("menuUrl");
+  console.log(menuImg);
+
+  if (menuImg === undefined || menuImg == null) {
+    console.log(menuImg);
+    document.getElementById("menu_img").src = src =
+      "./img_rps/rps_default_img.svg";
+  } else {
+    console.log(menuImg);
+    var menuUrl = menuImg;
+    document.getElementById("menu_img").src = menuUrl;
+  }
 };

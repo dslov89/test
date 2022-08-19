@@ -1,4 +1,4 @@
-name: backend pull request test to develop branch
+name: backend PR test
 
 on:
   pull_request:
@@ -6,6 +6,7 @@ on:
       - develop
     paths:
       - "backend/**"
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +19,7 @@ jobs:
         distribution: 'temurin'
         
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: chmod +x ./gradlew
 
     - name: Test with Gradle
       run: ./gradlew test

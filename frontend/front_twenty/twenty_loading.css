@@ -41,10 +41,10 @@ text{
     top: 30px;
 }
 
-.loading{
+loading{
     position: relative;
     text-align: center;
-    right: 190px;
-    top: 50px;
+    left: 100px;
+    top: 100px;
 
 }

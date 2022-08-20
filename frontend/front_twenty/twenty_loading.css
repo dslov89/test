@@ -43,6 +43,8 @@ text{
 
 .loading{
     position: relative;
+    text-align: center;
+    right: 190px;
     top: 50px;
 
 }

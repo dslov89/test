@@ -11,6 +11,7 @@ function result(name){
     food_id = localStorage.getItem("food_code");
 
   }
+var food_img_code="";
 
 async function chose_succuess(food_id){
     food_id = localStorage.getItem("food_code");
@@ -21,7 +22,15 @@ async function chose_succuess(food_id){
     const data = await response.json();
     console.log(data.name);
     result(data.name);
-    var img_url = data.imageUrl;
-    document.getElementById("food_img").src= img_url;
+    food_img_code = data.imageUrl;
+    console.log(data.imageUrl);
+    input_img(food_img_code);
+
     }
+
+  function input_img(code){
+
+    var img_url = code;
+    document.getElementById("food_img").src= code;    
+  }
 chose_succuess(chose_food);

@@ -21,71 +21,41 @@ main_logo{
   
 }
   
-  #start_botton {
+
+#start_botton {
     text-align: center;
-    /*width: 100%;*/
     margin-bottom: 0px;
     position: relative;
-    bottom: 10px;
-  
+    bottom: -20px;
 }
   
 #logo_word {
     text-align: center;
-    /*width: 100%;*/
-    margin-top: 100px;
-    margin-bottom: 100px;
-  
 }
 
 tutorial{
-    position: relative;
-    top: 00px;
-    margin-bottom:250px;
-    text-align: center; 
-    /*
-    
-    max-height: 500px;
-    overflow: hidden;
-*/
-    
+    top: 50px;
+    margin-bottom:30px;
+    margin-top: 30px;
 }
 
-tutorial img{
-    position: absolute;
-    clip:rect(62px, 291px, 239px, 9px);
-    left: 618px;
-    
-    /*
-    
-    max-height: initial;
-    margin-top: -4.1%;
-    margin-bottom: -4.3%;
-    max-width: initial;
-
-    transform: translate(10, 50);
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    margin: auto;
-    position: absolute;
-    */
-}
 .gif{
-    border-radius:132px;
+    border-radius:20px;
+    text-align: center;
 }
 
 #back_botton{
-    position: relative;
+    position: relative; 
     right: 470px;
     top: 20px;
     border: 0ch;
 }
 
+
 texts{
     position: relative;
-    margin: 50px;
     font-family: "NanumSquareAcr";
     font-size: 14;
-    margin-bottom:100px;
+    margin-bottom:50px;
+
 }

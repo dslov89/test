@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twenty_loading</title>
+    <link rel="stylesheet" href="./twenty_tutorial.css">
+    <script src="./twenty_tutorial.js"> </script>
+    <!--아래부분은 추가된 부분-->
+    
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+      />
+    <script src="..\front_head\includeHTML.js"></script>
+    <link rel="stylesheet" href="..\front_head\style.css" />
+
+</head>
+<div include-html="..\front_head\nav.html"></div>
+<script> includeHTML(); </script>
+
+
+<body>
+    <top_botton>
+        <button type="button" class="image" id = "back_botton" onClick=history.back();>
+            <img src="./img_file_twenty/twenty_guess_sec_arrow_back.svg" width="auto", height="50">
+        </button>
+    </top_botton>
+
+    <logo>
+        <img src="./img_file_twenty/twenty_main_logo_new.svg">
+    </logo>
+
+    <tutorial>
+        <img class="gif" src="./img_file_twenty/twenty_tutorial_gif.gif" width="300", height="auto" style="border-top: 1000px;">
+    </tutorial>
+
+    <texts>
+        질문에 대한 답을 골라주세요!
+        <br>
+        너무 오래 생각하지 말고 선택해주세요:)
+    </texts>
+
+    <start_button>
+        <buttonype="button" class="image" id = "start_botton" onClick="location.href='./twenty_guess.html'">
+        <img  src=".\img_file_twenty\twenty_main_sec_botton.svg" width="auto", height="70">
+        </button> 
+    </start_button>
+</body>
+

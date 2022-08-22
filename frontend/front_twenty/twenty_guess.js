@@ -149,8 +149,19 @@ function dislike(){
   
 }
 
-function nurmal(){
-  console.log(arr);
+function normal(){
+  guess_order=guess_order+1;
+  if(clicked_count<=1){
+
+    console.log(arr);
+    return;
+  }
+  else{
+    console.log(arr);
+    choose_record[guess_order]=2;
+    console.log(choose_record);
+  }
+  
 }
 
 function guess_back(){
@@ -171,6 +182,14 @@ function guess_back(){
     for(smallkey in food_data[rst[guess_order-2]].dishes){
       arr[food_data[rst[guess_order-2]].dishes[smallkey].id]+=1;
     }
+    guessElement.innerText = food_data[rst[guess_order-2]].question;
+    console.log(arr);
+    choose_record[guess_order]=0;
+    console.log(choose_record);
+    guess_order-=1;
+  }
+
+  else if(choose_record[guess_order]==2){
     guessElement.innerText = food_data[rst[guess_order-2]].question;
     console.log(arr);
     choose_record[guess_order]=0;
@@ -233,7 +252,7 @@ function count(type)  {
   const resultElement = document.getElementById('guess_number');
   // 현재 화면에 표시된 값
   let number = resultElement.innerText;
-  
+
   if(type === 'plus') {
     number = parseInt(number) + 1;
 

@@ -42,7 +42,7 @@ function getScrollPoistion() {
     var img3 = document.getElementById("main_main_sec_tut_img3");
     var img4 = document.getElementById("main_main_sec_tut_img4");
     
-    if (y>=0&&y<150){
+    if (y>0&&y<150){
         addBoxCss(box1,0);
         addTextCss(text1,0);
         removeBoxCss(box2);
@@ -240,7 +240,7 @@ function includeHTML() {
     var ContainerElement = document.getElementById("main_main_sec_tut_scroll");
     var y = ContainerElement.scrollTop;
 
-    if (y>=0&&y<150){
+    if (y>0&&y<150){
         location.href='../front_twenty/twenty_main.html' //여기에 스무고개 html 연결
     }
     else if (y>=150&&y<300){
@@ -252,6 +252,4 @@ function includeHTML() {
     else if (y>450){
         // location.href='random_category_sec.html' 여기에 랜덤 html 연결
     }
-
   }
-

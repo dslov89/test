@@ -4,7 +4,6 @@
     padding:0;
     box-sizing:border-box;
 
-    
 
     /*
     font-family: 'NanumSquareAcb';
@@ -124,7 +123,9 @@
     position: relative;
     z-index: 8;
 
+
     background-color:white;
+
 
 }
 

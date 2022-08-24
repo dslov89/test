@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMG-recipe</title>
+    <link rel="stylesheet" href="../front_head/style.css" />
+    <link rel="stylesheet" href="recipe.css" />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+    />
+    <script src="../front_head/includeHTML.js"></script>
+    <script src="recipe.js"></script>
+</head>
+<body>
+    <div include-html="../front_head/nav.html"></div>
+    <div class="left_side"></div>
+    <div class="right_side"></div>
+    <button type ="button" id="backbutton"  onclick="history.back()">
+        <img id="backbutton_img" src="img_recipe/recipe_backbutton.svg">
+    </button>
+    <div class="recipe">
+        <div class="recipe_logo">
+            <img id="recipe_logo1" src = "img_recipe/recipe_logo.svg">
+            <img id="recipe_logo2" src = "img_recipe/recipe_logo2.svg">
+        </div>
+        <div class="recipe_recipebutton">
+            <button type="button" class="recipe_button" id ="recipe_button1" onclick="button(2,3,4,1)">
+                <h1 id ="recipe_button1_text" class="recipe_button_text">레시피</h1>
+                <h2 id ="recipe_button1_num" class="recipe_button_num">1</h2>
+            </button>
+            <button type="button" class="recipe_button1" id ="recipe_button2" onclick="button(1,3,4,2)">
+                <h1 id ="recipe_button2_text" class="recipe_button_text1">레시피</h1>
+                <h2 id ="recipe_button2_num" class="recipe_button_num1">2</h2>
+            </button>
+            <button type="button" class="recipe_button1" id ="recipe_button3" onclick="button(1,2,4,3)">
+                <h1 id ="recipe_button3_text" class="recipe_button_text1">레시피</h1>
+                <h2 id ="recipe_button3_num" class="recipe_button_num1">3</h2>
+            </button>
+            <button type="button" class="recipe_button1" id ="recipe_button4" onclick="button(1,2,3,4)"> 
+                <h1 id ="recipe_button4_text" class="recipe_button_text1">레시피</h1>
+                <h2 id ="recipe_button4_num" class="recipe_button_num1">4</h2>
+            </button> 
+        </div>
+        <img id="recipe_line" src="img_recipe/recipe_line.svg">
+        <div class="recipe_textimg">
+            <div class="recipe_text">
+                <h3 class="recipe_text1">오늘 저녁은 여기</h3>
+                <h4 class="recipe_text2">해물 부추전</h4>
+                <img id="recipe_line2" src ="img_recipe/recipe_line2.svg">
+            </div>
+            <img id="recipe_img" src="img_recipe/recipe_img.svg">
+            <img id="recipe_book" src="img_recipe/recipe_bookmark.svg" onclick = "bookMark(recipe_book)">
+        </div>
+        <ul class="recipe_list">
+            <li class ="recipe_recipelist">
+                <h5 class="recipe_list_num">1</h5>
+                <div class="recipe_list_textback">
+                    <h6 class="recipe_list_text" id="recipe_list_text1">야채와 해물을 준비합니다.</h6>
+                </div>
+            </li>
+            <div class="recipe_list_line"></div>
+            <li class ="recipe_recipelist">
+                <h5 class="recipe_list_num">2</h5>
+                <div class="recipe_list_textback">
+                    <h6 class="recipe_list_text" id="recipe_list_text2">밀가루와 야채와 해물을 섞어 반죽을 만듭니다.</h6>
+                </div>
+            </li>
+            <div class="recipe_list_line"></div>
+            <li class ="recipe_recipelist">
+                <h5 class="recipe_list_num">3</h5>
+                <div class="recipe_list_textback">
+                    <h6 class="recipe_list_text" id="recipe_list_text3">후라이팬에 기름을 둘러 반죽을 예쁘게 부칩니다.</h6>
+                </div>    
+            </li>
+            <div class="recipe_list_line"></div>
+            <li class ="recipe_recipelist">
+                <h5 class="recipe_list_num">4</h5>
+                <div class="recipe_list_textback">
+                    <h6 class="recipe_list_text" id="recipe_list_text4">맛있게 먹습니다.</h6>
+                </div>
+            </li>
+        </ul>          
+    </div>
+    <div class="recipe_side">
+        <div class="recipe_side1">
+            <h2 class="recipe_side_text">추천이</h2>
+            <h2 class="recipe_side_text">마음에 드셨나요?</h2>
+            <div class="stars">
+                <img class="recipe_star" id = "star1" src="img_recipe/recipe_star.svg" onclick="star(1)">
+                <img class="recipe_star" id = "star2" src="img_recipe/recipe_star.svg" onclick="star(2)">
+                <img class="recipe_star" id = "star3" src="img_recipe/recipe_star.svg" onclick="star(3)">
+                <img class="recipe_star" id = "star4" src="img_recipe/recipe_star.svg" onclick="star(4)">
+                <img class="recipe_star" id = "star5" src="img_recipe/recipe_star.svg" onclick="star(5)">
+            </div>
+            
+            <button type="button" id="submit_button" onclick="submit()">submit</button>
+        </div>
+        <h1 class="recipe_side2">메뉴 커스텀</h1>
+        <h1 class="recipe_side3">맛집 목록</h1>
+        <button type="button" id="recipe_scroll">
+            <img class="recipe_scroll2" src="img_recipe/recipe_scroll.svg">
+        </button>
+    </div>
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>

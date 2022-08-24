@@ -233,7 +233,6 @@ function includeHTML() {
       }
     }
   }
-
   
   
   function clickScroll(){
@@ -245,6 +244,7 @@ function includeHTML() {
     }
     else if (y>=150&&y<300){
         location.href='../front_rps/rps_main.html' //여기에 가위바위보 html 연결 
+
     }
     else if (y>=300&&y<450){
         // location.href='random_category_sec.html' 여기에 맛집 html 연결
@@ -252,4 +252,6 @@ function includeHTML() {
     else if (y>450){
         // location.href='random_category_sec.html' 여기에 랜덤 html 연결
     }
-  }
+
+}
+

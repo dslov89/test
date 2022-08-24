@@ -233,11 +233,13 @@ function includeHTML() {
       }
     }
   }
+
   
   
   function clickScroll(){
     var ContainerElement = document.getElementById("main_main_sec_tut_scroll");
     var y = ContainerElement.scrollTop;
+
 
     if (y>0&&y<150){
         location.href='../front_twenty/twenty_main.html' //여기에 스무고개 html 연결
@@ -253,5 +255,7 @@ function includeHTML() {
         // location.href='random_category_sec.html' 여기에 랜덤 html 연결
     }
 
+
 }
+
 

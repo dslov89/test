@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+  
+  }
+
+.image {
+    border: 0ch;
+    margin: 0px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+}
+
+#logo_word{
+    position: relative;
+    top: 50px;
+}
+
+#back_button{
+    position: relative;
+    right: 430px;
+    top: 30px;
+}
+food_text{
+    color:orange;
+    position: relative;
+    top: 50px;
+    margin-top: 60px;
+    font-family: "NanumSquareAcr";
+    font-size: 48px;
+}
+
+wave{
+    position: relative;
+    top: 5px;
+}
+
+food_img{
+    position: relative;
+    top: 70px;
+    margin: 0px;
+    margin-bottom: 0px;
+}
+
+connect_top{
+    position: relative;
+    bottom: 0px;
+    top: 70px;
+}
+
+connect_line{
+    position: relative;
+    height: 600px;
+}
+button{
+    border: 0px;
+    margin: 0px;
+}
+bottom_button{
+    vertical-align: middle;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    width: 90%;
+    display: flex;
+}
+
+#left{
+    flex: 1;
+
+    border: 0px;
+    margin: 1px;
+    position: relative;
+    left: 200px;  
+}
+
+#right{
+    flex: 1;
+
+    border: 0px;
+    margin: 1px;
+
+    position: relative;
+    left: 00px;
+}
+
+#go_top{
+    position: relative;
+    left: 700px;
+}
+
+.yellow_button{
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    top: 1054px;
+    left: 979px;
+    opacity:0.5;
+    background-color: transparent;
+}
+
+.again{
+    border:0px;
+    position: relative;
+    background-color: transparent;
+    left: 1090px;
+    bottom:140px;
+    width: 100px;
+}

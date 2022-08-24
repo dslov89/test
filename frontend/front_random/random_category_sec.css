@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+   
+  }
+
+#random_category_sec_back{
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    top:7.625rem;
+    left: 21.75rem;
+}
+
+.random_category_sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.random_category_sec_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.random_category_sec_menu1{
+ 
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  #666666;
+    margin-top: 40px;
+
+    width: 267px;
+    height: 77px;
+
+}
+
+.random_category_sec_menu2{
+    width: 420px;
+    height: 22px;
+   
+}
+
+.random_category_sec_cat{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.random_category_sec_cat1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.random_category_sec_check{
+    width: 40px;
+    height: 40px;
+    margin-top: 42px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.random_category_sec_check2{
+    width: 40px;
+    height: 40px;
+    margin-top: 28px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.random_category_sec_cat_img1{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    bottom: 0px;
+    z-index: 1;
+    margin-top: -19px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.random_category_sec_cat_text{
+    font-family: 'NanumSquareAceb';
+    font-size: 16px;
+    color: #494646;
+    position: relative;
+    margin-top: 8px;
+   
+}
+
+.random_category_sec_cat2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+}
+
+#random_category_sec_start{
+    width: 220px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #9b9b9b;
+    border: 0px;
+    font-family: 'NanumSquareAcb';
+    font-size: 20px;
+    color: #FFFEFB;
+    margin-top: 54px;
+    position: relative;
+ 
+}
+
+

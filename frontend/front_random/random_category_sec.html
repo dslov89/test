@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMG</title>
+    <link rel="stylesheet" href="../front_head/style.css" />
+    <link rel="stylesheet" href="random_category_sec.css" />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+    />
+    <script src="../front_head/includeHTML.js"></script>
+    <script src="random_category_sec.js"></script>
+  </head>
+
+  <body>
+    <div include-html="../front_head/nav.html"></div>
+
+    <button type = "button" id="random_category_sec_back" onclick="history.back()">
+        <img id="random_category_sec_back_img" src="img_random/random_category_sec_back.svg" alt="back">
+    </button>
+    <div class="random_category_sec">
+    <div class="random_category_sec_menu">
+        <h1 class="random_category_sec_menu1">MENU</h1>
+        <img class="random_category_sec_menu2" src="img_random/random_category_sec_menu.svg" alt ="back">
+    </div>
+    <div class="random_category_sec_cat">
+        <div class="random_category_sec_cat1" onclick="check(1)">
+            <img class = "random_category_sec_check" id = "random_category_sec_cat_check_fast" src ="img_random/random_category_sec_check.svg" alt ="check">
+            <img class="random_category_sec_cat_img1"   src = "img_random/random_category_sec_cat1.svg" alt="fastfood">
+            <h2 class="random_category_sec_cat_text">한식</h2>    
+        </div>
+        <div class="random_category_sec_cat1" onclick="check(2)">
+            <img class = "random_category_sec_check" id = "random_category_sec_cat_check_jap" src ="img_random/random_category_sec_check.svg" alt ="check">
+            <img class="random_category_sec_cat_img1" src = "img_random/random_category_sec_cat2.svg" alt="Japanese">
+            <h2 class="random_category_sec_cat_text">일식</h2>    
+        </div>
+        <div class="random_category_sec_cat1" onclick="check(3)">
+            <img class = "random_category_sec_check" id = "random_category_sec_cat_check_wes" src ="img_random/random_category_sec_check.svg" alt ="check">
+            <img class="random_category_sec_cat_img1"src = "img_random/random_category_sec_cat3.svg" alt="Western">
+            <h2 class="random_category_sec_cat_text">양식</h2>    
+        </div>
+    </div>
+    <div class="random_category_sec_cat">
+        <div class="random_category_sec_cat2" onclick="check(4)">
+            <img class = "random_category_sec_check2" id = "random_category_sec_cat_check_kor" src ="img_random/random_category_sec_check.svg" alt ="check">
+            <img class="random_category_sec_cat_img1" src = "img_random/random_category_sec_cat4.svg" alt="Korean">
+            <h2 class="random_category_sec_cat_text">기타</h2>    
+        </div>
+        
+        <div class="random_category_sec_cat2" onclick="check(5)">
+            <img class = "random_category_sec_check2" id = "random_category_sec_cat_check_chi" src ="img_random/random_category_sec_check.svg" alt ="check">
+            <img class="random_category_sec_cat_img1" src = "img_random/random_category_sec_cat5.svg" alt="Chinese">
+            <h2 class="random_category_sec_cat_text">중식</h2>    
+        </div>
+        <div class="random_category_sec_cat2" onclick="check(6)">
+            <img class="random_category_sec_check2" id = "random_category_sec_cat_check_all" src ="img_random/random_category_sec_check.svg" alt ="check">
+            <img class="random_category_sec_cat_img1" src = "img_random/random_category_sec_cat6.svg" alt="ALL">
+            <h2 class="random_category_sec_cat_text">ALL</h2>    
+        </div>
+    </div>
+    <button type ="button"  id="random_category_sec_start" onclick="choose_random()" >다음</button>
+    <!-- onclick="location.href='main_main_sec.html'" html 경로 바꿔서 추가하기 -->
+    </div>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

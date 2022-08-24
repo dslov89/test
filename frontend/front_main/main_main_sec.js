@@ -252,7 +252,7 @@ function includeHTML() {
         // location.href='random_category_sec.html' 여기에 맛집 html 연결
     }
     else if (y>450){
-        // location.href='random_category_sec.html' 여기에 랜덤 html 연결
+        location.href='../front_random/ran_start.html' //여기에 랜덤 html 연결
     }
 
 

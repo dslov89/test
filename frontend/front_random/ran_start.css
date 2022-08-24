@@ -17,28 +17,6 @@
 }
 
 
-.ran_start_sec_exitbutton
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    margin-top: 122px;
-    margin-right: 800px;
-    background: none;
-    border: 0;
-    
-}
-
-#ran_start_sec_exit_button_img
-{
-    height: 50px;
-    width: 50px;
-
-}
-
 .ran_start_sec_title
 {
     display: flex;
@@ -47,7 +25,7 @@
     align-items: center;
     height: 50px;
     width: 160px;
-    margin-top: 5px;
+    margin-top: 50px;
 }
 
 #ran_start_sec_title_img
@@ -81,6 +59,7 @@
     align-items: center;
     font-size: 50%;
     margin-top: 38px;
+    font-family: 'NanumSquareAcb';
 }
 
 #ran_start_sec_mainphrase_text1

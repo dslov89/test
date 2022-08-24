@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>random_start_page</title>
 
+    <link rel="stylesheet" href="../front_head/style.css" />
+    <script src="../front_head/includeHTML.js"></script>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <link rel="stylesheet" href="./ran_start.css">
 </head>
 
 <body>
+    <div include-html="../front_head/nav.html"></div>
+
     <div class="ran_start_sec">
-        <button class="ran_start_sec_exitbutton" type="button" onClick="">
-            <img id="ran_start_sec_exit_button_img" src="./img_random/ran_start_exit_Button.svg" alt="exit button">
-        </button>
         <div class="ran_start_sec_title">
             <img id="ran_start_sec_title_img" src="./img_random/ran_start_slang.svg" alt="ran title">
         </div>
@@ -27,11 +29,13 @@
             <h1 id ="ran_start_sec_mainphrase_text2">두구두구두구두구두구두구</h1>
         </div>
 
-        <button class="ran_start_sec_startbutton" type="button" onClick="">
+        <button class="ran_start_sec_startbutton" type="button" onClick="location.href='./random_category_sec.html'">
             <img id="ran_start_sec_start_button_img" src="./img_random/Button_Start.svg" alt="start button">
         </button>
 
     </div>
-    
+    <script>
+        includeHTML();
+    </script>
 </body>
 </html>

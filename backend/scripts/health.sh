@@ -15,7 +15,7 @@ sleep 10
 for RETRY_COUNT in {1..10}
 do
   RESPONSE=$(curl -s http://localhost:${IDLE_PORT}/api/health)
-  UP_COUNT=$(echo ${RESPONSE} | grep 'OK!' | wc -1)
+  UP_COUNT=$(echo ${RESPONSE} | grep 'OK!' | wc -l)
 
   if [ ${UP_COUNT} -ge 1 ]; then
     echo "> Health check 성공"

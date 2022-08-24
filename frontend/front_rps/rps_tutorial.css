@@ -10,20 +10,14 @@ body {
   flex-direction: column;
 }
 
-back_button {
-  position: relative;
-  margin-right: 65vw;
-  margin-top: 2vh;
-}
-
 main_text {
   margin: 0 auto;
-  margin-top: -4vh;
+  margin-top: 7vh;
   text-align: center;
 }
 
 .image {
-  background-color: white;
+  background-color: transparent;
   border: 0ch;
   text-align: center;
 }
@@ -49,5 +43,9 @@ small_text {
   text-align: center;
   position: relative;
   margin-top: 1vh;
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
+}
+
+#start_botton:hover {
+  cursor: pointer;
 }

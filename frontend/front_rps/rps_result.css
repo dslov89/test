@@ -10,20 +10,14 @@ body {
   flex-direction: column;
 }
 
-back_button {
-  position: relative;
-  margin-right: 65vw;
-  margin-top: 2vh;
-}
-
 .image {
-  background-color: white;
+  background-color: transparent;
   border: 0ch;
   text-align: center;
 }
 
 #rps {
-  margin-top: -7vh;
+  margin-top: 4vh;
   margin-bottom: 1vh;
 }
 
@@ -81,5 +75,11 @@ back_button {
 }
 
 share_button {
-  margin: 3vh auto;
+  margin: 0 auto;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
+
+share_button img:hover {
+  cursor: not-allowed;
 }

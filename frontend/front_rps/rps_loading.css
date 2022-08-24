@@ -10,12 +10,6 @@ body {
   flex-direction: column;
 }
 
-back_button {
-  position: relative;
-  margin-right: 65vw;
-  margin-top: 2vh;
-}
-
 .image {
   background-color: white;
   border: 0ch;
@@ -25,7 +19,7 @@ back_button {
 #rps_loading_img {
   margin: 0 auto;
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 25vh;
 }
 
 #rps_loading_text {

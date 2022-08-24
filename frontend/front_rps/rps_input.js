@@ -9,6 +9,8 @@ function addItem() {
     .querySelector("#next_img")
     .setAttribute("src", "./img_rps/next_button_gray.svg");
   document.getElementById("next_img").removeAttribute("onClick");
+  document.getElementById("next_img").removeAttribute("onClick");
+  $("#next_img").css("cursor", "default");
 
   const arr = Array.from(Array(value), () => Array(2).fill(null));
 
@@ -115,6 +117,7 @@ function blockNext() {
       .querySelector("#next_img")
       .setAttribute("src", "./img_rps/next_button_gray.svg");
     document.getElementById("next_img").removeAttribute("onClick");
+    $("#next_img").css("cursor", "default");
   } else {
     finishPage();
   }
@@ -156,7 +159,10 @@ function finishPage() {
     document
       .querySelector("#next_img")
       .setAttribute("src", "./img_rps/next_button.svg");
-    document.getElementById("next_img").setAttribute("onClick", "hrefLink();");
+    document
+      .getElementById("next_img")
+      .setAttribute("onClick", "connect_server();");
+    $("#next_img").css("cursor", "pointer");
     let randNum = Math.floor(Math.random() * value);
     winner_name = document.getElementsByClassName("rps_name")[randNum].value;
     winner_menu = document.getElementsByClassName("rps_menu")[randNum].value;
@@ -169,7 +175,7 @@ function finishPage() {
   }
 }
 
-function hrefLink() {
+async function connect_server() {
   // 서버 연결
   let params = {
     name: winner_menu,
@@ -179,25 +185,22 @@ function hrefLink() {
     (k) => encodeURIComponent(k) + "=" + encodeURIComponent(params[k])
   );
 
-  let url =
-    "http://ec2-43-200-137-107.ap-northeast-2.compute.amazonaws.com:8081/dishes?" +
-    query;
+  let url = "https://mwomeokji.shop/dishes?" + query;
 
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      localStorage.setItem("menuUrl", data.imageUrl);
-    })
-    .catch(function (error) {
-      console.log("request failed", error);
-    });
+  const response = await fetch(url);
+  const data = await response.json();
 
+  console.log(data);
+  localStorage.setItem("menuUrl", data.imageUrl);
   localStorage.setItem("name", winner_name);
   localStorage.setItem("menu", winner_menu);
   localStorage.setItem("src", winner_src);
 
   location.href = "./rps_loading.html";
+}
+
+function hrefLink() {
+  connect_server();
 }
 
 $(function () {

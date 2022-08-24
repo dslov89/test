@@ -4,18 +4,6 @@ window.onload = function () {
     document.getElementById("rps").src = rps;
   }
 
-  if (localStorage.getItem("menu")) {
-    var menu = localStorage.getItem("menu");
-    document.getElementById("menu").innerHTML = menu;
-  }
-
-  if (localStorage.getItem("name")) {
-    var people = localStorage.getItem("name");
-    document.getElementById(
-      "name"
-    ).innerHTML = `<div id="name">'${people}' <span>승!</span></div>`;
-  }
-
   var menuImg = localStorage.getItem("menuUrl");
   console.log(menuImg);
 
@@ -27,5 +15,17 @@ window.onload = function () {
     console.log(menuImg);
     var menuUrl = menuImg;
     document.getElementById("menu_img").src = menuUrl;
+  }
+
+  if (localStorage.getItem("menu")) {
+    var menu = localStorage.getItem("menu");
+    document.getElementById("menu").innerHTML = menu;
+  }
+
+  if (localStorage.getItem("name")) {
+    var people = localStorage.getItem("name");
+    document.getElementById(
+      "name"
+    ).innerHTML = `<div id="name">'${people}' <span>승!</span></div>`;
   }
 };

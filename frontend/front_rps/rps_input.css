@@ -12,14 +12,8 @@ body {
   flex-direction: column;
 }
 
-back_button {
-  position: relative;
-  margin-right: 65vw;
-  margin-top: 2vh;
-}
-
 .image {
-  background-color: white;
+  background-color: transparent;
   border: 0ch;
   text-align: center;
 }
@@ -27,7 +21,7 @@ back_button {
 #num_container {
   display: flex;
   margin: 0 auto;
-  margin-top: -4vh;
+  margin-top: 7vh;
 }
 
 #plate_container {
@@ -47,8 +41,16 @@ back_button {
   margin-right: 30px;
 }
 
+#minus_button img:hover {
+  cursor: pointer;
+}
+
 #plus_button {
   margin-left: 30px;
+}
+
+#plus_button img:hover {
+  cursor: pointer;
 }
 
 #plate_container_hr {
@@ -166,14 +168,22 @@ input:-ms-input-placeholder {
   visibility: hidden;
 }
 
+.edit_img:hover {
+  cursor: pointer;
+}
+
 .check_img {
   display: block;
   margin-top: 16px;
 }
 
+.check_img:hover {
+  cursor: pointer;
+}
+
 #next_img {
-  margin-top: 4vh;
-  margin-bottom: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
 }
 
 #top_button {

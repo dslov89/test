@@ -9,7 +9,9 @@ function slide(){
       $(".slide").animate({marginLeft:"-900px"}, 400);
       $(".guess_slide").animate({marginLeft:"-200px"}, 400);
       //$("#guess_button_a").hide();
-      $(".slide").animate({marginLeft:"1100px"}, 0000);
+      $(".slide").animate({marginLeft:"1100px"}, 0000, function(){
+        next_guess();
+      });
       $(".guess_slide").animate({marginLeft:"900px"}, 0000);
       $(".slide").animate({marginLeft:"0px"}, 400);
       $(".guess_slide").animate({marginLeft:"0px"}, 700);
@@ -33,12 +35,17 @@ async function getjson(){
   var i=0 
 
   if(guess_start_check==0){
-    guess_start_check=1;
     next_guess();
+    guess_start_check=1;
+  }
+/*
+  if(guess_start_check==0){
+    guess_start_check=1;
+    
     like();
     count("plus");
   }
-
+*/
   return data;
 
 }
@@ -84,9 +91,9 @@ function next_guess(){
   console.log(food_data[rst[guess_order]].question);
   console.log(food_data[rst[guess_order]].question.length);
 
-  //for(var j=0 ; j<44 ; j++){
-    //console.log(j+" "+food_data[rst[j]].question);
-  //}
+  for(var j=0 ; j<44 ; j++){
+    console.log(j+" "+food_data[rst[j]].question);
+  }
 
   if(food_data[rst[guess_order]].question.length >20){
     $('#background_img2').css({
@@ -125,32 +132,27 @@ make_arr();
 
 function like(){
 
-  console.log("rst");
-  console.log(food_data[rst[0]].dishes[0].name);
-  console.log(food_data[rst[guess_order]].dishes.length);
+  //console.log("rst");
+  //console.log(food_data[rst[0]].dishes[0].name);
+  //console.log(food_data[rst[guess_order]].dishes.length);
   
   guess_order=guess_order+1;
   if (clicked_count > 45){
     choose();
   }
   bar_progress();
-  if(clicked_count<=1){
 
-    console.log(arr);
-    return;
-  }
-  
-  else{
-    //console.log("question ", food_data[rst[guess_order-2]].question);
-    for(smallkey in food_data[rst[guess_order-2]].dishes){
-      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]+=1;
-      //console.log(guess_order-2 +" guess "+arr[food_data[rst[guess_order-1]].name]);
+    console.log("question ", food_data[rst[guess_order-1]].question);
+    for(smallkey in food_data[rst[guess_order-1]].dishes){
+      arr[food_data[rst[guess_order-1]].dishes[smallkey].id]+=1;
+      console.log(guess_order-1 +" guess "+arr[food_data[rst[guess_order-1]].name]);
     }
     //console.log("arr 배열");
+    console.log("arr");
     console.log(arr);
     choose_record[guess_order]=1;
     console.log(choose_record);
-  }
+  
 
 }
 
@@ -160,19 +162,14 @@ function dislike(){
     choose();
   }
   bar_progress();
-  if(clicked_count<=1){
-
-    console.log(arr);
-    return;
-  }
   
-  else{
+  
     console.log("question", food_data[rst[guess_order-2]].question);
     for(smallkey in food_data[rst[guess_order-2]].dishes){
       arr[food_data[rst[guess_order-2]].dishes[smallkey].id]-=1;
       console.log(guess_order-2 +" guess "+arr[food_data[rst[guess_order-2]].dishes[smallkey].name]);
     }
-  }
+    console.log("arr");
     console.log(arr);
     choose_record[guess_order]=-1;
     console.log(choose_record);
@@ -186,20 +183,14 @@ function normal(){
     choose();
   }
   bar_progress();
-  if(clicked_count<=1){
 
-    console.log(arr);
-    return;
-  }
-  
-  else{
     choose_record[guess_order]=0;
     console.log(choose_record);
-  }  
+
 }
 
 function guess_back(){
-  if(food_data[rst[guess_order-2]].question.length >20){
+  if(food_data[rst[guess_order-1]].question.length >20){
     $('#background_img2').css({
       "width":"400px",
       "left":"-120px"
@@ -227,10 +218,10 @@ function guess_back(){
   const guessElement = document.getElementById('guess_text');
 
   if(choose_record[guess_order]==1){
-    for(smallkey in food_data[rst[guess_order-2]].dishes){
-      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]-=1;
+    for(smallkey in food_data[rst[guess_order-1]].dishes){
+      arr[food_data[rst[guess_order-1]].dishes[smallkey].id]-=1;
     }
-    guessElement.innerText = food_data[rst[guess_order-2]].question;
+    guessElement.innerText = food_data[rst[guess_order-1]].question;
     console.log(arr);
     choose_record[guess_order]=0;
     console.log(choose_record);
@@ -239,10 +230,10 @@ function guess_back(){
   }
 
   else if(choose_record[guess_order]==-1){
-    for(smallkey in food_data[rst[guess_order-2]].dishes){
-      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]+=1;
+    for(smallkey in food_data[rst[guess_order-1]].dishes){
+      arr[food_data[rst[guess_order-1]].dishes[smallkey].id]+=1;
     }
-    guessElement.innerText = food_data[rst[guess_order-2]].question;
+    guessElement.innerText = food_data[rst[guess_order-1]].question;
     console.log(arr);
     choose_record[guess_order]=0;
     console.log(choose_record);
@@ -250,7 +241,7 @@ function guess_back(){
   }
 
   else if(choose_record[guess_order]==2){
-    guessElement.innerText = food_data[rst[guess_order-2]].question;
+    guessElement.innerText = food_data[rst[guess_order-1]].question;
     console.log(arr);
     choose_record[guess_order]=0;
     console.log(choose_record);

@@ -1,5 +1,5 @@
 var food_id=0;
-
+console.log("2");
 chose_succuess(food_id)
 result()
 function result(name){
@@ -17,7 +17,7 @@ async function chose_succuess(food_id){
     food_id = localStorage.getItem("food_code");
     console.log("chose_success");
     console.log(food_id);
-    var result_url = "http://ec2-43-200-137-107.ap-northeast-2.compute.amazonaws.com:8081/dishes/";
+    var result_url = "https://mwomeokji.shop/dishes/";
     const response = await fetch(result_url+food_id);
     const data = await response.json();
     console.log(data.name);
@@ -34,3 +34,7 @@ async function chose_succuess(food_id){
     document.getElementById("food_img").src= code;    
   }
 chose_succuess(chose_food);
+
+function go_top(){
+  window.scrollTo({top:0, left:0, behavior:"smooth"});
+}

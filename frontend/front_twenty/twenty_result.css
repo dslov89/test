@@ -5,7 +5,7 @@ body{
     flex-direction: column;
     text-align: center;
     margin: auto;
-  
+    scroll-behavior: smooth;
   }
 
 .image {
@@ -104,3 +104,20 @@ bottom_button{
     background-color: transparent;
 }
 
+#top_button {
+
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+
+    z-index: 9999;    
+    /*
+    display: none;
+    
+    */
+
+  }
+  
+  a{
+    scroll-behavior: smooth;
+  }

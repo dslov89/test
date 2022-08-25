@@ -13,7 +13,7 @@ body{
   flex-direction: column;
 }
 
-top_botton{
+top_button{
     margin-top: 20px;
     text-align: center;
 }
@@ -108,7 +108,7 @@ number{
 
 
 
-#back_botton{
+#back_button{
     position: relative;
     right: 430px;
     top: 0px;
@@ -116,32 +116,32 @@ number{
 }
 
 
-#reset_botton{
+#reset_button{
     position: relative;
     background-color: white;
     left: 350px;
 }
 
-#guess_botton_a{
+#guess_button_a{
     position: relative;
     left: 180px;
     bottom: 40px;
 }
 
-#guess_botton_b{
+#guess_button_b{
     position: relative;
     left: 180px;
     bottom: 10px;
 }
 
-#guess_botton_c{
+#guess_button_c{
     position: relative;
     left: 180px;
     top: 20px;
 }
 
 
-.botton_hover:hover{
+.button_hover:hover{
     content: url("./img_file_twenty/twenty_guess_yellow_answer.svg");
 
 
@@ -155,10 +155,10 @@ number{
   top: 20px;
   display: none;
 }
-.botton_hover:hover .clicked {
+.button_hover:hover .clicked {
   display: block;
 }
-.botton_hover:hover .botton_hover {
+.button_hover:hover .button_hover {
   display: none;
 }
 
@@ -195,14 +195,117 @@ skip{
     top: 60px;
 }
 
-.btn:active {
-
-    box-shadow: inset -.3rem -.1rem 1.4rem  #FBFBFB, inset .3rem .4rem .8rem #BEC5D0; 
-    cursor: pointer;
-
+#jb{
+    width: 20%;
+    height: 30px;
 }
 
-btn{
-    border-radius: 10px;
-    box-shadow:.8rem .5rem 1.4rem  #BEC5D0, -.3rem -.4rem .8rem #FBFBFB;
+#jb {
+    appearance: none;
 }
+#jb::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#jb::-webkit-progress-value {
+    border-radius:10px;
+    background: #1D976C;
+    background: -webkit-linear-gradient(to right, #E06437, #E06437);
+    background: linear-gradient(to right, #E06437, #E06437);
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
+
+/*
+.fonts {
+  font-family: 'Josefin Slab', serif;
+}
+*/
+
+
+/*
+
+body {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  background: #ececec;
+  overflow-y: scroll;
+}
+p {
+  margin-bottom: 0.5em;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #00AE68;
+}
+
+.clear {
+  clear: both;
+}
+
+
+.container {
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 
+    solid
+    1px
+    #CCC;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+.btn-2 {
+    
+    //background: rgb(96,9,240);
+    //background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    
+
+
+    border: none;
+
+  }
+  .btn-2:before {
+    background-color: transparent;
+    height: 0%;
+    width: 2px;
+  }
+  .btn-2:active {
+
+    filter: drop-shadow(0px 0px 0px white);
+    box-shadow: 0 4px 4px -4px white;
+  }
+
+  .btn-2{
+    background-color: transparent;
+    
+    
+     //box-shadow: 1px 2px 4px -3px black;    
+    
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));   
+    
+    
+  }
+
+.answer_img{
+    background-color: transparent;
+}
+*/

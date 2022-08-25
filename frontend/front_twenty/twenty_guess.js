@@ -3,6 +3,18 @@ var question_length=[]; // 질문마다 길이가 저장됨
 var guess_start_check=0;
 var choose_record=[];
 
+
+function slide(){
+    //$(".slide").click(function(){ 
+      $(".slide").animate({marginLeft:"-900px"}, 400);
+      $(".guess_slide").animate({marginLeft:"-200px"}, 400);
+      //$("#guess_button_a").hide();
+      $(".slide").animate({marginLeft:"1100px"}, 0000);
+      $(".guess_slide").animate({marginLeft:"900px"}, 0000);
+      $(".slide").animate({marginLeft:"0px"}, 400);
+      $(".guess_slide").animate({marginLeft:"0px"}, 700);
+    };
+
 //시간 지연을 위해 사용
 function sleep(ms) {
   const wakeUpTime = Date.now() + ms;
@@ -11,12 +23,12 @@ function sleep(ms) {
 
 //fetch 시작
 async function getjson(){
-  const response = await fetch(`http://ec2-43-200-137-107.ap-northeast-2.compute.amazonaws.com:8081/questions/dishes`);
+  const response = await fetch(`https://mwomeokji.shop/questions/dishes`);
   const data = await response.json();
   console.log(data.dishes);
   food_data = data;
   for(key in data) {
-      question_length.push(data[key].question.length); // 문자열 뒤에 length를 붙이는 것만으로 길이 측정
+    question_length.push(data[key].question.length); // 문자열 뒤에 length를 붙이는 것만으로 길이 측정
   }
   var i=0 
 
@@ -30,7 +42,6 @@ async function getjson(){
   return data;
 
 }
-
 
 
 var rst=[]; // 질문들이 랜덤하게 들어있고 안에 그 순서가 지정되있다 
@@ -70,7 +81,125 @@ function next_guess(){
 
   guessElement.innerText = food_data[rst[guess_order]].question;
 
+  console.log(food_data[rst[guess_order]].question);
+  console.log(food_data[rst[guess_order]].question.length);
+
+  //for(var j=0 ; j<44 ; j++){
+    //console.log(j+" "+food_data[rst[j]].question);
+  //}
+
   if(food_data[rst[guess_order]].question.length >20){
+    $('#background_img2').css({
+      "width":"400px",
+      "left":"-120px"
+    });
+    
+    $('#guess_text').css({
+      "width":"400px",
+      "left":"-10px"
+    });
+    document.getElementById("background_img").src= "./img_file_twenty/twenty_guess_guess_long.svg";
+  }
+  else{
+    $('#background_img2').css({
+      "width":"100px",
+      "left":"-180px"
+    });
+    $('#guess_text').css({
+      "width":"300px",
+      "right":"-20px"
+    });
+    document.getElementById("background_img").src= "./img_file_twenty/twenty_guess_guess_background.svg";
+  }
+}
+var arr = {};
+function make_arr(){
+  
+  for( var order = 1 ; order <106 ; order++){
+    arr[order] = 0;
+  }
+  console.log("arr");
+  console.log(arr);
+}
+make_arr();
+
+function like(){
+
+  console.log("rst");
+  console.log(food_data[rst[0]].dishes[0].name);
+  console.log(food_data[rst[guess_order]].dishes.length);
+  
+  guess_order=guess_order+1;
+  if (clicked_count > 45){
+    choose();
+  }
+  bar_progress();
+  if(clicked_count<=1){
+
+    console.log(arr);
+    return;
+  }
+  
+  else{
+    //console.log("question ", food_data[rst[guess_order-2]].question);
+    for(smallkey in food_data[rst[guess_order-2]].dishes){
+      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]+=1;
+      //console.log(guess_order-2 +" guess "+arr[food_data[rst[guess_order-1]].name]);
+    }
+    //console.log("arr 배열");
+    console.log(arr);
+    choose_record[guess_order]=1;
+    console.log(choose_record);
+  }
+
+}
+
+function dislike(){
+  guess_order=guess_order+1;
+  if (clicked_count > 45){
+    choose();
+  }
+  bar_progress();
+  if(clicked_count<=1){
+
+    console.log(arr);
+    return;
+  }
+  
+  else{
+    console.log("question", food_data[rst[guess_order-2]].question);
+    for(smallkey in food_data[rst[guess_order-2]].dishes){
+      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]-=1;
+      console.log(guess_order-2 +" guess "+arr[food_data[rst[guess_order-2]].dishes[smallkey].name]);
+    }
+  }
+    console.log(arr);
+    choose_record[guess_order]=-1;
+    console.log(choose_record);
+}  
+  
+
+
+function normal(){
+  guess_order=guess_order+1;
+  if (clicked_count > 45){
+    choose();
+  }
+  bar_progress();
+  if(clicked_count<=1){
+
+    console.log(arr);
+    return;
+  }
+  
+  else{
+    choose_record[guess_order]=0;
+    console.log(choose_record);
+  }  
+}
+
+function guess_back(){
+  if(food_data[rst[guess_order-2]].question.length >20){
     $('#background_img2').css({
       "width":"400px",
       "left":"-120px"
@@ -95,76 +224,6 @@ function next_guess(){
     });
     document.getElementById("background_img").src= "./img_file_twenty/twenty_guess_guess_background.svg";
   }
-
-}
-var arr = {};
-function make_arr(){
-  
-  for( var order = 1 ; order <106 ; order++){
-    arr[order] = 0;
-  }
-  console.log("arr");
-  console.log(arr);
-}
-make_arr();
-
-
-function like(){
-  
-  guess_order=guess_order+1;
-  if(clicked_count<=1){
-
-    console.log(arr);
-    return;
-  }
-  
-  else{
-    for(smallkey in food_data[rst[guess_order-2]].dishes){
-      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]+=1;
-    }
-    console.log(arr);
-    choose_record[guess_order]=1;
-    console.log(choose_record);
-  }
-
-}
-
-function dislike(){
-  guess_order=guess_order+1;
-  if(clicked_count<=1){
-
-    console.log(arr);
-    return;
-  }
-  
-  else{
-
-    for(smallkey in food_data[rst[guess_order-2]].dishes){
-      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]-=1;
-    }
-    console.log(arr);
-    choose_record[guess_order]=-1;
-    console.log(choose_record);
-  }  
-  
-}
-
-function normal(){
-  guess_order=guess_order+1;
-  if(clicked_count<=1){
-
-    console.log(arr);
-    return;
-  }
-  else{
-    console.log(arr);
-    choose_record[guess_order]=2;
-    console.log(choose_record);
-  }
-  
-}
-
-function guess_back(){
   const guessElement = document.getElementById('guess_text');
 
   if(choose_record[guess_order]==1){
@@ -176,6 +235,7 @@ function guess_back(){
     choose_record[guess_order]=0;
     console.log(choose_record);
     guess_order-=1;
+    bar_progress();
   }
 
   else if(choose_record[guess_order]==-1){
@@ -205,7 +265,28 @@ function guess_back(){
     //console.log(arr);
   }
 
+    //$(".slide").click(function(){ 
+      $(".slide").animate({marginLeft:"-1100px"}, 0000);
+      $(".guess_slide").animate({marginLeft:"-900px"}, 0000);
+
+
+      $(".slide").animate({marginLeft:"0px"}, 400);
+      $(".guess_slide").animate({marginLeft:"0px"}, 700);      
+
+      //$(".slide").animate({marginLeft:"+900px"}, 400);
+      //$(".guess_slide").animate({marginLeft:"+200px"}, 400, function(){
+        //next_guess();
+      //});
+      //$("#guess_button_a").hide();
+
+
 }
+
+function bar_progress(){
+  document.getElementById( 'jb' ).value = guess_order;
+
+}
+
 next_guess();
 console.log(rst);
 
@@ -265,8 +346,12 @@ function count(type)  {
   }
 
 
-  if(number>7){
+  if(number>12){
     document.getElementById("skipd").src= "./img_file_twenty/twenty_guess_skip_guess.svg";
+  }
+
+  else{
+    document.getElementById("skipd").src= "./img_file_twenty/twenty_guess_choose_more.svg";
   }
   
   // 결과 출력
@@ -278,4 +363,7 @@ function count(type)  {
   }
 }
 
+/*
+
+*/
 

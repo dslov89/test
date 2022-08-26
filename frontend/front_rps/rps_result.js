@@ -7,10 +7,9 @@ window.onload = function () {
   var menuImg = localStorage.getItem("menuUrl");
   console.log(menuImg);
 
-  if (menuImg === undefined || menuImg == null) {
+  if (menuImg === undefined || menuImg == null || menuImg == "undefined") {
     console.log(menuImg);
-    document.getElementById("menu_img").src = src =
-      "./img_rps/rps_default_img.svg";
+    document.getElementById("menu_img").src = "./img_rps/rps_default_img.svg";
   } else {
     console.log(menuImg);
     var menuUrl = menuImg;

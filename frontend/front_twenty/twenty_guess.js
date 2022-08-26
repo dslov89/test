@@ -5,10 +5,9 @@ var choose_record=[];
 
 
 function slide(){
-    //$(".slide").click(function(){ 
+
       $(".slide").animate({marginLeft:"-900px"}, 400);
       $(".guess_slide").animate({marginLeft:"-200px"}, 400);
-      //$("#guess_button_a").hide();
       $(".slide").animate({marginLeft:"1100px"}, 0000, function(){
         next_guess();
       });
@@ -27,7 +26,6 @@ function sleep(ms) {
 async function getjson(){
   const response = await fetch(`https://mwomeokji.shop/questions/dishes`);
   const data = await response.json();
-  console.log(data.dishes);
   food_data = data;
   for(key in data) {
     question_length.push(data[key].question.length); // 문자열 뒤에 length를 붙이는 것만으로 길이 측정
@@ -38,14 +36,6 @@ async function getjson(){
     next_guess();
     guess_start_check=1;
   }
-/*
-  if(guess_start_check==0){
-    guess_start_check=1;
-    
-    like();
-    count("plus");
-  }
-*/
   return data;
 
 }
@@ -88,9 +78,6 @@ function next_guess(){
 
   guessElement.innerText = food_data[rst[guess_order]].question;
 
-  console.log(food_data[rst[guess_order]].question);
-  console.log(food_data[rst[guess_order]].question.length);
-
   for(var j=0 ; j<44 ; j++){
     console.log(j+" "+food_data[rst[j]].question);
   }
@@ -125,16 +112,11 @@ function make_arr(){
   for( var order = 1 ; order <106 ; order++){
     arr[order] = 0;
   }
-  console.log("arr");
-  console.log(arr);
+
 }
 make_arr();
 
 function like(){
-
-  //console.log("rst");
-  //console.log(food_data[rst[0]].dishes[0].name);
-  //console.log(food_data[rst[guess_order]].dishes.length);
   
   guess_order=guess_order+1;
   if (clicked_count > 45){
@@ -142,18 +124,10 @@ function like(){
   }
   bar_progress();
 
-    console.log("question ", food_data[rst[guess_order-1]].question);
-    for(smallkey in food_data[rst[guess_order-1]].dishes){
-      arr[food_data[rst[guess_order-1]].dishes[smallkey].id]+=1;
-      console.log(guess_order-1 +" guess "+arr[food_data[rst[guess_order-1]].name]);
-    }
-    //console.log("arr 배열");
-    console.log("arr");
-    console.log(arr);
-    choose_record[guess_order]=1;
-    console.log(choose_record);
-  
-
+  for(smallkey in food_data[rst[guess_order-1]].dishes){
+    arr[food_data[rst[guess_order-1]].dishes[smallkey].id]+=1;
+  }
+  choose_record[guess_order]=1;
 }
 
 function dislike(){
@@ -162,21 +136,13 @@ function dislike(){
     choose();
   }
   bar_progress();
-  
-  
-    console.log("question", food_data[rst[guess_order-2]].question);
-    for(smallkey in food_data[rst[guess_order-2]].dishes){
-      arr[food_data[rst[guess_order-2]].dishes[smallkey].id]-=1;
-      console.log(guess_order-2 +" guess "+arr[food_data[rst[guess_order-2]].dishes[smallkey].name]);
-    }
-    console.log("arr");
-    console.log(arr);
-    choose_record[guess_order]=-1;
-    console.log(choose_record);
+
+  for(smallkey in food_data[rst[guess_order-2]].dishes){
+    arr[food_data[rst[guess_order-2]].dishes[smallkey].id]-=1;
+  }
+  choose_record[guess_order]=-1;
 }  
   
-
-
 function normal(){
   guess_order=guess_order+1;
   if (clicked_count > 45){
@@ -184,9 +150,8 @@ function normal(){
   }
   bar_progress();
 
-    choose_record[guess_order]=0;
-    console.log(choose_record);
-
+  choose_record[guess_order]=0;
+  console.log(choose_record);
 }
 
 function guess_back(){
@@ -194,7 +159,6 @@ function guess_back(){
     $('#background_img2').css({
       "width":"400px",
       "left":"-120px"
-
     });
     
     $('#guess_text').css({
@@ -222,9 +186,7 @@ function guess_back(){
       arr[food_data[rst[guess_order-1]].dishes[smallkey].id]-=1;
     }
     guessElement.innerText = food_data[rst[guess_order-1]].question;
-    console.log(arr);
     choose_record[guess_order]=0;
-    console.log(choose_record);
     guess_order-=1;
     bar_progress();
   }
@@ -234,54 +196,34 @@ function guess_back(){
       arr[food_data[rst[guess_order-1]].dishes[smallkey].id]+=1;
     }
     guessElement.innerText = food_data[rst[guess_order-1]].question;
-    console.log(arr);
     choose_record[guess_order]=0;
-    console.log(choose_record);
     guess_order-=1;
   }
 
   else if(choose_record[guess_order]==2){
     guessElement.innerText = food_data[rst[guess_order-1]].question;
-    console.log(arr);
     choose_record[guess_order]=0;
-    console.log(choose_record);
     guess_order-=1;
   }
 
   else{
-    //console.log("둘다 아님");
-    //console.log(guess_order);
-    //console.log("choose "+choose_record);
-    //console.log(choose_record);
-    //console.log(arr);
+    // 둘다 아님 이 부분이 뜬다면 안됨
   }
 
-    //$(".slide").click(function(){ 
       $(".slide").animate({marginLeft:"-1100px"}, 0000);
       $(".guess_slide").animate({marginLeft:"-900px"}, 0000);
 
-
       $(".slide").animate({marginLeft:"0px"}, 400);
       $(".guess_slide").animate({marginLeft:"0px"}, 700);      
-
-      //$(".slide").animate({marginLeft:"+900px"}, 400);
-      //$(".guess_slide").animate({marginLeft:"+200px"}, 400, function(){
-        //next_guess();
-      //});
-      //$("#guess_button_a").hide();
-
 
 }
 
 function bar_progress(){
   document.getElementById( 'jb' ).value = guess_order;
-
 }
 
 next_guess();
-console.log(rst);
 
- 
 let chose_food=1;
 
 function choose(){
@@ -292,14 +234,12 @@ function choose(){
     let sorted = Object.entries(arr).sort((a, b) => b[1] - a[1]);
     var sorted_arr = [];
     var big_value=sorted[0][1];
-    var chose;
     var big_value_arr=[];
     var length=0;
 
     for(let element of sorted) {
       if(big_value==element[1]){
         big_value_arr.push(element[0]);
-        console.log(length);
         length+=1;
       }
 
@@ -330,7 +270,6 @@ function count(type)  {
 
   }else if(type === 'minus')  {
     number = parseInt(number) - 1;
-    console.log(arr);
     if(number === -1){
       location.href='./twenty_main.html';
     }
@@ -353,8 +292,3 @@ function count(type)  {
     resultElement.innerText = number+".";
   }
 }
-
-/*
-
-*/
-

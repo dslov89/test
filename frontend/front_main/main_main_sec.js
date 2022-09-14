@@ -7,13 +7,13 @@ var colors = [
 ]
 
 
+
 function getScrollPoistion() {
     var ContainerElement = document.getElementById("main_main_sec_tut_scroll");
-    var x = ContainerElement.scrollLeft;
     var y = ContainerElement.scrollTop;
-    console.log(x); // scroll position from Left
     console.log(y); // scroll position from top
-
+   
+    
     var box1= document.getElementById("main_main_sec_tut_box1");
     var text1 = document.getElementById("main_main_sec_tut_text1");
     var box2 = document.getElementById("main_main_sec_tut_box2");
@@ -41,7 +41,7 @@ function getScrollPoistion() {
     var img23 = document.getElementById("main_main_sec_tut_img23");
     var img3 = document.getElementById("main_main_sec_tut_img3");
     var img4 = document.getElementById("main_main_sec_tut_img4");
-    
+
     if (y>0&&y<150){
         addBoxCss(box1,0);
         addTextCss(text1,0);
@@ -239,7 +239,7 @@ function includeHTML() {
   function clickScroll(){
     var ContainerElement = document.getElementById("main_main_sec_tut_scroll");
     var y = ContainerElement.scrollTop;
-
+    
 
     if (y>0&&y<150){
         location.href='../front_twenty/twenty_main.html' //여기에 스무고개 html 연결
@@ -254,8 +254,4 @@ function includeHTML() {
     else if (y>450){
         location.href='../front_random/ran_start.html' //여기에 랜덤 html 연결
     }
-
-
 }
-
-

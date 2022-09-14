@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    /*
+    font-family: 'NanumSquareAcb';
+    font-family: 'NanumSquareAceb';
+    font-family: 'NanumSquareAcl';
+    font-family: 'NanumSquareAcr';
+    */
+    
+  }
+
+  .left_side{
+    background-color: #E9E9E9;
+    height: 100vh;
+    width: 18.7vw;
+    position: absolute;
+   
+   
+    z-index: -1;
+  }
+
+  .right_side{
+    background-color: #E9E9E9;
+    height: 100vh;
+    width: 18.75vw;
+    position: absolute;
+   
+    right: 0px;
+    z-index: -1;
+  }
+
+  #backbutton{
+    background-color: transparent;
+    border: 0px;
+
+    position: absolute;
+    top: 13.4vh;
+    left: 21.75vw;
+    display: none;
+ }
+
+ #backbutton_img{
+    height: 50px;
+    width: 50px;
+    
+ }
+
+ .recipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .recipe_logo{
+    display: flex;
+    flex-direction: column;
+ }
+
+ #recipe_logo1{
+    position: relative;
+    top: 92px;
+    height: 78px;
+    width: 220px;
+ }
+
+ #recipe_logo2{
+    position: relative;
+    /* width: 150px; */
+    height: 150px;
+    bottom: 15px;
+ }
+ 
+ .recipe_recipebutton{
+    display: flex;
+    justify-content: space-between;
+    width: 437px;
+    height: 70px;
+    margin-top: 32px;
+    position: relative;
+    right: 134px;
+ }
+ .recipe_button{
+    background-color: transparent;
+   
+    width: 70px;
+    height: 70px;
+    border: 1.5px solid #494949;
+    border-radius: 50px;
+ }
+
+ .recipe_button1{
+    background-color: transparent;
+   
+    width: 70px;
+    height: 70px;
+    border: 1px solid #E9E9E9;
+    border-radius: 50px;
+ }
+
+ .recipe_button_text{
+    font-family: 'NanumSquareAcl';
+    font-size: 12px;
+    color: #494949;
+ }
+ .recipe_button_text1{
+    font-family: 'NanumSquareAcl';
+    font-size: 12px;
+    color: #494949;
+    text-shadow: 1px 0 #E9E9E9, 0 -1px #E9E9E9, -1px 0 #E9E9E9, 0  1px #E9E9E9;
+ }
+
+ .recipe_button_num{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #E06437;
+    font-size: 20px;
+    position: relative;
+    top:4px;
+ }
+
+ .recipe_button_num1{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #666666;
+    font-size: 20px;
+    position: relative;
+    top:4px;
+    text-shadow: 1px 0 #E9E9E9, 0 -1px #E9E9E9, -1px 0 #E9E9E9, 0  1px #E9E9E9;
+ }
+
+ #recipe_line{
+    height: 12px;
+    width: 708px;
+    margin-top: 39px;
+ }
+
+ .recipe_textimg{
+    position: relative;
+    right:240px;
+    margin-top: 21px;
+    display: flex;
+    flex-direction: row;
+ }
+
+ .recipe_text1{
+    font-family: 'NanumSquareAcl';
+    font-size: 16px;
+    color: #1F1818;
+ }
+
+ .recipe_text2{
+    font-family: 'NanumSquareAceb';
+    font-size: 30px;
+    color: #E06437;
+    margin-top: 8px;
+ }
+
+ #recipe_line2{
+    position: relative;
+    bottom: 25px;
+    z-index: -1;
+ }
+
+ #recipe_img{
+    position: relative;
+    top: 25px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+ }
+
+ #recipe_book{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 25px;
+    left: 482px;
+ }
+
+.recipe_list{
+    position: relative;
+    left: 20px;
+}
+
+ .recipe_recipelist{
+    display: flex;
+    flex-direction: row;
+    
+ }
+
+ .recipe_list_num{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    /* height: 20px; */
+ }
+
+ .recipe_list_line{
+    height: 40px;
+    width: 0px;
+    border: 1px solid #9B9B9B;
+    position: relative;
+    left: 8px;
+    margin: -4px 0px;
+ }
+
+ .recipe_list_textback{
+    height: 60px;
+    /* width: 390px; */
+    background-color: #F8F5EC;
+    border-radius: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: 24px;
+ }
+
+ .recipe_list_text{
+    
+    font-family: 'NanumSquareAcl';
+    font-size: 16px;
+    color: #1F1818;
+    position: relative;
+    left: 26px;
+    margin-right: 250px;
+ }
+
+
+.recipe_side1{
+    position: absolute;
+    top: 35vh;
+    left: 87vw; 
+    background-color: white;
+    height: 142px;
+    width: 122px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.recipe_side_text{
+    font-family: 'NanumSquareAcl';
+    font-size: 10px;
+    color: #333030;
+    margin-bottom: 4px;
+}
+
+.recipe_star{
+    width: 20px;
+    height: 20px;
+    margin: 12px -2.5px 19px;
+}
+
+#submit_button{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    color: #EA973E;
+    width: 62px;
+    height: 24px;
+    background-color:  rgba(234, 151, 62, 0.2);
+    border-radius: 16px;
+    border: 0px;
+}
+
+
+.recipe_side2{
+    position: absolute;
+    margin-top: 164px;
+    top: 35vh;
+    left: 87vw; 
+    background-color: white;
+    height: 41px;
+    width: 122px;
+    border-radius: 32px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: 'NanumSquareAcl';
+    font-size:14px;
+    
+}
+
+.recipe_side3{
+    position: absolute;
+    top: 35vh;
+    left: 87vw;
+    margin-top: 221px;
+    background-color: white;
+    height: 41px;
+    width: 122px;
+    border-radius: 32px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: 'NanumSquareAcl';
+    font-size:14px;
+    color: #333030;
+}
+
+#recipe_scroll{
+    /* width: 50px;*/
+    /* height: 50px;  */
+    position: absolute;
+    top:98vh;
+    left: 84vw;
+    background-color: transparent;
+    border: 0px;
+}
+
+.recipe_scroll2{
+    width: 70px;
+    height: 70px;
+}
+
+@media (max-width: 1200px) {
+   .left_side{
+      display: none;
+   }
+ 
+   .right_side{
+     display: none;
+   }
+ 
+   
+ }
+ 

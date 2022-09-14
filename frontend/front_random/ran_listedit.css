@@ -1,0 +1,220 @@
+
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.ran_listedit_sec
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.ran_listedit_sec_backbutton
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 122px;
+    margin-right: 800px;
+    background: none;
+    border: 0;
+}
+
+#ran_listedit_sec_back_button_img
+{
+    height: 50px;
+    width: 50px;
+}
+
+.ran_listedit_sec_category
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#ran_listedit_sec_category_img
+{
+    height: 100px;
+    width: 100px;
+}
+
+.ran_listedit_sec_categoryphrase
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#ran_listedit_sec_categoryname_text1
+{
+    font-size: 16px;
+}
+
+#ran_listedit_sec_categoryphrase_text2
+{
+    font-size: 12px;
+}
+
+.ran_listedit_sec_itemboxlist
+{
+    margin-top: 30px;
+    position: relative;
+}
+
+#ran_listedit_sec_mainframe_img
+{
+    height: 350px;
+    width: 708px;
+    position: relative;
+}
+
+.ran_listedit_sec_itemboxedit
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.ran_listedit_sec_itembox
+{
+    position: absolute;
+}
+
+#ran_listedit_sec_itembox_img
+{
+    height: 50;
+    width: 300;
+    position: relative;
+}
+
+.ran_listedit_sec_itembox_name
+{
+    position: absolute;
+}
+
+#ran_listedit_sec_itembox_name
+{
+    align-items: center;
+
+    position: absolute;
+}
+
+.ran_listedit_sec_deletebutton
+{
+    margin-left: 400px;
+    background: none;
+    border: 0;
+
+    position: absolute;
+
+}
+
+#ran_listedit_sec_delete_button_img
+{
+    height: 40px;
+    width: 40px;
+}
+
+.ran_listedit_sec_itembox_editing
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ran_listedit_sec_gray_itembox
+{
+    position: absolute;
+}
+
+#ran_listedit_sec_itembox_editing_img
+{
+    height: 50;
+    width: 300;
+    position: relative;
+}
+
+.ran_listedit_sec_inputbox
+{
+    position: absolute;
+}
+
+#ran_listedit_sec_inputbox_text
+{
+    background: transparent;
+    border: none;
+    text-align: center;
+    height: 40px;
+    width: 250px;
+}
+
+#ran_listedit_sec_inputbox_text:focus
+{
+    outline: none;
+    height: 40px;
+    width: 250px;
+}
+
+.ran_listedit_sec_donebutton
+{
+    background: none;
+    border: 0;
+
+    margin-left: 400px;
+    background: none;
+    border: 0;
+
+    position: absolute;
+}
+
+#ran_listedit_sec_done_button_img
+{
+    height: 40px;
+    width: 40px;
+}
+
+
+.ran_listedit_sec_addbutton
+{
+    background: none;
+    border: 0;
+}
+
+#ran_listedit_sec_add_button_img
+{
+    height: 40px;
+    width: 40px;
+}
+
+.ran_start_sec_nextbutton
+{
+    background: none;
+    border: 0;
+}
+
+#ran_start_sec_next_button_img
+{
+    height: 70px;
+    width: 220px;
+}

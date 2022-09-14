@@ -1,0 +1,1 @@
+setTimeout(function() {  location.href='./ran_result.html'; }, 4000);

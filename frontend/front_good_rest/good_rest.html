@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMG</title>
+    <link rel="stylesheet" href="./good_rest.css" />
+    <link rel="stylesheet" href="../front_head/style.css" />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+    />
+    <script src="../front_head/includeHTML.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div include-html="../front_head/nav.html"></div>
+      <div id="good_rest_main">
+        <div class="image" id="good_rest_deco_left">
+          <img src="./img_good_rest/good_rest_deco_left.svg"
+          style="width: 115px; height: 54px;"/>
+        </div>
+        <div class="image" id="good_rest_plate">
+          <img
+            src="./img_good_rest/good_rest_plate.svg"
+            style="width: 150px; height: 150px;"
+          />
+        </div>
+        <div class="image" id="good_rest_deco_right">
+          <img src="./img_good_rest/good_rest_deco_right.svg"
+          style="width: 40px; height: 5px;"/>
+        </div>
+      </div>
+      <div class="map_wrap">
+        <div id="map"></div>
+        <div class="custom_zoomcontrol radius_border"> 
+          <span onclick="zoomIn()"><img src="./img_good_rest/good_rest_plus_button.svg" alt="확대"></span>  
+          <span id="good_rest_minus_button" onclick="zoomOut()"><img src="./img_good_rest/good_rest_minus_button.svg" alt="축소"></span>
+      </div>
+      </div>
+      <script>
+        includeHTML();
+      </script>
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d3324172e4fe81e5f4aa862840b72082"></script>
+      <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };  
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+            
+        // 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
+        function setMapType(maptype) { 
+            var roadmapControl = document.getElementById('btnRoadmap');
+            var skyviewControl = document.getElementById('btnSkyview'); 
+            if (maptype === 'roadmap') {
+                map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
+                roadmapControl.className = 'selected_btn';
+                skyviewControl.className = 'btn';
+            } else {
+                map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
+                skyviewControl.className = 'selected_btn';
+                roadmapControl.className = 'btn';
+            }
+        }
+
+        // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+        function zoomIn() {
+            map.setLevel(map.getLevel() - 1);
+        }
+
+        // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+        function zoomOut() {
+            map.setLevel(map.getLevel() + 1);
+        }
+
+        var imageSrc = './img_good_rest/good_rest_marker_01.svg', // 마커이미지의 주소입니다    
+        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+        imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+          
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+            markerPosition = new kakao.maps.LatLng(33.450701, 126.570667); // 마커가 표시될 위치입니다
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition, 
+            image: markerImage // 마커이미지 설정 
+        });
+        
+        var imageSrc2 = './img_good_rest/good_rest_marker_02.svg', // 마커이미지의 주소입니다    
+        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+        imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+          
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage2 = new kakao.maps.MarkerImage(imageSrc2, imageSize, imageOption),
+            markerPosition2 = new kakao.maps.LatLng(33.450, 126.573); // 마커가 표시될 위치입니다
+
+        // 마커를 생성합니다
+        var marker2 = new kakao.maps.Marker({
+            position: markerPosition2, 
+            image: markerImage2 // 마커이미지 설정 
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);  
+        marker2.setMap(map);
+      </script>
+  </body>
+</html>

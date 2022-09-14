@@ -31,6 +31,14 @@ public class DishController {
         return ResponseEntity.status(CREATED).body(dishService.saveDish(request, multipartFile));
     }
 
+    @Operation(summary = "CSV 파일을 이용한 메뉴 저장 API", description = "CSV 파일을 이용하여 메뉴를 저장하기 위한 API 입니다.")
+    @PostMapping("upload/csv")
+    public ResponseEntity<List<DishNameResponse>> saveDishesByCsv(
+            @RequestPart(name = "file") MultipartFile file,
+            @RequestPart(name = "image") List<MultipartFile> image) {
+        return ResponseEntity.status(CREATED).body(dishService.saveDishByCsv(file, image));
+    }
+
     @Operation(summary = "메뉴 이름 조회 API", description = "저장된 모든 메뉴의 이름을 조회하기 위한 API 입니다.")
     @GetMapping("/name")
     public ResponseEntity<List<DishNameResponse>> getAllDishesName() {

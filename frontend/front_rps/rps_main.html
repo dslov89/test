@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMG</title>
+    <link rel="stylesheet" href="./rps_main.css" />
+    <link rel="stylesheet" href="../front_head/style.css" />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+    />
+    <script src="../front_head/includeHTML.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div include-html="../front_head/nav.html"></div>
+      <main_text class="item">
+        <span class="image" id="logo_word">
+          <img
+            src="./img_rps/rps_main_sec_word.svg"
+            style="width: auto; height: 15vh"
+          />
+        </span>
+      </main_text>
+
+      <main_logo class="item image">
+        <img
+          src="./img_rps/rps_main_sec_logo.svg"
+          style="width: auto; height: 30vh"
+        />
+      </main_logo>
+
+      <small_text class="item">
+        네가 이기면 그거<br />내가 이기면 이거
+      </small_text>
+
+      <start_button>
+        <button
+          type="button"
+          class="image"
+          id="start_botton"
+          onClick="location.href='./rps_tutorial.html'"
+          ;
+        >
+          <img
+            src="./img_rps/rps_main_sec_button.svg"
+            style="width: auto; height: 15vh"
+          />
+        </button>
+      </start_button>
+    </div>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

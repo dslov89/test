@@ -7,12 +7,10 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.umc.mwomeokji.infra.s3.exception.AmazonException;
 import com.umc.mwomeokji.infra.s3.exception.FileException;
 import lombok.RequiredArgsConstructor;
-import org.apache.tika.Tika;
 import org.apache.tika.mime.MimeType;
 import org.apache.tika.mime.MimeTypeException;
 import org.apache.tika.mime.MimeTypes;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,7 +24,6 @@ import static com.umc.mwomeokji.global.error.exception.ExceptionCodeAndDetails.*
 public class FileServiceImpl implements FileService {
 
     private final AmazonS3 amazonS3;
-    private final Tika tika = new Tika();
 
     @Value("${cloud.aws.s3.bucket-name}")
     private String bucketName;
@@ -70,30 +67,24 @@ public class FileServiceImpl implements FileService {
     }
 
     private void fileExtensionValidator(MultipartFile multipartFile) {
-        try {
-            String MIMEType = tika.detect(multipartFile.getBytes());
-            if(!MIMEType.startsWith("image")) {
-                throw new FileException(FILE_EXTENSION_EXCEPTION);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new FileException(FILE_IO_EXCEPTION);
+        if(!multipartFile.getContentType().startsWith("image")) {
+            throw new FileException(FILE_EXTENSION_EXCEPTION);
         }
     }
 
     private ObjectMetadata generateObjectMetadata(MultipartFile multipartFile) {
         ObjectMetadata objectMetadata = new ObjectMetadata();
         objectMetadata.setContentLength(multipartFile.getSize());
-        objectMetadata.setContentType(MediaType.IMAGE_PNG_VALUE);
+        objectMetadata.setContentType(multipartFile.getContentType());
         return objectMetadata;
     }
 
     private String generateFileName(MultipartFile multipartFile) {
         try {
             String fileName = UUID.randomUUID().toString();
-            MimeType mimeType = MimeTypes.getDefaultMimeTypes().forName(tika.detect(multipartFile.getBytes()));
+            MimeType mimeType = MimeTypes.getDefaultMimeTypes().forName(multipartFile.getContentType());
             return fileName + mimeType.getExtension();
-        } catch (MimeTypeException | IOException e) {
+        } catch (MimeTypeException e) {
             e.printStackTrace();
             throw new FileException(FILE_EXTENSION_EXCEPTION);
         }

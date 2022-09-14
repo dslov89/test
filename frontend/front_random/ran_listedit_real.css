@@ -1,0 +1,303 @@
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.ran_listedit_sec
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.ran_listedit_sec_backbutton
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 122px;
+    margin-right: 800px;
+    background: none;
+    border: 0;
+}
+
+#ran_listedit_sec_back_button_img
+{
+    height: 50px;
+    width: 50px;
+}
+
+.ran_listedit_sec_category
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#ran_listedit_sec_category_img
+{
+    height: 100px;
+    width: 100px;
+}
+
+.ran_listedit_sec_categoryphrase
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#ran_listedit_sec_categoryname_text1
+{
+    font-size: 16px;
+}
+
+#ran_listedit_sec_categoryphrase_text2
+{
+    font-size: 12px;
+}
+
+.ran_listedit_sec_itemboxlist
+{
+    margin-top: 30px;
+    position: relative;
+}
+
+.ran_listedit_sec_mainframe
+{
+    height: 350px;
+    width: 708px;
+    border: 2px solid #E9E9E9;
+    border-radius: 30px;
+    background: transparent;
+    position: relative;
+}
+
+.ran_listedit_sec_itembox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 1;
+    position: absolute;
+
+}
+
+.ran_listedit_sec_itembox_background
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    height: 50px;
+    width: 300px;
+    border: 2px solid #FAF9E1;
+    border-radius: 50px;
+    background-color: #FAF9E1;
+    position: relative;
+
+}
+
+
+.ran_listedit_sec_itembox_name
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    text-align: center;
+    position: absolute;
+}
+
+#ran_listedit_sec_itembox_name_text
+{
+    height: 20px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.ran_listedit_sec_deletebutton
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 5px;
+    margin-left: 350px;
+    position: absolute;
+    background: none;
+    border: 0;
+
+}
+
+#ran_listedit_sec_delete_button_img
+{
+    height: 40px;
+    width: 40px;
+}
+
+.ran_listedit_sec_itembox_editing
+{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.ran_listedit_sec_gray_itembox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    height: 50px;
+    width: 300px;
+    border: 2px solid #E9E9E9;
+    border-radius: 50px;
+    background-color: #E9E9E9;
+    z-index: 0;
+    position: relative;
+    
+}
+
+
+.ran_listedit_sec_inputbox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    position: absolute;
+}
+
+#ran_listedit_sec_inputbox_text
+{
+    background: transparent;
+    border: none;
+    text-align: center;
+    height: 40px;
+    width: 250px;
+}
+
+#ran_listedit_sec_inputbox_text:focus
+{
+    outline: none;
+    height: 40px;
+    width: 250px;
+}
+
+.ran_listedit_sec_donebutton
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 6px;
+    margin-left: 350px;
+    position: absolute;
+    background: none;
+    border: 0;
+}
+
+#ran_listedit_sec_done_button_img
+{
+    height: 40px;
+    width: 40px;
+}
+
+.ran_listedit_arrows
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ran_listedit_left_arrow
+{
+
+}
+
+#ran_listedit_left_arrow_img
+{
+
+}
+
+.ran_listedit_right_arrow
+{
+
+}
+
+#ran_listedit_right_arrow_img
+{
+
+}
+
+.ran_listedit_dots
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ran_listedit_dot1
+{
+    
+}
+
+.ran_listedit_dot2
+{
+
+}
+
+.ran_listedit_dot3
+{
+
+}
+
+.ran_listedit_sec_addbutton
+{
+    background: none;
+    border: 0;
+}
+
+#ran_listedit_sec_add_button_img
+{
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+}
+
+.ran_start_sec_nextbutton
+{
+    background: none;
+    border: 0;
+}
+
+#ran_start_sec_next_button_img
+{
+    height: 70px;
+    width: 220px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random_list_editing_page</title>
+
+    <link rel="stylesheet" href="./ran_listedit.css">
+</head>
+
+<body>
+    <div class="ran_listedit_sec">
+        <button class="ran_listedit_sec_backbutton" type="button" onClick="">
+            <img id="ran_listedit_sec_back_button_img" src="./img_random/ran_listedit_back_button.svg" alt="back button">
+        </button>
+        <div class="ran_listedit_sec_category">
+            <img id="ran_listedit_sec_category_img" src="./img_random/ran_listedit_category_img.svg" alt="ran category">
+        </div>
+
+        <div class="ran_listedit_sec_categoryphrase">
+            <h1 id ="ran_listedit_sec_categoryname_text1">카테고리 이름 (한식)</h1>
+            <h2 id ="ran_listedit_sec_categoryphrase_text2">먹고 싶은 음식은 추가하고, 먹고 싶지 않은 음식은 삭제해주세요</h2>
+        </div>
+            
+        <div class="ran_listedit_sec_itemboxlist">
+            <img id="ran_listedit_sec_mainframe_img" src="./img_random/ran_listedit_listbox.svg" alt="ran list box">
+            <div class="ran_listedit_sec_itemboxedit">
+                <div class="ran_listedit_sec_itembox">
+                    <img id="ran_listedit_sec_itembox_img" src="./img_random/ran_listedit_list_itembox_background.svg" alt="ran itembox background">
+                </div>
+                <div class="ran_listedit_sec_itembox_name">
+                    <h2 id ="ran_listedit_sec_itembox_name_text">김밥</h2>
+                </div>
+                <button class="ran_listedit_sec_deletebutton" type="button" onClick="">
+                    <img id="ran_listedit_sec_delete_button_img" src="./img_random/ran_listedit_list_itemBox_button_delete.svg" alt="delete button">
+                </button>
+            </div>
+        </div>
+        <div class="ran_listedit_sec_itembox_editing">
+            <div class="ran_listedit_sec_gray_itembox">
+                <img id="ran_listedit_sec_itembox_editing_img" src="./img_random/ran_listedit_list_itemBox_background_edit.svg" alt="ran itembox edit background">
+            </div>
+            <div class="ran_listedit_sec_inputbox">
+                <input type="text" id="ran_listedit_sec_inputbox_text" name="name" requiredminlength="1" size="10">
+            </div>
+            <button class="ran_listedit_sec_donebutton" type="button" onClick="">
+                <img id="ran_listedit_sec_done_button_img" src="./img_random/ran_listedit_list_itemBox_button_editdone.svg" alt="done button">
+            </button>
+        </div>
+        <button class="ran_listedit_sec_addbutton" type="button" onClick="">
+            <img id="ran_listedit_sec_add_button_img" src="./img_random/ran_listedit_additem_button.svg" alt="add button">
+        </button>
+        <button class="ran_start_sec_nextbutton" type="button" onClick="">
+            <img id="ran_start_sec_next_button_img" src="./img_random/Button_Next.svg" alt="next button">
+        </button>
+    
+    </div>
+    
+</body>
+</html>

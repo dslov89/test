@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMG</title>
+    <link rel="stylesheet" href="./rps_input.css" />
+    <link rel="stylesheet" href="../front_head/style.css" />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.js"
+    ></script>
+    <script src="./rps_input.js"></script>
+    <script src="../front_head/includeHTML.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div include-html="../front_head/nav.html"></div>
+      <div id="num_container">
+        <button
+          id="minus_button"
+          type="button"
+          class="image"
+          onClick="removeItem()"
+        >
+          <img src="./img_rps/minus_btn.svg" />
+        </button>
+        <div id="plate_container">
+          <span id="num">2</span>
+          <img id="plate" src="./img_rps/rps_input_plate.svg" />
+        </div>
+        <button
+          id="plus_button"
+          type="button"
+          class="image"
+          onClick="addItem()"
+        >
+          <img src="./img_rps/plus_btn.svg" />
+        </button>
+      </div>
+      <hr id="plate_container_hr" />
+      <div id="inputItem">
+        <div class="item_box" id="item1">
+          <div class="item_container">
+            <img class="rps_img" src="./img_rps/img_r_gray.svg" width="60px" />
+            <input class="rps_name" placeholder="이름 입력" />
+            <input class="rps_menu" placeholder="메뉴 입력" />
+            <button type="button" class="image">
+              <img
+                class="edit_img"
+                src="./img_rps/edit_button.svg"
+                width="35px"
+                onClick="editValue(1)"
+              />
+            </button>
+          </div>
+          <img
+            class="check_img"
+            src="./img_rps/img_check.svg"
+            width="80px"
+            onClick="saveValue(1)"
+          />
+        </div>
+        <div class="item_box" id="item2">
+          <div class="item_container">
+            <img class="rps_img" src="./img_rps/img_s_gray.svg" width="60px" />
+            <input class="rps_name" placeholder="이름 입력" />
+            <input class="rps_menu" placeholder="메뉴 입력" />
+            <button type="button" class="image">
+              <img
+                class="edit_img"
+                src="./img_rps/edit_button.svg"
+                width="35px"
+                onClick="editValue(2)"
+              />
+            </button>
+          </div>
+          <img
+            class="check_img"
+            src="./img_rps/img_check.svg"
+            width="80px"
+            onClick="saveValue(2)"
+          />
+        </div>
+      </div>
+      <button type="button" class="image">
+        <img
+          id="next_img"
+          src="./img_rps/next_button_gray.svg"
+          style="width: auto; height: 15vh"
+        />
+      </button>
+    </div>
+    <a id="top_button" href="#"
+      ><img src="img_rps/top_button.svg" style="width: auto; height: 13vh"
+    /></a>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

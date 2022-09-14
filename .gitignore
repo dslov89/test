@@ -3,4 +3,6 @@
 .idea
 build
 
-
+# vscode #
+.vscode
+frontend/.vscode

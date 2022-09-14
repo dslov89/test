@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+
+}
+.container {
+	display: flex;
+  flex-direction: column;
+}
+
+top_button{
+    margin-top: 20px;
+    text-align: center;
+}
+
+bar{
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+number{
+    position: relative;
+    bottom: 0px;
+    top: -20px;
+    margin-bottom: 0px;
+}
+number_buttom{
+  position: relative;
+  top: -10px;
+  font-family: "NanumSquareAcr";
+
+}
+
+guess_button{
+  position: relative;
+  margin-top: 50px;
+}
+
+button_background{
+    position: relative;
+    /*
+    right :120px;
+    */
+    
+    right :180px;
+    
+}
+guess_text{
+/*
+    position: absolute;
+    top: -90%;
+    color: white;
+    right: 10px;
+    bottom: 20px;
+    font-family: "NanumSquareAcr";
+    text-align: center;    
+    max-width: 4000px;
+    width: 400px;    
+*/
+    
+
+    width: 400px;
+    position: absolute;
+    top: -90%;
+    color: white;
+    right: 30px;
+    bottom: 20px;
+    font-family: "NanumSquareAcr";
+    text-align: center;    
+
+    
+    
+}
+
+answer_text{
+    position: absolute;
+    color: black;
+    left : 130px;
+    top: 15px;
+    text-align: center;
+    font-family: "NanumSquareAcr";
+    font-size: 16px;
+}
+
+d{
+    position: relative;
+}
+
+
+
+number{
+    position: relative;
+    bottom: 80px;    
+}
+
+.image {
+    border: 0ch;
+    background-color: white;
+    text-align: center;
+    position: relative;
+
+}
+
+
+
+#back_button{
+    position: relative;
+    right: 430px;
+    top: 0px;
+
+}
+
+
+#reset_button{
+    position: relative;
+    background-color: white;
+    left: 350px;
+}
+
+#guess_button_a{
+    position: relative;
+    left: 180px;
+    bottom: 40px;
+}
+
+#guess_button_b{
+    position: relative;
+    left: 180px;
+    bottom: 10px;
+}
+
+#guess_button_c{
+    position: relative;
+    left: 180px;
+    top: 20px;
+}
+
+
+.button_hover:hover{
+    content: url("./img_file_twenty/twenty_guess_yellow_answer.svg");
+
+
+}
+
+
+
+.clicked {
+  position: absolute;
+  left: 180px;
+  top: 20px;
+  display: none;
+}
+.button_hover:hover .clicked {
+  display: block;
+}
+.button_hover:hover .button_hover {
+  display: none;
+}
+
+
+.bottom_text {
+    position: absolute;
+    bottom: 5px;
+    right: 12px;
+  }
+
+#bottom_button{
+    position: relative;
+    top:60px;
+}
+
+.guess_img{
+    object-fit: cover;
+    width: 10px;
+}
+
+#guess_number{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-family:Arial;
+}
+
+.skip_image{
+    position: relative;
+
+}
+
+skip{
+    position: relative;
+    top: 60px;
+}
+
+#jb{
+    width: 20%;
+    height: 30px;
+}
+
+#jb {
+    appearance: none;
+}
+#jb::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#jb::-webkit-progress-value {
+    border-radius:10px;
+    background: #1D976C;
+    background: -webkit-linear-gradient(to right, #E06437, #E06437);
+    background: linear-gradient(to right, #E06437, #E06437);
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
+
+/*
+.fonts {
+  font-family: 'Josefin Slab', serif;
+}
+*/
+
+
+/*
+
+body {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  background: #ececec;
+  overflow-y: scroll;
+}
+p {
+  margin-bottom: 0.5em;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #00AE68;
+}
+
+.clear {
+  clear: both;
+}
+
+
+.container {
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 
+    solid
+    1px
+    #CCC;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+.btn-2 {
+    
+    //background: rgb(96,9,240);
+    //background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    
+
+
+    border: none;
+
+  }
+  .btn-2:before {
+    background-color: transparent;
+    height: 0%;
+    width: 2px;
+  }
+  .btn-2:active {
+
+    filter: drop-shadow(0px 0px 0px white);
+    box-shadow: 0 4px 4px -4px white;
+  }
+
+  .btn-2{
+    background-color: transparent;
+    
+    
+     //box-shadow: 1px 2px 4px -3px black;    
+    
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));   
+    
+    
+  }
+
+.answer_img{
+    background-color: transparent;
+}
+*/

@@ -7,7 +7,9 @@ import com.umc.mwomeokji.domain.dish.dish.dao.DishRepository;
 import com.umc.mwomeokji.domain.dish.dish.domain.Dish;
 import com.umc.mwomeokji.domain.dish.dish.dto.DishDto.*;
 import com.umc.mwomeokji.domain.dish.dish.dto.DishMapper;
+import com.umc.mwomeokji.domain.dish.dish.exception.NotEqualSizeException;
 import com.umc.mwomeokji.domain.dish.dish.exception.NotFoundDishException;
+import com.umc.mwomeokji.global.util.csv.DishCsvReader;
 import com.umc.mwomeokji.infra.s3.FileService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -31,15 +33,31 @@ public class DishServiceImpl implements DishService{
     @Override
     public DishDetailsResponse saveDish(DishPostRequest request, MultipartFile multipartFile) {
         String imageUrl = fileService.uploadImage(multipartFile);
-        Dish dish = dishRepository.save(dishMapper.toEntity(request, imageUrl));
+        Dish dish = dishRepository.save(dishMapper.toEntity(request, imageUrl, findByCategory(request.getCategory())));
         return dishMapper.toDishDetailsResponse(dish);
+    }
+
+    @Override
+    public List<DishNameResponse> saveDishByCsv(MultipartFile file, List<MultipartFile> images) {
+        DishCsvReader dishCsvReader = new DishCsvReader(file);
+        List<DishPostRequest> dishPostRequestList = dishCsvReader.getDishPostRequests(dishCsvReader.readAll());
+        if (dishPostRequestList.size() != images.size()) {
+            throw new NotEqualSizeException();
+        }
+        List<String> imageUrls = images.stream().map(image -> fileService.uploadImage(image)).collect(Collectors.toList());
+        List<Dish> dishesList = new ArrayList<>();
+        for (int i = 0; i < dishPostRequestList.size(); i++){
+            dishesList.add(dishMapper.toEntity(dishPostRequestList.get(i), imageUrls.get(i), findByCategory(dishPostRequestList.get(i).getCategory())));
+        }
+        dishRepository.saveAll(dishesList);
+        return dishMapper.toDishNameResponseList(dishesList);
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<DishNameResponse> getAllDishesName() {
         List<Dish> dishesList = dishRepository.findAll();
-        return dishesList.stream().map(dish -> dishMapper.toDishNameResponse(dish)).collect(Collectors.toList());
+        return dishMapper.toDishNameResponseList(dishesList);
     }
 
     @Override
@@ -84,6 +102,10 @@ public class DishServiceImpl implements DishService{
         return dishMapper.toDishDetailsResponse(selectOneFromList(dishesList));
     }
 
+    private Category findByCategory(String categoryName) {
+        return categoryRepository.findByCategory(categoryName).orElseThrow(NotFoundCategoryException::new);
+    }
+
     private String removeBlank(String str) {
         return str.replaceAll(" ", "");
     }
@@ -94,7 +116,7 @@ public class DishServiceImpl implements DishService{
     }
 
     private List<Dish> getDishByCategory(String categoryName) {
-        Category category = categoryRepository.findByCategory(categoryName).orElseThrow(NotFoundCategoryException::new);
+        Category category = findByCategory(categoryName);
         return dishRepository.findByCategory(category);
     }
 }

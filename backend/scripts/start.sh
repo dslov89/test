@@ -27,6 +27,6 @@ IDLE_PORT=$(find_idle_port)
 echo "> $JAR_NAME 를 $IDLE_PORT 포트에서 실행합니다."
 
 nohup java -jar \
-        -Dspring.profiles.active=local \
+        -Dspring.profiles.active=prod \
         -Dserver.port=$IDLE_PORT \
         $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &

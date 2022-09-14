@@ -26,6 +26,9 @@ dependencies {
 	// OpenAPI 3.0
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
 
+	// CSV
+	implementation 'com.opencsv:opencsv:5.7.0'
+
 	// DB
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'com.h2database:h2'

@@ -1,4 +1,4 @@
-package com.umc.mwomeokji.domain.dish.application;
+package com.umc.mwomeokji.domain.dish.dish.application;
 
 import com.umc.mwomeokji.domain.dish.category.domain.Category;
 import com.umc.mwomeokji.domain.dish.dish.application.DishServiceImpl;

@@ -48,116 +48,115 @@ public class DataLoader {
         List<Category> categoriesList = Arrays.asList(일식, 양식, 한식, 중식, 기타);
         categoryRepository.saveAll(categoriesList);
 
-        Dish 백반 = Dish.builder().name("백반").category(한식).imageUrl(createFilePath("002")).build();
-        Dish 김밥 = Dish.builder().name("김밥").category(한식).imageUrl(createFilePath("003")).build();
-        Dish 비빔밥 = Dish.builder().name("비빔밥").category(한식).imageUrl(createFilePath("004")).build();
-        Dish 볶음밥_한식 = Dish.builder().name("볶음밥").category(한식).imageUrl(createFilePath("005")).build();
-        Dish 덮밥 = Dish.builder().name("덮밥").category(한식).imageUrl(createFilePath("006")).build();
-        Dish 컵밥 = Dish.builder().name("컵밥").category(한식).imageUrl(createFilePath("007")).build();
-        Dish 죽 = Dish.builder().name("죽").category(한식).imageUrl(createFilePath("008")).build();
-        Dish 메밀국수 = Dish.builder().name("메밀국수").category(한식).imageUrl(createFilePath("009")).build();
-        Dish 비빔국수 = Dish.builder().name("비빔국수").category(한식).imageUrl(createFilePath("010")).build();
-        Dish 잔치국수 = Dish.builder().name("잔치국수").category(한식).imageUrl(createFilePath("011")).build();
-        Dish 칼국수 = Dish.builder().name("칼국수").category(한식).imageUrl(createFilePath("012")).build();
-        Dish 물냉면 = Dish.builder().name("물냉면").category(한식).imageUrl(createFilePath("013")).build();
-        Dish 비빔냉면 = Dish.builder().name("비빔냉면").category(한식).imageUrl(createFilePath("014")).build();
-        Dish 밀면 = Dish.builder().name("밀면").category(한식).imageUrl(createFilePath("015")).build();
-        Dish 떡갈비 = Dish.builder().name("떡갈비").category(한식).imageUrl(createFilePath("016")).build();
-        Dish 불고기 = Dish.builder().name("불고기").category(한식).imageUrl(createFilePath("017")).build();
-        Dish 소갈비 = Dish.builder().name("소갈비").category(한식).imageUrl(createFilePath("018")).build();
-        Dish 삼겹살 = Dish.builder().name("삼겹살").category(한식).imageUrl(createFilePath("019")).build();
-        Dish 제육볶음 = Dish.builder().name("제육볶음").category(한식).imageUrl(createFilePath("020")).build();
-        Dish 보쌈= Dish.builder().name("보쌈").category(한식).imageUrl(createFilePath("021")).build();
-        Dish 순대= Dish.builder().name("순대").category(한식).imageUrl(createFilePath("022")).build();
-        Dish 족발 = Dish.builder().name("족발").category(한식).imageUrl(createFilePath("023")).build();
-        Dish 찜닭 = Dish.builder().name("찜닭").category(한식).imageUrl(createFilePath("024")).build();
-        Dish 닭갈비 = Dish.builder().name("닭갈비").category(한식).imageUrl(createFilePath("025")).build();
-        Dish 곱창 = Dish.builder().name("곱창").category(한식).imageUrl(createFilePath("026")).build();
-        Dish 치킨 = Dish.builder().name("치킨").category(한식).imageUrl(createFilePath("027")).build();
-        Dish 닭발 = Dish.builder().name("닭발").category(한식).imageUrl(createFilePath("028")).build();
-        Dish 육회 = Dish.builder().name("육회").category(한식).imageUrl(createFilePath("029")).build();
-        Dish 만두 = Dish.builder().name("만두").category(한식).imageUrl(createFilePath("030")).build();
-        Dish 게장 = Dish.builder().name("게장").category(한식).imageUrl(createFilePath("031")).build();
-        Dish 생선찜 = Dish.builder().name("생선찜").category(한식).imageUrl(createFilePath("032")).build();
-        Dish 생선구이 = Dish.builder().name("생선구이").category(한식).imageUrl(createFilePath("033")).build();
-        Dish 조개구이 = Dish.builder().name("조개구이").category(한식).imageUrl(createFilePath("034")).build();
-        Dish 회덮밥 = Dish.builder().name("회덮밥").category(한식).imageUrl(createFilePath("035")).build();
-        Dish 물회 = Dish.builder().name("물회").category(한식).imageUrl(createFilePath("036")).build();
-        Dish 전 = Dish.builder().name("전").category(한식).imageUrl(createFilePath("037")).build();
-        Dish 국밥 = Dish.builder().name("국밥").category(한식).imageUrl(createFilePath("038")).build();
-        Dish 떡국 = Dish.builder().name("떡국").category(한식).imageUrl(createFilePath("039")).build();
-        Dish 수제비 = Dish.builder().name("수제비").category(한식).imageUrl(createFilePath("040")).build();
-        Dish 갈비탕 = Dish.builder().name("갈비탕").category(한식).imageUrl(createFilePath("041")).build();
-        Dish 감자탕 = Dish.builder().name("감자탕").category(한식).imageUrl(createFilePath("042")).build();
-        Dish 닭도리탕 = Dish.builder().name("닭도리탕").category(한식).imageUrl(createFilePath("043")).build();
-        Dish 매운탕 = Dish.builder().name("매운탕").category(한식).imageUrl(createFilePath("044")).build();
-        Dish 삼계탕 = Dish.builder().name("삼계탕").category(한식).imageUrl(createFilePath("045")).build();
-        Dish 김치찌개 = Dish.builder().name("김치찌개").category(한식).imageUrl(createFilePath("046")).build();
-        Dish 된장찌개 = Dish.builder().name("된장찌개").category(한식).imageUrl(createFilePath("047")).build();
-        Dish 순두부찌개 = Dish.builder().name("순두부찌개").category(한식).imageUrl(createFilePath("048")).build();
-        Dish 부대찌개 = Dish.builder().name("부대찌개").category(한식).imageUrl(createFilePath("049")).build();
-        Dish 떡볶이_쌀떡 = Dish.builder().name("떡볶이(밀떡)").category(한식).imageUrl(createFilePath("050_051")).build();
-        Dish 떡볶이_밀떡 = Dish.builder().name("떡볶이(쌀떡)").category(한식).imageUrl(createFilePath("050_051")).build();
-        Dish 라면 = Dish.builder().name("라면").category(한식).imageUrl(createFilePath("052")).build();
-        Dish 쫄면 = Dish.builder().name("쫄면").category(한식).imageUrl(createFilePath("053")).build();
-        Dish 튀김_분식 = Dish.builder().name("튀김(분식)").category(한식).imageUrl(createFilePath("054")).build();
-        Dish 샤브샤브 = Dish.builder().name("샤브샤브").category(일식).imageUrl(createFilePath("055")).build();
-        Dish 초밥 = Dish.builder().name("초밥").category(일식).imageUrl(createFilePath("056")).build();
-        Dish 돈부리 = Dish.builder().name("돈부리").category(일식).imageUrl(createFilePath("057")).build();
-        Dish 돈가스 = Dish.builder().name("돈가스").category(일식).imageUrl(createFilePath("058")).build();
-        Dish 사시미 = Dish.builder().name("사시미").category(일식).imageUrl(createFilePath("059")).build();
-        Dish 오코노미야끼 = Dish.builder().name("오코노미야끼").category(일식).imageUrl(createFilePath("060")).build();
-        Dish 타코야끼 = Dish.builder().name("타코야끼").category(일식).imageUrl(createFilePath("061")).build();
-        Dish 고로케 = Dish.builder().name("고로케").category(일식).imageUrl(createFilePath("062")).build();
-        Dish 야끼소바 = Dish.builder().name("야끼소바").category(일식).imageUrl(createFilePath("063")).build();
-        Dish 라멘 = Dish.builder().name("라멘").category(일식).imageUrl(createFilePath("064")).build();
-        Dish 우동 = Dish.builder().name("우동").category(일식).imageUrl(createFilePath("065")).build();
-        Dish 냉소바 = Dish.builder().name("냉소바").category(일식).imageUrl(createFilePath("066")).build();
-        Dish 나가사키짬뽕 = Dish.builder().name("나가사키짬뽕").category(일식).imageUrl(createFilePath("067")).build();
-        Dish 리조또 = Dish.builder().name("리조또").category(양식).imageUrl(createFilePath("068")).build();
-        Dish 필라프 = Dish.builder().name("필라프").category(양식).imageUrl(createFilePath("069")).build();
-        Dish 스테이크 = Dish.builder().name("스테이크").category(양식).imageUrl(createFilePath("070")).build();
-        Dish 바비큐 = Dish.builder().name("바비큐").category(양식).imageUrl(createFilePath("071")).build();
-        Dish 그라탕 = Dish.builder().name("그라탕").category(양식).imageUrl(createFilePath("072")).build();
-        Dish 피자 = Dish.builder().name("피자").category(양식).imageUrl(createFilePath("073")).build();
-        Dish 감바스 = Dish.builder().name("감바스").category(양식).imageUrl(createFilePath("074")).build();
-        Dish 토스트 = Dish.builder().name("토스트").category(양식).imageUrl(createFilePath("075")).build();
-        Dish 핫도그 = Dish.builder().name("핫도그").category(양식).imageUrl(createFilePath("076")).build();
-        Dish 샌드위치 = Dish.builder().name("샌드위치").category(양식).imageUrl(createFilePath("077")).build();
-        Dish 햄버거 = Dish.builder().name("햄버거").category(양식).imageUrl(createFilePath("078")).build();
-        Dish 파스타 = Dish.builder().name("파스타").category(양식).imageUrl(createFilePath("079")).build();
-        Dish 짜장면 = Dish.builder().name("짜장면").category(중식).imageUrl(createFilePath("080")).build();
-        Dish 짬뽕 = Dish.builder().name("짬뽕").category(중식).imageUrl(createFilePath("081")).build();
-        Dish 볶음밥_중식 = Dish.builder().name("볶음밥").category(중식).imageUrl(createFilePath("082")).build();
-        Dish 짜장밥 = Dish.builder().name("짜장밥").category(중식).imageUrl(createFilePath("083")).build();
-        Dish 짬뽕밥 = Dish.builder().name("짬뽕밥").category(중식).imageUrl(createFilePath("084")).build();
-        Dish 잡채밥 = Dish.builder().name("잡채밥").category(중식).imageUrl(createFilePath("085")).build();
-        Dish 마파두부 = Dish.builder().name("마파두부").category(중식).imageUrl(createFilePath("086")).build();
-        Dish 탕수육 = Dish.builder().name("탕수육").category(중식).imageUrl(createFilePath("087")).build();
-        Dish 깐풍기 = Dish.builder().name("깐풍기").category(중식).imageUrl(createFilePath("088")).build();
-        Dish 유린기 = Dish.builder().name("유린기").category(중식).imageUrl(createFilePath("089")).build();
-        Dish 꿔바로우 = Dish.builder().name("꿔바로우").category(중식).imageUrl(createFilePath("090")).build();
-        Dish 군만두 = Dish.builder().name("군만두").category(중식).imageUrl(createFilePath("091")).build();
-        Dish 물만두 = Dish.builder().name("물만두").category(중식).imageUrl(createFilePath("092")).build();
-        Dish 딤섬 = Dish.builder().name("딤섬").category(중식).imageUrl(createFilePath("093")).build();
-        Dish 양꼬치 = Dish.builder().name("양꼬치").category(중식).imageUrl(createFilePath("094")).build();
-        Dish 깐풍새우 = Dish.builder().name("깐풍새우").category(중식).imageUrl(createFilePath("095")).build();
-        Dish 깐쇼새우 = Dish.builder().name("깐쇼새우").category(중식).imageUrl(createFilePath("096")).build();
-        Dish 마라샹궈 = Dish.builder().name("마라샹궈").category(중식).imageUrl(createFilePath("097")).build();
-        Dish 마라탕 = Dish.builder().name("마라탕").category(중식).imageUrl(createFilePath("098")).build();
-        Dish 훠궈 = Dish.builder().name("훠궈").category(중식).imageUrl(createFilePath("099")).build();
-        Dish 쌀국수 = Dish.builder().name("쌀국수").category(기타).imageUrl(createFilePath("100")).build();
-        Dish 볶음쌀국수 = Dish.builder().name("볶음쌀국수").category(기타).imageUrl(createFilePath("101")).build();
-        Dish 인도식카레 = Dish.builder().name("인도식카레").category(기타).imageUrl(createFilePath("102")).build();
-        Dish 타코 = Dish.builder().name("타코").category(양식).imageUrl(createFilePath("103")).build();
-        Dish 부리또 = Dish.builder().name("부리또").category(양식).imageUrl(createFilePath("104")).build();
-        Dish 포케 = Dish.builder().name("포케").category(양식).imageUrl(createFilePath("105")).build();
-        Dish 샐러드 = Dish.builder().name("샐러드").category(양식).imageUrl(createFilePath("106")).build();
-        Dish 그릭요거트 = Dish.builder().name("그릭요거트").category(양식).imageUrl(createFilePath("107")).build();
-        Dish 돼지갈비찜 = Dish.builder().name("돼지갈비찜").category(양식).imageUrl(createFilePath("108")).build();
-        Dish 등갈비김치찜 = Dish.builder().name("등갈비김치찜").category(양식).imageUrl(createFilePath("109")).build();
-        Dish 고추장찌개 = Dish.builder().name("고추장찌개").category(양식).imageUrl(createFilePath("110")).build();
-        Dish 차돌박이김치찌개 = Dish.builder().name("차돌박이김치찌개").category(양식).imageUrl(createFilePath("111")).build();
+        Dish 백반 = Dish.builder().name("백반").category(한식).imageUrl(createFilePath("백반")).build();
+        Dish 김밥 = Dish.builder().name("김밥").category(한식).imageUrl(createFilePath("김밥")).build();
+        Dish 비빔밥 = Dish.builder().name("비빔밥").category(한식).imageUrl(createFilePath("비빔밥")).build();
+        Dish 볶음밥_한식 = Dish.builder().name("볶음밥").category(한식).imageUrl(createFilePath("볶음밥_한식")).build();
+        Dish 덮밥 = Dish.builder().name("덮밥").category(한식).imageUrl(createFilePath("덮밥")).build();
+        Dish 컵밥 = Dish.builder().name("컵밥").category(한식).imageUrl(createFilePath("컵밥")).build();
+        Dish 죽 = Dish.builder().name("죽").category(한식).imageUrl(createFilePath("죽")).build();
+        Dish 메밀국수 = Dish.builder().name("메밀국수").category(한식).imageUrl(createFilePath("메밀국수")).build();
+        Dish 비빔국수 = Dish.builder().name("비빔국수").category(한식).imageUrl(createFilePath("비빔국수")).build();
+        Dish 잔치국수 = Dish.builder().name("잔치국수").category(한식).imageUrl(createFilePath("잔치국수")).build();
+        Dish 칼국수 = Dish.builder().name("칼국수").category(한식).imageUrl(createFilePath("칼국수")).build();
+        Dish 물냉면 = Dish.builder().name("물냉면").category(한식).imageUrl(createFilePath("물냉면")).build();
+        Dish 비빔냉면 = Dish.builder().name("비빔냉면").category(한식).imageUrl(createFilePath("비빔냉면")).build();
+        Dish 밀면 = Dish.builder().name("밀면").category(한식).imageUrl(createFilePath("밀면")).build();
+        Dish 떡갈비 = Dish.builder().name("떡갈비").category(한식).imageUrl(createFilePath("떡갈비")).build();
+        Dish 불고기 = Dish.builder().name("불고기").category(한식).imageUrl(createFilePath("불고기")).build();
+        Dish 소갈비 = Dish.builder().name("소갈비").category(한식).imageUrl(createFilePath("소갈비")).build();
+        Dish 삼겹살 = Dish.builder().name("삼겹살").category(한식).imageUrl(createFilePath("삼겹살")).build();
+        Dish 제육볶음 = Dish.builder().name("제육볶음").category(한식).imageUrl(createFilePath("제육볶음")).build();
+        Dish 보쌈= Dish.builder().name("보쌈").category(한식).imageUrl(createFilePath("보쌈")).build();
+        Dish 순대= Dish.builder().name("순대").category(한식).imageUrl(createFilePath("순대")).build();
+        Dish 족발 = Dish.builder().name("족발").category(한식).imageUrl(createFilePath("족발")).build();
+        Dish 찜닭 = Dish.builder().name("찜닭").category(한식).imageUrl(createFilePath("찜닭")).build();
+        Dish 닭갈비 = Dish.builder().name("닭갈비").category(한식).imageUrl(createFilePath("닭갈비")).build();
+        Dish 곱창 = Dish.builder().name("곱창").category(한식).imageUrl(createFilePath("곱창")).build();
+        Dish 치킨 = Dish.builder().name("치킨").category(한식).imageUrl(createFilePath("치킨")).build();
+        Dish 닭발 = Dish.builder().name("닭발").category(한식).imageUrl(createFilePath("닭발")).build();
+        Dish 육회 = Dish.builder().name("육회").category(한식).imageUrl(createFilePath("육회")).build();
+        Dish 만두 = Dish.builder().name("만두").category(한식).imageUrl(createFilePath("만두")).build();
+        Dish 게장 = Dish.builder().name("게장").category(한식).imageUrl(createFilePath("게장")).build();
+        Dish 생선찜 = Dish.builder().name("생선찜").category(한식).imageUrl(createFilePath("생선찜")).build();
+        Dish 생선구이 = Dish.builder().name("생선구이").category(한식).imageUrl(createFilePath("생선구이")).build();
+        Dish 조개구이 = Dish.builder().name("조개구이").category(한식).imageUrl(createFilePath("조개구이")).build();
+        Dish 회덮밥 = Dish.builder().name("회덮밥").category(한식).imageUrl(createFilePath("회덮밥")).build();
+        Dish 물회 = Dish.builder().name("물회").category(한식).imageUrl(createFilePath("물회")).build();
+        Dish 전 = Dish.builder().name("전").category(한식).imageUrl(createFilePath("전")).build();
+        Dish 국밥 = Dish.builder().name("국밥").category(한식).imageUrl(createFilePath("국밥")).build();
+        Dish 떡국 = Dish.builder().name("떡국").category(한식).imageUrl(createFilePath("떡국")).build();
+        Dish 수제비 = Dish.builder().name("수제비").category(한식).imageUrl(createFilePath("수제비")).build();
+        Dish 갈비탕 = Dish.builder().name("갈비탕").category(한식).imageUrl(createFilePath("갈비탕")).build();
+        Dish 감자탕 = Dish.builder().name("감자탕").category(한식).imageUrl(createFilePath("감자탕")).build();
+        Dish 닭도리탕 = Dish.builder().name("닭도리탕").category(한식).imageUrl(createFilePath("닭도리탕")).build();
+        Dish 매운탕 = Dish.builder().name("매운탕").category(한식).imageUrl(createFilePath("매운탕")).build();
+        Dish 삼계탕 = Dish.builder().name("삼계탕").category(한식).imageUrl(createFilePath("삼계탕")).build();
+        Dish 김치찌개 = Dish.builder().name("김치찌개").category(한식).imageUrl(createFilePath("김치찌개")).build();
+        Dish 된장찌개 = Dish.builder().name("된장찌개").category(한식).imageUrl(createFilePath("된장찌개")).build();
+        Dish 순두부찌개 = Dish.builder().name("순두부찌개").category(한식).imageUrl(createFilePath("순두부찌개")).build();
+        Dish 부대찌개 = Dish.builder().name("부대찌개").category(한식).imageUrl(createFilePath("부대찌개")).build();
+        Dish 떡볶이_쌀떡 = Dish.builder().name("떡볶이(밀떡)").category(한식).imageUrl(createFilePath("떡볶이(밀떡)")).build();
+        Dish 떡볶이_밀떡 = Dish.builder().name("떡볶이(쌀떡)").category(한식).imageUrl(createFilePath("떡볶이(쌀떡)")).build();
+        Dish 라면 = Dish.builder().name("라면").category(한식).imageUrl(createFilePath("라면")).build();
+        Dish 쫄면 = Dish.builder().name("쫄면").category(한식).imageUrl(createFilePath("쫄면")).build();
+        Dish 튀김_분식 = Dish.builder().name("튀김(분식)").category(한식).imageUrl(createFilePath("튀김(분식)")).build();
+        Dish 샤브샤브 = Dish.builder().name("샤브샤브").category(일식).imageUrl(createFilePath("샤브샤브")).build();
+        Dish 초밥 = Dish.builder().name("초밥").category(일식).imageUrl(createFilePath("초밥")).build();
+        Dish 돈부리 = Dish.builder().name("돈부리").category(일식).imageUrl(createFilePath("돈부리")).build();
+        Dish 돈가스 = Dish.builder().name("돈가스").category(일식).imageUrl(createFilePath("돈가스")).build();
+        Dish 사시미 = Dish.builder().name("사시미").category(일식).imageUrl(createFilePath("사시미")).build();
+        Dish 오코노미야끼 = Dish.builder().name("오코노미야끼").category(일식).imageUrl(createFilePath("오코노미야끼")).build();
+        Dish 타코야끼 = Dish.builder().name("타코야끼").category(일식).imageUrl(createFilePath("타코야끼")).build();
+        Dish 고로케 = Dish.builder().name("고로케").category(일식).imageUrl(createFilePath("고로케")).build();
+        Dish 야끼소바 = Dish.builder().name("야끼소바").category(일식).imageUrl(createFilePath("야끼소바")).build();
+        Dish 라멘 = Dish.builder().name("라멘").category(일식).imageUrl(createFilePath("라멘")).build();
+        Dish 우동 = Dish.builder().name("우동").category(일식).imageUrl(createFilePath("우동")).build();
+        Dish 냉소바 = Dish.builder().name("냉소바").category(일식).imageUrl(createFilePath("냉소바")).build();
+        Dish 나가사키짬뽕 = Dish.builder().name("나가사키짬뽕").category(일식).imageUrl(createFilePath("나가사키짬뽕")).build();
+        Dish 리조또 = Dish.builder().name("리조또").category(양식).imageUrl(createFilePath("리조또")).build();
+        Dish 필라프 = Dish.builder().name("필라프").category(양식).imageUrl(createFilePath("필라프")).build();
+        Dish 스테이크 = Dish.builder().name("스테이크").category(양식).imageUrl(createFilePath("스테이크")).build();
+        Dish 바비큐 = Dish.builder().name("바비큐").category(양식).imageUrl(createFilePath("바비큐")).build();
+        Dish 그라탕 = Dish.builder().name("그라탕").category(양식).imageUrl(createFilePath("그라탕")).build();
+        Dish 피자 = Dish.builder().name("피자").category(양식).imageUrl(createFilePath("피자")).build();
+        Dish 감바스 = Dish.builder().name("감바스").category(양식).imageUrl(createFilePath("감바스")).build();
+        Dish 토스트 = Dish.builder().name("토스트").category(양식).imageUrl(createFilePath("토스트")).build();
+        Dish 핫도그 = Dish.builder().name("핫도그").category(양식).imageUrl(createFilePath("핫도그")).build();
+        Dish 샌드위치 = Dish.builder().name("샌드위치").category(양식).imageUrl(createFilePath("샌드위치")).build();
+        Dish 햄버거 = Dish.builder().name("햄버거").category(양식).imageUrl(createFilePath("햄버거")).build();
+        Dish 파스타 = Dish.builder().name("파스타").category(양식).imageUrl(createFilePath("파스타")).build();
+        Dish 짜장면 = Dish.builder().name("짜장면").category(중식).imageUrl(createFilePath("짜장면")).build();
+        Dish 짬뽕 = Dish.builder().name("짬뽕").category(중식).imageUrl(createFilePath("짬뽕")).build();
+        Dish 볶음밥_중식 = Dish.builder().name("볶음밥").category(중식).imageUrl(createFilePath("볶음밥")).build();
+        Dish 짜장밥 = Dish.builder().name("짜장밥").category(중식).imageUrl(createFilePath("짜장밥")).build();
+        Dish 짬뽕밥 = Dish.builder().name("짬뽕밥").category(중식).imageUrl(createFilePath("짬뽕밥")).build();
+        Dish 잡채밥 = Dish.builder().name("잡채밥").category(중식).imageUrl(createFilePath("잡채밥")).build();
+        Dish 마파두부 = Dish.builder().name("마파두부").category(중식).imageUrl(createFilePath("마파두부")).build();
+        Dish 탕수육 = Dish.builder().name("탕수육").category(중식).imageUrl(createFilePath("탕수육")).build();
+        Dish 깐풍기 = Dish.builder().name("깐풍기").category(중식).imageUrl(createFilePath("깐풍기")).build();
+        Dish 유린기 = Dish.builder().name("유린기").category(중식).imageUrl(createFilePath("유린기")).build();
+        Dish 꿔바로우 = Dish.builder().name("꿔바로우").category(중식).imageUrl(createFilePath("꿔바로우")).build();
+        Dish 군만두 = Dish.builder().name("군만두").category(중식).imageUrl(createFilePath("군만두")).build();
+        Dish 물만두 = Dish.builder().name("물만두").category(중식).imageUrl(createFilePath("물만두")).build();
+        Dish 딤섬 = Dish.builder().name("딤섬").category(중식).imageUrl(createFilePath("딤섬")).build();
+        Dish 양꼬치 = Dish.builder().name("양꼬치").category(중식).imageUrl(createFilePath("양꼬치")).build();
+        Dish 깐풍새우 = Dish.builder().name("깐풍새우").category(중식).imageUrl(createFilePath("깐풍새우")).build();
+        Dish 깐쇼새우 = Dish.builder().name("깐쇼새우").category(중식).imageUrl(createFilePath("깐쇼새우")).build();
+        Dish 마라샹궈 = Dish.builder().name("마라샹궈").category(중식).imageUrl(createFilePath("마라샹궈")).build();
+        Dish 마라탕 = Dish.builder().name("마라탕").category(중식).imageUrl(createFilePath("마라탕")).build();
+        Dish 훠궈 = Dish.builder().name("훠궈").category(중식).imageUrl(createFilePath("훠궈")).build();
+        Dish 쌀국수 = Dish.builder().name("쌀국수").category(기타).imageUrl(createFilePath("쌀국수")).build();
+        Dish 볶음쌀국수 = Dish.builder().name("볶음쌀국수").category(기타).imageUrl(createFilePath("볶음쌀국수")).build();
+        Dish 인도식카레 = Dish.builder().name("인도식카레").category(기타).imageUrl(createFilePath("인도식카레")).build();
+        Dish 타코 = Dish.builder().name("타코").category(양식).imageUrl(createFilePath("타코")).build();
+        Dish 부리또 = Dish.builder().name("부리또").category(양식).imageUrl(createFilePath("부리또")).build();
+        Dish 포케 = Dish.builder().name("포케").category(양식).imageUrl(createFilePath("포케")).build();
+        Dish 샐러드 = Dish.builder().name("샐러드").category(양식).imageUrl(createFilePath("샐러드")).build();
+        Dish 돼지갈비찜 = Dish.builder().name("돼지갈비찜").category(양식).imageUrl(createFilePath("돼지갈비찜")).build();
+        Dish 등갈비김치찜 = Dish.builder().name("등갈비김치찜").category(양식).imageUrl(createFilePath("등갈비김치찜")).build();
+        Dish 고추장찌개 = Dish.builder().name("고추장찌개").category(양식).imageUrl(createFilePath("고추장찌개")).build();
+        Dish 차돌박이김치찌개 = Dish.builder().name("차돌박이김치찌개").category(양식).imageUrl(createFilePath("차돌박이김치찌개")).build();
 
         List<Dish> dishesList = Arrays.asList(
                 백반, 김밥, 비빔밥, 볶음밥_한식, 덮밥, 컵밥, 죽, 메밀국수, 비빔국수, 잔치국수, 칼국수, 물냉면, 비빔냉면, 밀면, 떡갈비,
@@ -166,7 +165,7 @@ public class DataLoader {
                 떡볶이_쌀떡, 떡볶이_밀떡, 라면, 쫄면, 튀김_분식, 샤브샤브, 초밥, 돈부리, 돈가스, 사시미, 오코노미야끼, 타코야끼, 고로케, 야끼소바,
                 라멘, 우동, 냉소바, 나가사키짬뽕, 리조또, 필라프, 스테이크, 바비큐, 그라탕, 피자, 감바스, 토스트, 핫도그, 샌드위치, 햄버거, 파스타,
                 짜장면, 짬뽕, 볶음밥_중식, 짜장밥, 짬뽕밥, 잡채밥, 마파두부, 탕수육, 깐풍기, 유린기, 꿔바로우, 군만두, 물만두, 딤섬, 양꼬치,
-                깐풍새우, 깐쇼새우, 마라샹궈, 마라탕, 훠궈, 쌀국수, 볶음쌀국수, 인도식카레, 타코, 부리또, 포케, 샐러드, 그릭요거트, 돼지갈비찜,
+                깐풍새우, 깐쇼새우, 마라샹궈, 마라탕, 훠궈, 쌀국수, 볶음쌀국수, 인도식카레, 타코, 부리또, 포케, 샐러드, 돼지갈비찜,
                 등갈비김치찜, 고추장찌개, 차돌박이김치찌개
         );
 
@@ -300,7 +299,7 @@ public class DataLoader {
                 비빔국수.getId(), 잔치국수.getId(), 칼국수.getId(), 물냉면.getId(), 비빔냉면.getId(), 밀면.getId(),
                 떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(), 쫄면.getId(), 초밥.getId(), 고로케.getId(),
                 우동.getId(), 냉소바.getId(), 토스트.getId(), 핫도그.getId(), 샌드위치.getId(), 부리또.getId(),
-                포케.getId(), 샐러드.getId(), 그릭요거트.getId()
+                포케.getId(), 샐러드.getId()
         );
         List<Long> dishesIds18 = Arrays.asList(
                 쌀국수.getId(), 볶음쌀국수.getId(), 인도식카레.getId(), 타코.getId(), 부리또.getId(), 포케.getId()
@@ -332,7 +331,7 @@ public class DataLoader {
                 물냉면.getId(), 비빔냉면.getId(), 만두.getId(), 국밥.getId(), 떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(),
                 쫄면.getId(), 튀김_분식.getId(), 토스트.getId(), 핫도그.getId(), 샌드위치.getId(), 햄버거.getId(), 짜장면.getId(),
                 짬뽕.getId(), 볶음밥_중식.getId(), 짜장밥.getId(), 짬뽕밥.getId(), 군만두.getId(), 물만두.getId(), 부리또.getId(),
-                샐러드.getId(), 그릭요거트.getId()
+                샐러드.getId()
         );
         List<Long> dishesIds26 = Arrays.asList(
                 비빔밥.getId(), 볶음밥_한식.getId(), 죽.getId(), 비빔국수.getId(), 김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(),
@@ -351,7 +350,7 @@ public class DataLoader {
                 라면.getId(), 튀김_분식.getId(), 초밥.getId(), 돈부리.getId(), 돈가스.getId(), 오코노미야끼.getId(), 타코야끼.getId(),
                 고로케.getId(), 야끼소바.getId(), 라멘.getId(), 우동.getId(), 냉소바.getId(), 짜장면.getId(), 짬뽕.getId(), 볶음밥_중식.getId(),
                 짜장밥.getId(), 짬뽕밥.getId(), 잡채밥.getId(), 군만두.getId(), 물만두.getId(), 딤섬.getId(), 마라샹궈.getId(), 마라탕.getId(),
-                쌀국수.getId(), 볶음쌀국수.getId(), 인도식카레.getId(), 타코.getId(), 부리또.getId(), 포케.getId(), 샐러드.getId(), 그릭요거트.getId()
+                쌀국수.getId(), 볶음쌀국수.getId(), 인도식카레.getId(), 타코.getId(), 부리또.getId(), 포케.getId(), 샐러드.getId()
         );
         List<Long> dishesIds29 = Arrays.asList(
                 잔치국수.getId(), 칼국수.getId(),  전.getId(), 국밥.getId(), 수제비.getId(), 김치찌개.getId(),
@@ -429,14 +428,13 @@ public class DataLoader {
                 김밥.getId(), 비빔밥.getId(), 볶음밥_한식.getId(), 죽.getId(), 메밀국수.getId(), 비빔국수.getId(),
                 잔치국수.getId(), 칼국수.getId(), 물냉면.getId(), 비빔냉면.getId(), 밀면.getId(), 전.getId(), 떡국.getId(),
                 수제비.getId(), 김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(), 부대찌개.getId(), 떡볶이_밀떡.getId(),
-                떡볶이_쌀떡.getId(), 쫄면.getId(), 파스타.getId(), 마파두부.getId(), 포케.getId(), 샐러드.getId(),
-                그릭요거트.getId()
+                떡볶이_쌀떡.getId(), 쫄면.getId(), 파스타.getId(), 마파두부.getId(), 포케.getId(), 샐러드.getId()
         );
         List<Long> dishesIds45 = Arrays.asList(
                 백반.getId(), 김밥.getId(), 덮밥.getId(), 컵밥.getId(), 죽.getId(), 메밀국수.getId(), 떡갈비.getId(),
                 삼겹살.getId(), 육회.getId(), 만두.getId(), 회덮밥.getId(), 전.getId(), 초밥.getId(), 돈가스.getId(),
                 사시미.getId(), 타코야끼.getId(), 고로케.getId(), 토스트.getId(), 샌드위치.getId(), 햄버거.getId(), 군만두.getId(),
-                물만두.getId(), 딤섬.getId(), 타코.getId(), 부리또.getId(), 포케.getId(), 샐러드.getId(), 그릭요거트.getId()
+                물만두.getId(), 딤섬.getId(), 타코.getId(), 부리또.getId(), 포케.getId(), 샐러드.getId()
         );
 
         questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문1.getId(), dishesIds1));

@@ -7,7 +7,6 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.umc.mwomeokji.infra.s3.exception.AmazonException;
 import com.umc.mwomeokji.infra.s3.exception.FileException;
 import lombok.RequiredArgsConstructor;
-import org.apache.tika.Tika;
 import org.apache.tika.mime.MimeType;
 import org.apache.tika.mime.MimeTypeException;
 import org.apache.tika.mime.MimeTypes;
@@ -25,7 +24,6 @@ import static com.umc.mwomeokji.global.error.exception.ExceptionCodeAndDetails.*
 public class FileServiceImpl implements FileService {
 
     private final AmazonS3 amazonS3;
-    private final Tika tika = new Tika();
 
     @Value("${cloud.aws.s3.bucket-name}")
     private String bucketName;

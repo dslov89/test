@@ -12,6 +12,8 @@ public class DishDto {
     public static class DishPostRequest {
         @NotBlank(message = "메뉴 이름은 null 이거나 빈 칸일 수 없습니다.")
         private final String name;
+        @NotBlank(message = "메뉴 카테고리는 null 이거나 빈 칸일 수 없습니다.")
+        private final String category;
         private final String videoUrl1;
         private final String videoUrl2;
         private final String videoUrl3;

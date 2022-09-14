@@ -9,6 +9,8 @@ public interface DishService {
 
     DishDetailsResponse saveDish(DishPostRequest request, MultipartFile multipartFile);
 
+    List<DishNameResponse> saveDishByCsv(MultipartFile file, List<MultipartFile> image);
+
     List<DishNameResponse> getAllDishesName();
 
     DishDetailsResponse getDishDetails(Long id);

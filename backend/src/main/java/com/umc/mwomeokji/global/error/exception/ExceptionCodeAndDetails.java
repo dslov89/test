@@ -16,6 +16,7 @@ public enum ExceptionCodeAndDetails {
 
     // 1000: dish
     NOT_FOUND_DISH(404, "1001", "해당하는 메뉴를 찾을 수 없습니다."),
+    NOT_EQUAL_SIZE(400, "1002", "입력한 데이터의 개수와 이미지의 개수가 일치하지 않습니다."),
 
     // 2000: question
     NOT_FOUND_QUESTION(404, "2001", "해당하는 질문을 찾을 수 없습니다."),

@@ -33,5 +33,5 @@ chmod +x $JAR_NAME
 echo "> $JAR_NAME 실행"
 
 nohup java -jar \
-        -Dspring.profiles.active=local \
+        -Dspring.profiles.active=prod \
         $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &

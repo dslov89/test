@@ -5,12 +5,12 @@ body {
   text-align: center;
 }
 
-.container {
+.rps_main_container {
   display: flex;
   flex-direction: column;
 }
 
-main_text {
+.rps_main_text {
   margin: 0 auto;
   margin-top: 7vh;
   text-align: center;
@@ -22,13 +22,13 @@ main_text {
   text-align: center;
 }
 
-main_logo {
+.rps_main_logo {
   margin: 0 auto;
   text-align: center;
   margin-top: 4vh;
 }
 
-small_text {
+.rps_text {
   margin: 2vh auto;
   color: #494646;
   font-weight: 400;
@@ -39,13 +39,13 @@ small_text {
   font-family: "NanumSquareAcr";
 }
 
-#start_botton {
+#start_button {
   text-align: center;
   position: relative;
   margin-top: 4vh;
   margin-bottom: 2vh;
 }
 
-#start_botton:hover {
+#start_button:hover {
   cursor: pointer;
 }

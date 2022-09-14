@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 
-#container {
+#rps_loading_container {
   display: flex;
   flex-direction: column;
 }

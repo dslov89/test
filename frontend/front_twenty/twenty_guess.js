@@ -2,7 +2,7 @@ var food_data = []; // api로 fetch받은 데이터
 var question_length = []; // 질문마다 길이가 저장됨
 var guess_start_check = 0;
 var choose_record = [];
-
+console.log("콘솔 시작");
 function slide() {
   $(".slide").animate({ marginLeft: "-900px" }, 400);
   $(".guess_slide").animate({ marginLeft: "-200px" }, 400);
@@ -22,6 +22,7 @@ function sleep(ms) {
 
 //fetch 시작
 async function getjson() {
+  console.log("api 실행");
   const response = await fetch(`https://mwomeokji.shop/questions/dishes`);
   const data = await response.json();
   food_data = data;

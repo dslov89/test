@@ -13,41 +13,41 @@ body {
 }
 
 top_button {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   text-align: center;
 }
 
 bar {
-  margin-bottom: 60px;
-  margin-top: 20px;
+  margin-bottom: 3.75rem;
+  margin-top: 1.25rem;
 }
 
 number {
   position: relative;
-  top: -20px;
+  top: -1.25rem;
 }
 number_buttom {
   position: relative;
-  top: -10px;
+  top: -0.625rem;
   font-family: "NanumSquareAcr";
 }
 
 guess_button {
   position: relative;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 button_background {
   position: relative;
-  right: 180px;
+  right: 11.25rem;
 }
 guess_text {
-  width: 400px;
+  width: 25rem;
   position: absolute;
   top: -90%;
   color: white;
-  right: 30px;
-  bottom: 20px;
+  right: 1.875rem;
+  bottom: 1.25rem;
   font-family: "NanumSquareAcr";
   text-align: center;
 }
@@ -55,11 +55,11 @@ guess_text {
 answer_text {
   position: absolute;
   color: black;
-  left: 130px;
-  top: 15px;
+  left: 8.125rem;
+  top: 0.9375rem;
   text-align: center;
   font-family: "NanumSquareAcr";
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 answer_box {
@@ -68,7 +68,7 @@ answer_box {
 
 number {
   position: relative;
-  bottom: 80px;
+  bottom: 5rem;
 }
 
 .image {
@@ -80,60 +80,50 @@ number {
 
 #back_button {
   position: relative;
-  right: 430px;
+  right: 26.875rem;
 }
 
 #reset_button {
   position: relative;
   background-color: white;
-  left: 350px;
+  left: 21.875rem;
 }
 
 #guess_button_a {
   position: relative;
-  left: 180px;
-  bottom: 40px;
+  left: 11.25rem;
+  bottom: 2.5rem;
 }
 
 #guess_button_b {
   position: relative;
-  left: 180px;
-  bottom: 10px;
+  left: 11.25rem;
+  bottom: 0.625rem;
 }
 
 #guess_button_c {
   position: relative;
-  left: 180px;
-  top: 20px;
+  left: 11.25rem;
+  top: 1.25rem;
 }
 
 .button_hover:hover {
   content: url("./img_file_twenty/twenty_guess_yellow_answer.svg");
 }
 
-/*
-answer_text:hover ~ .button_hover {
-  content: url("./img_file_twenty/twenty_guess_yellow_answer.svg");
-  position: absolute;
-  left: 615px;
-  top: 1500px;
-  src = './img_file_twenty/twenty_guess_yellow_answer.svg'
-}
-*/
-
 .bottom_text {
   position: absolute;
-  bottom: 5px;
-  right: 12px;
+  bottom: 0.3125rem;
+  right: 0.75rem;
 }
 
 #bottom_button {
   position: relative;
-  top: 60px;
+  top: 3.75rem;
 }
 
 #guess_number {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: "Montserrat", sans-serif;
   font-family: Arial;
 }
@@ -144,12 +134,12 @@ answer_text:hover ~ .button_hover {
 
 skip {
   position: relative;
-  top: 60px;
+  top: 3.75rem;
 }
 
 #jb {
   width: 20%;
-  height: 30px;
+  height: 1.875rem;
 }
 
 #jb {
@@ -157,11 +147,11 @@ skip {
 }
 #jb::-webkit-progress-bar {
   background: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 2px #ccc;
+  border-radius: 0.625rem;
+  box-shadow: inset 0rem 0rem 0.125rem #ccc;
 }
 #jb::-webkit-progress-value {
-  border-radius: 10px;
+  border-radius: 10rem;
   background: #1d976c;
   background: -webkit-linear-gradient(to right, #e06437, #e06437);
   background: linear-gradient(to right, #e06437, #e06437);

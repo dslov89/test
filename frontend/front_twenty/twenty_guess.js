@@ -4,14 +4,14 @@ var guess_start_check = 0;
 var choose_record = [];
 console.log("콘솔 시작");
 function slide() {
-  $(".slide").animate({ marginLeft: "-900px" }, 400);
-  $(".guess_slide").animate({ marginLeft: "-200px" }, 400);
-  $(".slide").animate({ marginLeft: "1100px" }, 0000, function () {
+  $(".slide").animate({ marginLeft: "-56.25rem" }, 400);
+  $(".guess_slide").animate({ marginLeft: "-12.5rem" }, 400);
+  $(".slide").animate({ marginLeft: "68.75rem" }, 0000, function () {
     next_guess();
   });
-  $(".guess_slide").animate({ marginLeft: "900px" }, 0000);
-  $(".slide").animate({ marginLeft: "0px" }, 400);
-  $(".guess_slide").animate({ marginLeft: "0px" }, 700);
+  $(".guess_slide").animate({ marginLeft: "56.25rem" }, 0000);
+  $(".slide").animate({ marginLeft: "0rem" }, 400);
+  $(".guess_slide").animate({ marginLeft: "0rem" }, 700);
 }
 
 //시간 지연을 위해 사용
@@ -77,24 +77,24 @@ function next_guess() {
 
   if (food_data[rst[guess_order]].question.length > 20) {
     $("#background_changed_location").css({
-      width: "400px",
-      left: "-120px",
+      width: "25rem",
+      left: "-7.5rem",
     });
 
     $("#guess_text").css({
-      width: "400px",
-      left: "-10px",
+      width: "25rem",
+      left: "-0.625rem",
     });
     document.getElementById("background_changed").src =
       "./img_file_twenty/twenty_guess_guess_long.svg";
   } else {
     $("#background_changed_location").css({
-      width: "100px",
-      left: "-180px",
+      width: "6.25rem",
+      left: "-11.25rem",
     });
     $("#guess_text").css({
-      width: "300px",
-      right: "-20px",
+      width: "18.75rem",
+      right: "-1.25rem",
     });
     document.getElementById("background_changed").src =
       "./img_file_twenty/twenty_guess_guess_background.svg";
@@ -146,27 +146,26 @@ function normal() {
 }
 
 function guess_back() {
-  if (food_data[rst[guess_order - 1]].question.length > 20) {
+  if (food_data[rst[guess_order]].question.length > 20) {
     $("#background_changed_location").css({
-      width: "400px",
-      left: "-120px",
+      width: "25rem",
+      left: "-7.5rem",
     });
 
     $("#guess_text").css({
-      width: "400px",
-      left: "-10px",
+      width: "25rem",
+      left: "-0.625rem",
     });
     document.getElementById("background_changed").src =
       "./img_file_twenty/twenty_guess_guess_long.svg";
   } else {
     $("#background_changed_location").css({
-      width: "100px",
-      left: "-180px",
+      width: "6.25rem",
+      left: "-11.25rem",
     });
-
     $("#guess_text").css({
-      width: "300px",
-      right: "-20px",
+      width: "18.75rem",
+      right: "-1.25rem",
     });
     document.getElementById("background_changed").src =
       "./img_file_twenty/twenty_guess_guess_background.svg";
@@ -196,11 +195,11 @@ function guess_back() {
     // 둘다 아님 이 부분이 뜬다면 안됨
   }
 
-  $(".slide").animate({ marginLeft: "-1100px" }, 0000);
-  $(".guess_slide").animate({ marginLeft: "-900px" }, 0000);
+  $(".slide").animate({ marginLeft: "-68.75rem" }, 0000);
+  $(".guess_slide").animate({ marginLeft: "-56.25rem" }, 0000);
 
-  $(".slide").animate({ marginLeft: "0px" }, 400);
-  $(".guess_slide").animate({ marginLeft: "0px" }, 700);
+  $(".slide").animate({ marginLeft: "0rem" }, 400);
+  $(".guess_slide").animate({ marginLeft: "0rem" }, 700);
 }
 
 function bar_progress() {

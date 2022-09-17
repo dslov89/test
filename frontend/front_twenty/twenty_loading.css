@@ -2,7 +2,6 @@
 
 body {
   width: 100%;
-  height: 1000px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -10,20 +9,20 @@ body {
 
 top_botton {
   text-align: center;
-  bottom: 380px;
+  bottom: 23.75rem;
 }
 
 text {
   position: relative;
   color: black;
   text-align: center;
-  top: 50px;
-  right: 190px;
+  top: 3.125rem;
+  right: 11.875rem;
 }
 
 .image {
   border: 0ch;
-  top: 700px;
+  top: 43.75rem;
   background-color: transparent;
   text-align: center;
   position: relative;
@@ -31,13 +30,13 @@ text {
 
 #back_botton {
   position: relative;
-  right: 430px;
-  top: 30px;
+  right: 26.875rem;
+  top: 1.875rem;
 }
 
 loading {
   position: relative;
   text-align: center;
-  left: 100px;
-  top: 100px;
+  left: 6.25rem;
+  top: 6.25rem;
 }

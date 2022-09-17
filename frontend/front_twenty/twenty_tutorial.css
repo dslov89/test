@@ -8,8 +8,7 @@ body {
 }
 
 logo {
-  margin-top: 1.875rem;
-  margin-bottom: 1.25rem;
+  margin-top: 4.5rem;
 }
 
 main_logo {
@@ -21,15 +20,13 @@ main_logo {
   width: 6.25rem;
 }
 
-#start_botton {
-  margin-bottom: 0rem;
-  bottom: -6.25rem;
+start_button {
+  margin-top: 4.25rem;
+  margin-bottom: 5rem;
 }
 
 tutorial {
-  top: 3.125rem;
-  margin-bottom: 1.875rem;
-  margin-top: 1.875rem;
+  margin-top: 3rem;
 }
 
 .gif {
@@ -38,6 +35,6 @@ tutorial {
 
 texts {
   font-family: "NanumSquareAcr";
-  font-size: 0.875;
-  margin-bottom: 3.125rem;
+  font-size: 0.875rem;
+  margin-top: 2.625rem;
 }

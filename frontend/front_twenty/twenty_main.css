@@ -22,20 +22,15 @@ small_text {
   font-size: 0.875rem;
   width: 18.75rem;
   position: relative;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   font-family: "NanumSquareAcr";
   color: gray;
 }
 
 main_logo {
-  margin-top: 2.5rem;
+  margin-top: 4.625rem;
   text-align: center;
   position: relative;
-}
-
-#center {
-  text-align: center;
-  margin-top: 2.5rem;
 }
 
 .image {
@@ -43,18 +38,15 @@ main_logo {
   border: 0ch;
 }
 
-#start_botton {
-  margin-bottom: 0rem;
-  position: relative;
-  margin-top: 3.875rem;
+start_button {
   margin-bottom: 5rem;
+  position: relative;
+  margin-top: 6.5rem;
 }
 
 #logo_word {
-  margin-top: 6.25rem;
-  margin-bottom: 6.25rem;
-  width: 16.75rem;
-  height: 8.563rem;
+  width: 0.75rem;
+  height: 0.563rem;
 }
 #start_button:hover {
   cursor: pointer;

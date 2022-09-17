@@ -13,28 +13,29 @@ body {
 }
 
 top_button {
-  margin-top: 1.25rem;
+  margin-top: 2.5rem;
   text-align: center;
 }
 
 bar {
-  margin-bottom: 3.75rem;
-  margin-top: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
 }
 
 number {
   position: relative;
-  top: -1.25rem;
+  margin-top: 5.6255rem;
+  margin-bottom: 00px;
 }
-number_buttom {
+number_bottom {
   position: relative;
-  top: -0.625rem;
+  margin-top: -4.125rem;
   font-family: "NanumSquareAcr";
 }
 
 guess_button {
   position: relative;
-  margin-top: 3.125rem;
+  margin-top: 4rem;
 }
 
 button_background {
@@ -56,7 +57,7 @@ answer_text {
   position: absolute;
   color: black;
   left: 8.125rem;
-  top: 0.9375rem;
+
   text-align: center;
   font-family: "NanumSquareAcr";
   font-size: 1rem;
@@ -68,7 +69,10 @@ answer_box {
 
 number {
   position: relative;
-  bottom: 5rem;
+  bottom: 5.625rem;
+}
+guess_box {
+  margin-top: 4.4375rem;
 }
 
 .image {
@@ -80,31 +84,31 @@ number {
 
 #back_button {
   position: relative;
-  right: 26.875rem;
+  right: 21.75rem;
 }
 
 #reset_button {
   position: relative;
   background-color: white;
-  left: 21.875rem;
+  left: 20.9375rem;
 }
 
 #guess_button_a {
   position: relative;
   left: 11.25rem;
-  bottom: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 #guess_button_b {
   position: relative;
   left: 11.25rem;
-  bottom: 0.625rem;
+  margin-bottom: 1.5rem;
 }
 
 #guess_button_c {
   position: relative;
   left: 11.25rem;
-  top: 1.25rem;
 }
 
 .button_hover:hover {
@@ -134,12 +138,12 @@ number {
 
 skip {
   position: relative;
-  top: 3.75rem;
+  margin-top: 4.5rem;
 }
 
 #jb {
-  width: 20%;
-  height: 1.875rem;
+  width: 29rem;
+  height: 1.5rem;
 }
 
 #jb {

@@ -7,36 +7,23 @@ body {
   text-align: center;
 }
 
-top_botton {
-  text-align: center;
-  bottom: 23.75rem;
-}
-
-text {
+s_text {
   position: relative;
   color: black;
   text-align: center;
-  top: 3.125rem;
-  right: 11.875rem;
+  margin-top: 2.5rem;
 }
 
 .image {
   border: 0ch;
-  top: 43.75rem;
   background-color: transparent;
   text-align: center;
   position: relative;
 }
 
-#back_botton {
-  position: relative;
-  right: 26.875rem;
-  top: 1.875rem;
-}
-
 loading {
   position: relative;
   text-align: center;
-  left: 6.25rem;
-  top: 6.25rem;
+  margin-top: 14.75rem;
+  margin-bottom: 0rem;
 }

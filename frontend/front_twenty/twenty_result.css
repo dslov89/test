@@ -18,7 +18,7 @@ body {
 
 #logo_word {
   position: relative;
-  top: 3.125rem;
+  margin-top: 7.625rem;
 }
 
 #back_button {
@@ -29,28 +29,27 @@ body {
 food_text {
   color: orange;
   position: relative;
-  top: 3.125rem;
-  margin-top: 3.75rem;
+  margin-top: 3.5rem;
   font-family: "NanumSquareAcr";
   font-size: 3rem;
 }
 
 wave {
   position: relative;
-  top: 3.4375rem;
+  margin-top: 0.5rem;
 }
 
 food_img {
   position: relative;
-  top: 4.375rem;
-  margin: 3.125rem;
-  margin-bottom: 3.75rem;
+  margin-top: 4rem;
 }
 
 connect_top {
   position: relative;
-  bottom: 0rem;
-  top: 00rem;
+}
+connect_bottom {
+  position: relative;
+  height: 19.5rem;
 }
 
 connect_line {
@@ -68,6 +67,8 @@ bottom_button {
   text-align: center;
   width: 90%;
   display: flex;
+}
+.choose {
 }
 
 #left {

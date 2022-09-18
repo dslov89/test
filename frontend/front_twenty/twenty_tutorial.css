@@ -1,67 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+body {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-logo{
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 20px;
+logo {
+  margin-top: 4.5rem;
 }
 
-main_logo{
-    text-align: center;
-    margin-top: 30px;
-  
+main_logo {
+  margin-top: 1.875rem;
 }
-  
 
 .image {
-    background-color: transparent;
-    text-align: center;
-    width: 10px;
-  
-}
-  
-
-#start_botton {
-    text-align: center;
-    margin-bottom: 0px;
-    position: relative;
-    bottom: -20px;
-}
-  
-#logo_word {
-    text-align: center;
+  background-color: transparent;
+  width: 6.25rem;
 }
 
-tutorial{
-    top: 50px;
-    margin-bottom:30px;
-    margin-top: 30px;
+start_button {
+  margin-top: 4.25rem;
+  margin-bottom: 5rem;
 }
 
-.gif{
-    border-radius:20px;
-    text-align: center;
+tutorial {
+  margin-top: 3rem;
 }
 
-#back_botton{
-    position: relative; 
-    right: 470px;
-    top: 20px;
-    border: 0ch;
+.gif {
+  border-radius: 1.25rem;
 }
 
-
-texts{
-    position: relative;
-    font-family: "NanumSquareAcr";
-    font-size: 14;
-    margin-bottom:50px;
-
+texts {
+  font-family: "NanumSquareAcr";
+  font-size: 0.875rem;
+  margin-top: 2.625rem;
 }

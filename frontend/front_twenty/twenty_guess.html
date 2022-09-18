@@ -1,121 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" con tent="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" con tent="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>guess</title>
-    <link rel="stylesheet" href="./twenty_guess.css">
-    
+    <link rel="stylesheet" href="./twenty_guess.css" />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       type="text/javascript"
       src="http://code.jquery.com/jquery-latest.js"
     ></script>
-    <script src="./twenty_guess.js"> </script>
+    <script src="./twenty_guess.js"></script>
     <link
       href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
       rel="stylesheet"
-      />
-    <script src="../front_head\includeHTML.js"></script>
+    />
+    <script src="../front_head/includeHTML.js"></script>
     <link rel="stylesheet" href="../front_head/style.css" />
-    <link rel="stylesheet" href="../front_head/style.css" />
-</head>
+  </head>
 
-
-<body>
-    <div include-html="..\front_head\nav.html"></div>
-    <script> includeHTML(); </script>
+  <body>
+    <div include-html="../front_head/nav.html"></div>
+    <script>
+      includeHTML();
+    </script>
     <div class="container">
-    
-        <!--상단 로고 오늘은 뭐먹지-->
-        
-        <top_button>
-            <button src=".\img_file_twenty\twenty_guess_sec_arrow_back.svg" type="button" class="image custom-btn btn-2" id = "back_button" onclick='guess_back(), count("minus")', onClick="history.back()" width="auto", height="40">
-                <img  src=".\img_file_twenty\twenty_guess_sec_arrow_back.svg" width="auto", height="50">   
-                <!--
-                <img  src=".\img_file_twenty\twenty_guess_sec_arrow_back.svg" width="auto", height="50">    
-                -->
-            </button>
-    
-            <button type="button" class="image custom-btn btn-2" id = "reset_button" onClick="location.href='./twenty_main.html'";">
-                <img  src=".\img_file_twenty\twenty_guess_reset.svg" width="auto", height="50"> 
-            </button>
+      <!--상단 로고 오늘은 뭐먹지-->
+      <top_button>
+        <button
+          type="button"
+          class="image"
+          id="back_button"
+          onclick='guess_back(), count("minus")'
+          ,
+          onClick="history.back()"
+          width="auto"
+          ,
+          height="40rem"
+        >
+          <img
+            src="./img_file_twenty/twenty_guess_sec_arrow_back.svg"
+            width="auto"
+            ,
+            height="50rem"
+          />
+        </button>
 
+        <button
+          type="button"
+          class="image"
+          id="reset_button"
+          onClick="location.href='./twenty_main.html'"
+          ;
+        >
+          <img
+            src="./img_file_twenty/twenty_guess_reset.svg"
+            width="auto"
+            ,
+            height="50rem"
+          />
+        </button>
+      </top_button>
 
+      <number id="guess_number" style="font-family: 'Montserrat', sans-serif">
+        01.
+      </number>
+      <number_bottom style="font-family: NanumSquareAcr">
+        <progress value="0" max="13" id="jb"></progress>
+      </number_bottom>
 
-
-        </top_button>
-    
-        <number id='guess_number' style="font-family:'Montserrat', sans-serif">
-            01.
-        </number>
-        <number_bottom style="font-family: NanumSquareAcr">
-            <progress value="0" max="13" id="jb"></progress>
-        </number_bottom>
-        <guess_button class="guess_slide">
-
-            <button_background id="background_img2">
-                <img id="background_img" src=".\img_file_twenty\twenty_guess_guess_background.svg" width="auto", height="50">
-                <guess_text id='guess_text'>
-                    질문 내용
-                </guess_text>
-            </button_background>
-        </guess_button>
-    
-        <bar>
-            <img  src=".\img_file_twenty\twenty_guess_bar.svg" width="660">
-        </bar>
-    <!--
-        ,next_guess()
-    -->
-        <d class="slide">
-            <button type="button" class="image" id = "guess_button_a"
-                    onclick=' slide(), like(), count("plus")'>
-                <img class="button_hover custom-btn btn-2"  src=".\img_file_twenty\twenty_guess_answer_white.svg" width="auto", height="55">   
-                <answer_text style="position:absolute; left:130px; top:15px;">
-                    예
-                </answer_text>
-            </button>
-        </d>
-    
-    
-        <d class="slide">
-            <button type="button" class="image" id = "guess_button_b"
-                    onclick=' slide(), dislike(), count("plus")' >
-                <img class="button_hover custom-btn btn-2" src=".\img_file_twenty\twenty_guess_answer_white.svg" width="auto", height="55">
-                <answer_text style="position:absolute; left:115px; top:15px;">
-                    아니오
-                </answer_text>
-            </button>
-        </d>
-    
-        <d class="slide">
-            <button type="button" class="image" class="guess_img" id = "guess_button_c" onclick='slide(), normal(), count("plus")'>
-                <img class="button_hover custom-btn btn-2" src=".\img_file_twenty\twenty_guess_answer_white.svg" width="auto", height="55">
-                <answer_text style="position:absolute; left:110px; top:15px;">
-                    상관없음
-                </answer_text>
-            </button>
-        </d>
-    
-
-    
-        <skip>
-            <button class="image"  id="skip_guess" onclick="choose()">
-                <img id="skipd" src=".\img_file_twenty\twenty_guess_choose_more.svg" width="800", height="auto">
-            </button>        
-        </skip>  
-
-
-        
-    
-    </div>
-    
-
-</body>
-<!--
-        <e onclick="changeimage(),choose() ">
-            <img id="skipd" src=".\img_file_twenty\twenty_guess_choose_more.svg"> 
-        </e>      
+      <!--
+      <guess_box>    
 -->
+
+      <guess_button class="guess_slide">
+        <button_background id="background_changed_location">
+          <img
+            id="background_changed"
+            src="./img_file_twenty/twenty_guess_guess_background.svg"
+            width="auto"
+            ,
+            height="50rem"
+          />
+          <guess_text id="guess_text"> 질문 내용 </guess_text>
+        </button_background>
+      </guess_button>
+
+      <bar>
+        <img src="./img_file_twenty/twenty_guess_bar.svg" width="660" />
+      </bar>
+
+      <answer_box class="slide">
+        <button
+          type="button"
+          class="image"
+          id="guess_button_a"
+          onclick=' slide(), like(), count("plus")'
+        >
+          <img
+            class="button_hover"
+            src="./img_file_twenty/twenty_guess_answer_white.svg"
+            width="auto"
+            ,
+            height="55rem"
+          />
+          <answer_text
+            style="position: absolute; left: 8.125rem; top: 0.9375rem"
+          >
+            예
+          </answer_text>
+        </button>
+      </answer_box>
+
+      <answer_box class="slide">
+        <button
+          type="button"
+          class="image"
+          id="guess_button_b"
+          onclick=' slide(), dislike(), count("plus")'
+        >
+          <img
+            class="button_hover"
+            src="./img_file_twenty/twenty_guess_answer_white.svg"
+            width="auto"
+            ,
+            height="55rem"
+          />
+          <answer_text
+            style="position: absolute; left: 7.1875rem; top: 0.9375rem"
+          >
+            아니오
+          </answer_text>
+        </button>
+      </answer_box>
+
+      <answer_box class="slide">
+        <button
+          type="button"
+          class="image"
+          id="guess_button_c"
+          onclick='slide(), normal(), count("plus")'
+        >
+          <img
+            class="button_hover"
+            src="./img_file_twenty/twenty_guess_answer_white.svg"
+            width="auto"
+            ,
+            height="55rem"
+          />
+          <answer_text
+            style="position: absolute; left: 6.5625rem; top: 0.9375rem"
+          >
+            상관없음
+          </answer_text>
+        </button>
+      </answer_box>
+      <!--
+      </guess_box>    
+-->
+
+      <skip>
+        <button class="image" onclick="choose()">
+          <img
+            id="skipd"
+            src="./img_file_twenty/twenty_guess_choose_more.svg"
+            width="800rem"
+            ,
+            height="auto"
+          />
+        </button>
+      </skip>
+    </div>
+  </body>
+</html>

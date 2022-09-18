@@ -1,311 +1,162 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
 
-
-body{
+body {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: auto;
-
 }
 .container {
-	display: flex;
+  display: flex;
   flex-direction: column;
 }
 
-top_button{
-    margin-top: 20px;
-    text-align: center;
+top_button {
+  margin-top: 2.5rem;
+  text-align: center;
 }
 
-bar{
-    margin-bottom: 60px;
-    margin-top: 20px;
+bar {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
 }
 
-number{
-    position: relative;
-    bottom: 0px;
-    top: -20px;
-    margin-bottom: 0px;
-}
-number_buttom{
+number {
   position: relative;
-  top: -10px;
+  margin-top: 5.6255rem;
+  margin-bottom: 00px;
+}
+number_bottom {
+  position: relative;
+  margin-top: -4.125rem;
   font-family: "NanumSquareAcr";
-
 }
 
-guess_button{
+guess_button {
   position: relative;
-  margin-top: 50px;
+  margin-top: 4rem;
 }
 
-button_background{
-    position: relative;
-    /*
-    right :120px;
-    */
-    
-    right :180px;
-    
+button_background {
+  position: relative;
+  right: 11.25rem;
 }
-guess_text{
-/*
-    position: absolute;
-    top: -90%;
-    color: white;
-    right: 10px;
-    bottom: 20px;
-    font-family: "NanumSquareAcr";
-    text-align: center;    
-    max-width: 4000px;
-    width: 400px;    
-*/
-    
-
-    width: 400px;
-    position: absolute;
-    top: -90%;
-    color: white;
-    right: 30px;
-    bottom: 20px;
-    font-family: "NanumSquareAcr";
-    text-align: center;    
-
-    
-    
+guess_text {
+  width: 25rem;
+  position: absolute;
+  top: -90%;
+  color: white;
+  right: 1.875rem;
+  bottom: 1.25rem;
+  font-family: "NanumSquareAcr";
+  text-align: center;
 }
 
-answer_text{
-    position: absolute;
-    color: black;
-    left : 130px;
-    top: 15px;
-    text-align: center;
-    font-family: "NanumSquareAcr";
-    font-size: 16px;
+answer_text {
+  position: absolute;
+  color: black;
+  left: 8.125rem;
+
+  text-align: center;
+  font-family: "NanumSquareAcr";
+  font-size: 1rem;
 }
 
-d{
-    position: relative;
+answer_box {
+  position: relative;
 }
 
-
-
-number{
-    position: relative;
-    bottom: 80px;    
+number {
+  position: relative;
+  bottom: 5.625rem;
+}
+guess_box {
+  margin-top: 4.4375rem;
 }
 
 .image {
-    border: 0ch;
-    background-color: white;
-    text-align: center;
-    position: relative;
-
+  border: 0ch;
+  background-color: white;
+  text-align: center;
+  position: relative;
 }
 
-
-
-#back_button{
-    position: relative;
-    right: 430px;
-    top: 0px;
-
+#back_button {
+  position: relative;
+  right: 21.75rem;
 }
 
-
-#reset_button{
-    position: relative;
-    background-color: white;
-    left: 350px;
+#reset_button {
+  position: relative;
+  background-color: white;
+  left: 20.9375rem;
 }
 
-#guess_button_a{
-    position: relative;
-    left: 180px;
-    bottom: 40px;
+#guess_button_a {
+  position: relative;
+  left: 11.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-#guess_button_b{
-    position: relative;
-    left: 180px;
-    bottom: 10px;
+#guess_button_b {
+  position: relative;
+  left: 11.25rem;
+  margin-bottom: 1.5rem;
 }
 
-#guess_button_c{
-    position: relative;
-    left: 180px;
-    top: 20px;
+#guess_button_c {
+  position: relative;
+  left: 11.25rem;
 }
 
-
-.button_hover:hover{
-    content: url("./img_file_twenty/twenty_guess_yellow_answer.svg");
-
-
+.button_hover:hover {
+  content: url("./img_file_twenty/twenty_guess_yellow_answer.svg");
 }
-
-
-
-.clicked {
-  position: absolute;
-  left: 180px;
-  top: 20px;
-  display: none;
-}
-.button_hover:hover .clicked {
-  display: block;
-}
-.button_hover:hover .button_hover {
-  display: none;
-}
-
 
 .bottom_text {
-    position: absolute;
-    bottom: 5px;
-    right: 12px;
-  }
-
-#bottom_button{
-    position: relative;
-    top:60px;
+  position: absolute;
+  bottom: 0.3125rem;
+  right: 0.75rem;
 }
 
-.guess_img{
-    object-fit: cover;
-    width: 10px;
+#bottom_button {
+  position: relative;
+  top: 3.75rem;
 }
 
-#guess_number{
-    font-size: 25px;
-    font-family: 'Montserrat', sans-serif;
-    font-family:Arial;
+#guess_number {
+  font-size: 1.5625rem;
+  font-family: "Montserrat", sans-serif;
+  font-family: Arial;
 }
 
-.skip_image{
-    position: relative;
-
+.skip_image {
+  position: relative;
 }
 
-skip{
-    position: relative;
-    top: 60px;
-}
-
-#jb{
-    width: 20%;
-    height: 30px;
+skip {
+  position: relative;
+  margin-top: 4.5rem;
 }
 
 #jb {
-    appearance: none;
+  width: 29rem;
+  height: 1.5rem;
+}
+
+#jb {
+  appearance: none;
 }
 #jb::-webkit-progress-bar {
-    background:#f0f0f0;
-    border-radius:10px;
-    box-shadow: inset 3px 3px 10px #ccc;
+  background: #f0f0f0;
+  border-radius: 0.625rem;
+  box-shadow: inset 0rem 0rem 0.125rem #ccc;
 }
 #jb::-webkit-progress-value {
-    border-radius:10px;
-    background: #1D976C;
-    background: -webkit-linear-gradient(to right, #E06437, #E06437);
-    background: linear-gradient(to right, #E06437, #E06437);
+  border-radius: 10rem;
+  background: #1d976c;
+  background: -webkit-linear-gradient(to right, #e06437, #e06437);
+  background: linear-gradient(to right, #e06437, #e06437);
 }
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
-
-/*
-.fonts {
-  font-family: 'Josefin Slab', serif;
-}
-*/
-
-
-/*
-
-body {
-  font-family: 'Josefin Slab', serif;
-  font-size: 20px;
-  line-height: 24px;
-  color: #333;
-  background: #ececec;
-  overflow-y: scroll;
-}
-p {
-  margin-bottom: 0.5em;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-  color: #00AE68;
-}
-
-.clear {
-  clear: both;
-}
-
-
-.container {
-  padding-top: 1em;
-  margin-top: 1em;
-  border-top: 
-    solid
-    1px
-    #CCC;
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-/*
-.btn-2 {
-    
-    //background: rgb(96,9,240);
-    //background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
-    
-
-
-    border: none;
-
-  }
-  .btn-2:before {
-    background-color: transparent;
-    height: 0%;
-    width: 2px;
-  }
-  .btn-2:active {
-
-    filter: drop-shadow(0px 0px 0px white);
-    box-shadow: 0 4px 4px -4px white;
-  }
-
-  .btn-2{
-    background-color: transparent;
-    
-    
-     //box-shadow: 1px 2px 4px -3px black;    
-    
-    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));   
-    
-    
-  }
-
-.answer_img{
-    background-color: transparent;
-}
-*/

@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 
-#container {
+#rps_result_container {
   display: flex;
   flex-direction: column;
 }
@@ -16,28 +16,28 @@ body {
   text-align: center;
 }
 
-#rps {
+#rps_result_rps {
   margin-top: 4vh;
   margin-bottom: 1vh;
 }
 
-#rps_enjoy {
+#rps_result_enjoy {
   margin: 0 auto;
 }
 
-#img_container {
+#rps_result_img_container {
   margin: 2vh auto;
   display: inline-flex;
   flex-direction: row;
 }
 
-#menu_container {
+#rps_result_menu_container {
   margin: 0 3vw;
   display: inline-flex;
   flex-direction: column;
 }
 
-#menu_img {
+#rps_result_menu_img {
   margin: 0 auto;
   border-radius: 50px;
   border: none;
@@ -46,7 +46,7 @@ body {
   height: 120px;
 }
 
-#menu {
+#rps_result_menu {
   margin: 1vh auto;
   font-family: "NanumSquareAcr";
   font-weight: 800;
@@ -54,32 +54,32 @@ body {
   color: #494646;
 }
 
-#name {
+#rps_result_name {
   font-family: "NanumSquareAcr";
   font-weight: 700;
   font-size: 3.2vh;
   color: #666666;
 }
 
-#name span {
+#rps_result_name span {
   font-family: "NanumSquareAcr";
   font-weight: 800;
   font-size: 3.2vh;
   color: #e06437;
 }
 
-#name_deco {
+#rps_result_name_deco {
   width: 220px;
   margin: 0 auto;
   margin-top: 0.3vh;
 }
 
-share_button {
+.share_button {
   margin: 0 auto;
   margin-top: 3vh;
   margin-bottom: 2vh;
 }
 
-share_button img:hover {
+.share_button img:hover {
   cursor: not-allowed;
 }

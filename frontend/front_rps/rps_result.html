@@ -14,54 +14,61 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
-    <div id="container">
+    <div id="rps_result_container">
       <div include-html="../front_head/nav.html"></div>
       <div>
-        <img id="rps" style="width: auto; height: 15vh" />
+        <img id="rps_result_rps" style="width: auto; height: 15vh" />
       </div>
       <div>
         <img
-          id="rps_enjoy"
+          id="rps_result_enjoy"
           src="./img_rps/rps_result_enjoy.svg"
+          alt="enjoy텍스트"
           style="width: auto; height: 4vh"
         />
       </div>
-      <div id="img_container">
+      <div id="rps_result_img_container">
         <img
           src="./img_rps/rps_result_deco_left.svg"
+          alt="데코"
           style="width: auto; height: 23.5vh"
         />
-        <div id="menu_box">
-          <div id="menu_container">
-            <img id="menu_img" src="./img_rps/rps_default_img.svg" />
-            <div id="menu"></div>
+        <div id="rps_result_menu_box">
+          <div id="rps_result_menu_container">
+            <img
+              id="rps_result_menu_img"
+              src="./img_rps/rps_default_img.svg"
+              alt="메뉴이미지"
+            />
+            <div id="rps_result_menu"></div>
             <img
               src="./img_rps/rps_result_plate.svg"
+              alt="접시이미지"
               style="width: auto; height: 15vh"
             />
           </div>
         </div>
         <img
           src="./img_rps/rps_result_deco_right.svg"
+          alt="데코"
           style="width: auto; height: 23.5vh"
         />
       </div>
-      <div id="name"><span>승!</span></div>
+      <div id="rps_result_name"><span>승!</span></div>
       <img
-        id="name_deco"
+        id="rps_result_name_deco"
         src="./img_rps/rps_result_winner_deco.svg"
+        alt="밑줄이미지"
         style="width: auto; height: 3vh"
       />
-      <share_button>
-        <button type="button" class="image">
-          <img
-            src="./img_rps/rps_result_share.svg"
-            style="width: auto; height: 8vh"
-          />
-        </button>
-      </share_button>
+      <button type="button" class="share_button image">
+        <img
+          src="./img_rps/rps_result_share.svg"
+          alt="공유버튼"
+          style="width: auto; height: 8vh"
+        />
+      </button>
     </div>
     <script>
       includeHTML();

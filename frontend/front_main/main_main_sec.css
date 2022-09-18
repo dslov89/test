@@ -57,78 +57,45 @@
 
     
 }
-#main_main_sec_tut_box1{
+
+.main_main_sec_tut_box{
     display: flex;
     justify-content: center;
     align-items:flex-start;
     width: 60rem;
     height:8.5rem;
-    position: relative;
-    z-index: 1;
-   
-    border-radius: 32px 32px 0px 0px;
     background-color: #E9E9E9;
-    
+    position: relative;
+}
 
+#main_main_sec_tut_box1{
+    z-index: 1;
+    border-radius: 32px 32px 0px 0px;
 }
 
 
 #main_main_sec_tut_box2{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 60rem;
-    height:8.5rem;
-    position: relative;
     z-index: 2;
-    background-color: #E9E9E9;
-    
+}
 
-}
 #main_main_sec_tut_box3{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 60rem;
-    height:8.5rem;
-    position: relative;
     z-index: 3;
-    
-    background-color: #E9E9E9;
-  
 }
+
 #main_main_sec_tut_box4{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 60rem;
-    height:8.5rem;
-    position: relative;
     z-index: 4;
     border-radius: 0px 0px 32px 32px;
-    
-    background-color: #E9E9E9;
-   
 }
 
 /* what's your food? 내린 글자 안보이게 하는 빈 박스 */
 .main_main_sec_tut_box6{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     width: 60rem;
     height:8.5rem;
-    position: relative;
     z-index: 8;
-
-
     background-color:white;
-
-
 }
 
-
-#main_main_sec_tut_text1{
+.main_main_sec_tut_text{
     background-color: #E9E9E9;
     position: relative;
     top:5.063rem;
@@ -138,39 +105,17 @@
     font-size: 4.063rem;
     letter-spacing: 0.3em;
     -webkit-text-stroke:0.094rem #646464;
-
-}
-
-#main_main_sec_tut_text2{
-    background-color: #E9E9E9;
-    position: relative;
-    top:5.063rem;
-    color:#E9E9E9;
-
-    font-family: 'NanumSquareAceb';
-    font-size: 4.063rem;
-    letter-spacing: 0.3em;
-    -webkit-text-stroke:0.094rem #646464;
-
 }
 
 #main_main_sec_tut_text3-2{
-    background-color: #E9E9E9;
     position: relative;
-    top:5.063rem;
     left: 0.875rem;
-    color:#E9E9E9;
-
-    font-family: 'NanumSquareAceb';
-    font-size: 4.063rem;
-    letter-spacing: 0.3em;
-    -webkit-text-stroke:0.094rem #646464;
 }
-#main_main_sec_tut_text3-1{
+
+.main_main_sec_tut_text_eng{
     background-color: #E9E9E9;
     position: relative;
     top:4.563rem;
-    left: -0.875rem;
     color:#E9E9E9;
     font-weight:680;
     font-size: 4.063rem;
@@ -180,16 +125,9 @@
     
 }
 
-#main_main_sec_tut_text4{
-    background-color: #E9E9E9;
+#main_main_sec_tut_text3-1{
     position: relative;
-    top:4.563rem;
-    color:#E9E9E9;
-    font-weight:680;
-    font-size: 4.063rem;
-    font-family:'Montserrat', sans-serif;
-    letter-spacing: 0.2em;
-    text-shadow: 0.125rem 0 #646464, 0 -0.125rem #646464, -0.125rem 0 #646464, 0  0.125rem #646464;
+    left: -0.875rem;
     
 }
 
@@ -198,113 +136,61 @@
 
 /* --------------------------------------------------스크롤바 css-------------------------------------------------- */
 
-#main_main_sec_bar1-1{
-    background-color:transparent;
+.main_main_sec_bar{
+    background-color: transparent;
     width: 0.625rem;
-    height: 0.625rem;
     position: relative;
-    bottom:29rem;
     left: 38rem;
-    z-index: 3;
     border-radius: 32px;
+}
+
+#main_main_sec_bar1-1{
+    height: 0.625rem;
+    bottom:29rem;
 }
 
 #main_main_sec_bar1-2{
-    background-color:transparent;
-    width: 0.625rem;
     height: 5.125rem;
-    position: relative;
     bottom: 28.5rem;
-    left: 38rem;
-    border-radius: 32px;
 }
 
 #main_main_sec_bar2-1{
-    background-color:transparent;
-    width: 0.625rem;
     height: 1.375rem;
-    position: relative;
     bottom: 34.75rem;
-    left: 38rem;
-    /* display: flex; */
-    border-radius: 32px;
 }
 #main_main_sec_bar2-2{
-    background-color:transparent;
-    width: 0.625rem;
     height:  0.625rem;
-    position: relative;
     bottom: 34.25rem;
-    left: 38rem;
-    z-index: 3;
-   /* display: flex; */
-    border-radius: 32px;
 }
 
 #main_main_sec_bar2-3{
-    background-color:transparent;
-    width: 0.625rem;
     height: 3.25rem;
-    position: relative;
     bottom: 33.75rem;
-    left: 38rem;
-    /* display: flex; */
-    border-radius: 32px;
 }
 
 #main_main_sec_bar3-1{
-    background-color:transparent;
-    width: 0.625rem;
     height:  3.25rem;
-    position: relative;
     bottom: 40rem;
-    left: 38rem;
-    /* display: flex; */
-    border-radius: 32px;
 }
 
-#main_main_sec_bar3-2{
-    background-color:transparent;
-    width: 0.625rem;
+#main_main_sec_bar3-2{  
     height:  0.625rem;
-    position: relative;
     bottom: 39.5rem;
-    left: 38rem;
-   
-   /* display: flex; */
-    border-radius: 32px;
 }
 
 #main_main_sec_bar3-3{
-    background-color:transparent;
-    width: 0.625rem;
     height: 1.375rem;
-    position: relative;
     bottom:39rem;
-    left: 38rem;
-    /* display: flex; */
-    border-radius: 32px;
 }
 
 #main_main_sec_bar4-1{
-    background-color:transparent;
-    width: 0.625rem;
     height:  5.125rem;
-    position: relative;
     bottom: 45.25rem;
-    left: 38rem;
-    border-radius: 32px;
 }
 
 #main_main_sec_bar4-2{
-    background-color:transparent;
-    width: 0.625rem;
     height: 0.625rem;
-    position: relative;
     bottom: 44.75rem;
-    left: 38rem;
-  
-    border-radius: 32px;
 }
 
 /* ------------------------------------------------------스크롤바 css 끝------------------------------------------------------ */

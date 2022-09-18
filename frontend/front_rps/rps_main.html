@@ -13,44 +13,39 @@
     />
     <script src="../front_head/includeHTML.js"></script>
   </head>
-
   <body>
-    <div class="container">
+    <div class="rps_main_container">
       <div include-html="../front_head/nav.html"></div>
-      <main_text class="item">
-        <span class="image" id="logo_word">
+      <div class="rps_main_text">
+        <span class="image">
           <img
             src="./img_rps/rps_main_sec_word.svg"
+            alt="가위바위보텍스트"
             style="width: auto; height: 15vh"
           />
         </span>
-      </main_text>
-
-      <main_logo class="item image">
+      </div>
+      <div class="rps_main_logo image">
         <img
           src="./img_rps/rps_main_sec_logo.svg"
+          alt="가위바위보로고이미지"
           style="width: auto; height: 30vh"
         />
-      </main_logo>
-
-      <small_text class="item">
-        네가 이기면 그거<br />내가 이기면 이거
-      </small_text>
-
-      <start_button>
-        <button
-          type="button"
-          class="image"
-          id="start_botton"
-          onClick="location.href='./rps_tutorial.html'"
-          ;
-        >
-          <img
-            src="./img_rps/rps_main_sec_button.svg"
-            style="width: auto; height: 15vh"
-          />
-        </button>
-      </start_button>
+      </div>
+      <div class="rps_text">네가 이기면 그거<br />내가 이기면 이거</div>
+      <button
+        type="button"
+        class="image"
+        id="start_button"
+        onClick="location.href='./rps_tutorial.html'"
+        ;
+      >
+        <img
+          src="./img_rps/rps_main_sec_button.svg"
+          alt="가위바위보시작버튼"
+          style="width: auto; height: 15vh"
+        />
+      </button>
     </div>
     <script>
       includeHTML();

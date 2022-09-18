@@ -69,11 +69,8 @@ public class DishServiceImpl implements DishService{
     @Override
     @Transactional(readOnly = true)
     public DishDetailsResponse getDishDetails(DishGetByNameRequest request) {
-        List<Dish> dishesList = dishRepository.findByName(removeBlank(request.getName()));
-        if (dishesList.isEmpty()) {
-            throw new NotFoundDishException();
-        }
-        return dishMapper.toDishDetailsResponse(selectOneFromList(dishesList));
+        Dish dish = dishRepository.findByName(removeBlank(request.getName())).orElseThrow(NotFoundDishException::new);
+        return dishMapper.toDishDetailsResponse(dish);
     }
 
     @Override

@@ -51,7 +51,7 @@ public class DataLoader {
         Dish 백반 = Dish.builder().name("백반").category(한식).imageUrl(createFilePath("백반")).build();
         Dish 김밥 = Dish.builder().name("김밥").category(한식).imageUrl(createFilePath("김밥")).build();
         Dish 비빔밥 = Dish.builder().name("비빔밥").category(한식).imageUrl(createFilePath("비빔밥")).build();
-        Dish 볶음밥_한식 = Dish.builder().name("볶음밥").category(한식).imageUrl(createFilePath("볶음밥_한식")).build();
+        Dish 볶음밥_한식 = Dish.builder().name("볶음밥(한식)").category(한식).imageUrl(createFilePath("볶음밥_한식")).build();
         Dish 덮밥 = Dish.builder().name("덮밥").category(한식).imageUrl(createFilePath("덮밥")).build();
         Dish 컵밥 = Dish.builder().name("컵밥").category(한식).imageUrl(createFilePath("컵밥")).build();
         Dish 죽 = Dish.builder().name("죽").category(한식).imageUrl(createFilePath("죽")).build();
@@ -128,7 +128,7 @@ public class DataLoader {
         Dish 파스타 = Dish.builder().name("파스타").category(양식).imageUrl(createFilePath("파스타")).build();
         Dish 짜장면 = Dish.builder().name("짜장면").category(중식).imageUrl(createFilePath("짜장면")).build();
         Dish 짬뽕 = Dish.builder().name("짬뽕").category(중식).imageUrl(createFilePath("짬뽕")).build();
-        Dish 볶음밥_중식 = Dish.builder().name("볶음밥").category(중식).imageUrl(createFilePath("볶음밥")).build();
+        Dish 볶음밥_중식 = Dish.builder().name("볶음밥(중식)").category(중식).imageUrl(createFilePath("볶음밥")).build();
         Dish 짜장밥 = Dish.builder().name("짜장밥").category(중식).imageUrl(createFilePath("짜장밥")).build();
         Dish 짬뽕밥 = Dish.builder().name("짬뽕밥").category(중식).imageUrl(createFilePath("짬뽕밥")).build();
         Dish 잡채밥 = Dish.builder().name("잡채밥").category(중식).imageUrl(createFilePath("잡채밥")).build();
@@ -225,263 +225,263 @@ public class DataLoader {
 
         questionRepository.saveAll(questionsList);
 
-        List<Long> dishesIds1 = Arrays.asList(
-                백반.getId(), 김밥.getId(), 비빔밥.getId(), 볶음밥_한식.getId(), 덮밥.getId(), 컵밥.getId(), 죽.getId(),
-                메밀국수.getId(), 비빔국수.getId(), 잔치국수.getId(), 칼국수.getId(), 물냉면.getId(), 비빔냉면.getId(),
-                밀면.getId(), 떡갈비.getId(), 불고기.getId(), 소갈비.getId(), 삼겹살.getId(), 제육볶음.getId(), 보쌈.getId(),
-                순대.getId(), 족발.getId(), 찜닭.getId(), 닭갈비.getId(), 곱창.getId(), 치킨.getId(), 닭발.getId(),
-                육회.getId(), 만두.getId(), 게장.getId(), 생선찜.getId(), 생선구이.getId(), 조개구이.getId(), 회덮밥.getId(),
-                물회.getId(), 전.getId(), 국밥.getId(), 떡국.getId(), 수제비.getId(), 갈비탕.getId(), 감자탕.getId(),
-                닭도리탕.getId(), 매운탕.getId(), 삼계탕.getId(), 김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(),
-                부대찌개.getId(), 떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(), 쫄면.getId(), 튀김_분식.getId()
+        List<String> dishesNames1 = Arrays.asList(
+                백반.getName(), 김밥.getName(), 비빔밥.getName(), 볶음밥_한식.getName(), 덮밥.getName(), 컵밥.getName(), 죽.getName(),
+                메밀국수.getName(), 비빔국수.getName(), 잔치국수.getName(), 칼국수.getName(), 물냉면.getName(), 비빔냉면.getName(),
+                밀면.getName(), 떡갈비.getName(), 불고기.getName(), 소갈비.getName(), 삼겹살.getName(), 제육볶음.getName(), 보쌈.getName(),
+                순대.getName(), 족발.getName(), 찜닭.getName(), 닭갈비.getName(), 곱창.getName(), 치킨.getName(), 닭발.getName(),
+                육회.getName(), 만두.getName(), 게장.getName(), 생선찜.getName(), 생선구이.getName(), 조개구이.getName(), 회덮밥.getName(),
+                물회.getName(), 전.getName(), 국밥.getName(), 떡국.getName(), 수제비.getName(), 갈비탕.getName(), 감자탕.getName(),
+                닭도리탕.getName(), 매운탕.getName(), 삼계탕.getName(), 김치찌개.getName(), 된장찌개.getName(), 순두부찌개.getName(),
+                부대찌개.getName(), 떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 라면.getName(), 쫄면.getName(), 튀김_분식.getName()
         );
-        List<Long> dishesIds2 = Arrays.asList(
-                떡갈비.getId(), 불고기.getId(), 소갈비.getId(), 삼겹살.getId(), 제육볶음.getId(), 보쌈.getId(), 순대.getId(),
-                족발.getId(), 찜닭.getId(), 닭갈비.getId(), 곱창.getId(), 치킨.getId(), 닭발.getId(), 육회.getId(),
-                스테이크.getId(), 바비큐.getId(), 탕수육.getId(), 깐풍기.getId(), 유린기.getId(), 꿔바로우.getId(), 군만두.getId(),
-                물만두.getId(), 딤섬.getId(), 양꼬치.getId()
+        List<String> dishesNames2 = Arrays.asList(
+                떡갈비.getName(), 불고기.getName(), 소갈비.getName(), 삼겹살.getName(), 제육볶음.getName(), 보쌈.getName(), 순대.getName(),
+                족발.getName(), 찜닭.getName(), 닭갈비.getName(), 곱창.getName(), 치킨.getName(), 닭발.getName(), 육회.getName(),
+                스테이크.getName(), 바비큐.getName(), 탕수육.getName(), 깐풍기.getName(), 유린기.getName(), 꿔바로우.getName(), 군만두.getName(),
+                물만두.getName(), 딤섬.getName(), 양꼬치.getName()
         );
-        List<Long> dishesIds3 = Arrays.asList(
-                국밥.getId(), 칼국수.getId(), 떡국.getId(), 수제비.getId(), 갈비탕.getId(), 감자탕.getId(), 김치찌개.getId(),
-                순두부찌개.getId(), 라면.getId(), 짬뽕.getId()
+        List<String> dishesNames3 = Arrays.asList(
+                국밥.getName(), 칼국수.getName(), 떡국.getName(), 수제비.getName(), 갈비탕.getName(), 감자탕.getName(), 김치찌개.getName(),
+                순두부찌개.getName(), 라면.getName(), 짬뽕.getName()
         );
-        List<Long> dishesIds4 = Arrays.asList(
-                메밀국수.getId(), 잔치국수.getId(), 칼국수.getId(), 국밥.getId(), 떡국.getId(), 수제비.getId(), 갈비탕.getId(),
-                감자탕.getId(), 닭도리탕.getId(), 매운탕.getId(), 삼계탕.getId(), 김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(),
-                부대찌개.getId(), 라면.getId(), 라멘.getId(), 우동.getId(), 나가사키짬뽕.getId(), 짬뽕.getId(), 마라탕.getId(), 쌀국수.getId()
+        List<String> dishesNames4 = Arrays.asList(
+                메밀국수.getName(), 잔치국수.getName(), 칼국수.getName(), 국밥.getName(), 떡국.getName(), 수제비.getName(), 갈비탕.getName(),
+                감자탕.getName(), 닭도리탕.getName(), 매운탕.getName(), 삼계탕.getName(), 김치찌개.getName(), 된장찌개.getName(), 순두부찌개.getName(),
+                부대찌개.getName(), 라면.getName(), 라멘.getName(), 우동.getName(), 나가사키짬뽕.getName(), 짬뽕.getName(), 마라탕.getName(), 쌀국수.getName()
         );
-        List<Long> dishesIds5 = Arrays.asList(
-                보쌈.getId(), 순대.getId(), 족발.getId(), 찜닭.getId(), 곱창.getId(), 치킨.getId(), 닭발.getId(), 닭갈비.getId(), 김치찌개.getId()
+        List<String> dishesNames5 = Arrays.asList(
+                보쌈.getName(), 순대.getName(), 족발.getName(), 찜닭.getName(), 곱창.getName(), 치킨.getName(), 닭발.getName(), 닭갈비.getName(), 김치찌개.getName()
         );
-        List<Long> dishesIds6 = Arrays.asList(
-                비빔국수.getId(), 잔치국수.getId(), 칼국수.getId(), 밀면.getId(), 전.getId(), 수제비.getId(), 떡볶이_밀떡.getId(),
-                라면.getId(), 쫄면.getId(), 튀김_분식.getId(), 돈가스.getId(), 오코노미야끼.getId(), 타코야끼.getId(), 고로케.getId(),
-                야끼소바.getId(), 라멘.getId(), 우동.getId(), 나가사키짬뽕.getId(), 피자.getId(), 토스트.getId(), 핫도그.getId(),
-                샌드위치.getId(), 햄버거.getId(), 파스타.getId(), 짜장면.getId(), 짬뽕.getId(), 탕수육.getId(), 깐풍기.getId(),
-                유린기.getId(), 꿔바로우.getId(), 군만두.getId(), 물만두.getId(), 딤섬.getId(), 깐풍새우.getId(), 깐쇼새우.getId(),
-                타코.getId(), 부리또.getId()
+        List<String> dishesNames6 = Arrays.asList(
+                비빔국수.getName(), 잔치국수.getName(), 칼국수.getName(), 밀면.getName(), 전.getName(), 수제비.getName(), 떡볶이_밀떡.getName(),
+                라면.getName(), 쫄면.getName(), 튀김_분식.getName(), 돈가스.getName(), 오코노미야끼.getName(), 타코야끼.getName(), 고로케.getName(),
+                야끼소바.getName(), 라멘.getName(), 우동.getName(), 나가사키짬뽕.getName(), 피자.getName(), 토스트.getName(), 핫도그.getName(),
+                샌드위치.getName(), 햄버거.getName(), 파스타.getName(), 짜장면.getName(), 짬뽕.getName(), 탕수육.getName(), 깐풍기.getName(),
+                유린기.getName(), 꿔바로우.getName(), 군만두.getName(), 물만두.getName(), 딤섬.getName(), 깐풍새우.getName(), 깐쇼새우.getName(),
+                타코.getName(), 부리또.getName()
         );
-        List<Long> dishesIds7 = Arrays.asList(
-                곱창.getId(), 치킨.getId(), 닭발.getId(), 라면.getId()
+        List<String> dishesNames7 = Arrays.asList(
+                곱창.getName(), 치킨.getName(), 닭발.getName(), 라면.getName()
         );
-        List<Long> dishesIds8 = Arrays.asList(
-                육회.getId(), 회덮밥.getId(), 물회.getId(), 초밥.getId(), 사시미.getId()
+        List<String> dishesNames8 = Arrays.asList(
+                육회.getName(), 회덮밥.getName(), 물회.getName(), 초밥.getName(), 사시미.getName()
         );
-        List<Long> dishesIds9 = Arrays.asList(
-                포케.getId(), 샐러드.getId()
+        List<String> dishesNames9 = Arrays.asList(
+                포케.getName(), 샐러드.getName()
         );
-        List<Long> dishesIds10 = Arrays.asList(
-                죽.getId(), 삼계탕.getId()
+        List<String> dishesNames10 = Arrays.asList(
+                죽.getName(), 삼계탕.getName()
         );
-        List<Long> dishesIds11 = Arrays.asList(
-                물냉면.getId(), 비빔냉면.getId(), 밀면.getId(), 냉소바.getId()
+        List<String> dishesNames11 = Arrays.asList(
+                물냉면.getName(), 비빔냉면.getName(), 밀면.getName(), 냉소바.getName()
         );
-        List<Long> dishesIds12 = Arrays.asList(
-                떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(), 쫄면.getId(), 튀김_분식.getId()
+        List<String> dishesNames12 = Arrays.asList(
+                떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 라면.getName(), 쫄면.getName(), 튀김_분식.getName()
         );
-        List<Long> dishesIds13 = Arrays.asList(
-                김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(), 부대찌개.getId(), 고추장찌개.getId(), 차돌박이김치찌개.getId()
+        List<String> dishesNames13 = Arrays.asList(
+                김치찌개.getName(), 된장찌개.getName(), 순두부찌개.getName(), 부대찌개.getName(), 고추장찌개.getName(), 차돌박이김치찌개.getName()
         );
-        List<Long> dishesIds14 = Arrays.asList(
-                찜닭.getId(), 생선찜.getId(), 돼지갈비찜.getId(), 등갈비김치찜.getId()
+        List<String> dishesNames14 = Arrays.asList(
+                찜닭.getName(), 생선찜.getName(), 돼지갈비찜.getName(), 등갈비김치찜.getName()
         );
-        List<Long> dishesIds15 = Arrays.asList(
-                찜닭.getId(), 닭갈비.getId(), 닭발.getId(), 닭도리탕.getId(), 삼계탕.getId(), 깐풍기.getId(), 유린기.getId()
+        List<String> dishesNames15 = Arrays.asList(
+                찜닭.getName(), 닭갈비.getName(), 닭발.getName(), 닭도리탕.getName(), 삼계탕.getName(), 깐풍기.getName(), 유린기.getName()
         );
-        List<Long> dishesIds16 = Arrays.asList(
-                떡갈비.getId(), 소갈비.getId(), 삼겹살.getId(), 보쌈.getId(), 족발.getId(), 곱창.getId(), 치킨.getId(), 만두.getId(),
-                전.getId(), 삼계탕.getId(), 튀김_분식.getId(), 돈부리.getId(), 돈가스.getId(), 라멘.getId(), 피자.getId(),
-                감바스.getId(), 짜장면.getId(), 짬뽕.getId(), 볶음밥_중식.getId(), 짜장밥.getId(), 짬뽕밥.getId(), 마파두부.getId(),
-                탕수육.getId(), 깐풍기.getId(), 유린기.getId(), 꿔바로우.getId(), 군만두.getId(), 깐풍새우.getId(), 깐쇼새우.getId()
+        List<String> dishesNames16 = Arrays.asList(
+                떡갈비.getName(), 소갈비.getName(), 삼겹살.getName(), 보쌈.getName(), 족발.getName(), 곱창.getName(), 치킨.getName(), 만두.getName(),
+                전.getName(), 삼계탕.getName(), 튀김_분식.getName(), 돈부리.getName(), 돈가스.getName(), 라멘.getName(), 피자.getName(),
+                감바스.getName(), 짜장면.getName(), 짬뽕.getName(), 볶음밥_중식.getName(), 짜장밥.getName(), 짬뽕밥.getName(), 마파두부.getName(),
+                탕수육.getName(), 깐풍기.getName(), 유린기.getName(), 꿔바로우.getName(), 군만두.getName(), 깐풍새우.getName(), 깐쇼새우.getName()
         );
-        List<Long> dishesIds17 = Arrays.asList(
-                김밥.getId(), 비빔밥.getId(), 볶음밥_한식.getId(), 덮밥.getId(), 컵밥.getId(), 죽.getId(), 메밀국수.getId(),
-                비빔국수.getId(), 잔치국수.getId(), 칼국수.getId(), 물냉면.getId(), 비빔냉면.getId(), 밀면.getId(),
-                떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(), 쫄면.getId(), 초밥.getId(), 고로케.getId(),
-                우동.getId(), 냉소바.getId(), 토스트.getId(), 핫도그.getId(), 샌드위치.getId(), 부리또.getId(),
-                포케.getId(), 샐러드.getId()
+        List<String> dishesNames17 = Arrays.asList(
+                김밥.getName(), 비빔밥.getName(), 볶음밥_한식.getName(), 덮밥.getName(), 컵밥.getName(), 죽.getName(), 메밀국수.getName(),
+                비빔국수.getName(), 잔치국수.getName(), 칼국수.getName(), 물냉면.getName(), 비빔냉면.getName(), 밀면.getName(),
+                떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 라면.getName(), 쫄면.getName(), 초밥.getName(), 고로케.getName(),
+                우동.getName(), 냉소바.getName(), 토스트.getName(), 핫도그.getName(), 샌드위치.getName(), 부리또.getName(),
+                포케.getName(), 샐러드.getName()
         );
-        List<Long> dishesIds18 = Arrays.asList(
-                쌀국수.getId(), 볶음쌀국수.getId(), 인도식카레.getId(), 타코.getId(), 부리또.getId(), 포케.getId()
+        List<String> dishesNames18 = Arrays.asList(
+                쌀국수.getName(), 볶음쌀국수.getName(), 인도식카레.getName(), 타코.getName(), 부리또.getName(), 포케.getName()
         );
-        List<Long> dishesIds19 = Arrays.asList(
-                닭발.getId(), 짬뽕.getId(), 짬뽕밥.getId(), 마라샹궈.getId(), 마라탕.getId(), 훠궈.getId()
+        List<String> dishesNames19 = Arrays.asList(
+                닭발.getName(), 짬뽕.getName(), 짬뽕밥.getName(), 마라샹궈.getName(), 마라탕.getName(), 훠궈.getName()
         );
-        List<Long> dishesIds20 = Arrays.asList(
-                메밀국수.getId(), 비빔국수.getId(), 잔치국수.getId(), 칼국수.getId(), 물냉면.getId(), 비빔냉면.getId(), 밀면.getId(),
-                라면.getId(), 쫄면.getId(), 야끼소바.getId(), 라멘.getId(), 우동.getId(), 냉소바.getId(), 나가사키짬뽕.getId(),
-                파스타.getId(), 짜장면.getId(), 짬뽕.getId(), 쌀국수.getId(), 볶음쌀국수.getId()
+        List<String> dishesNames20 = Arrays.asList(
+                메밀국수.getName(), 비빔국수.getName(), 잔치국수.getName(), 칼국수.getName(), 물냉면.getName(), 비빔냉면.getName(), 밀면.getName(),
+                라면.getName(), 쫄면.getName(), 야끼소바.getName(), 라멘.getName(), 우동.getName(), 냉소바.getName(), 나가사키짬뽕.getName(),
+                파스타.getName(), 짜장면.getName(), 짬뽕.getName(), 쌀국수.getName(), 볶음쌀국수.getName()
         );
-        List<Long> dishesIds21 = Arrays.asList(
-                튀김_분식.getId(), 고로케.getId(), 돈가스.getId(), 탕수육.getId(), 깐풍기.getId(), 유린기.getId(), 꿔바로우.getId()
+        List<String> dishesNames21 = Arrays.asList(
+                튀김_분식.getName(), 고로케.getName(), 돈가스.getName(), 탕수육.getName(), 깐풍기.getName(), 유린기.getName(), 꿔바로우.getName()
         );
-        List<Long> dishesIds22 = Arrays.asList(
-                국밥.getId(), 떡국.getId(), 수제비.getId(), 갈비탕.getId(), 삼계탕.getId(), 샤브샤브.getId(), 쌀국수.getId()
+        List<String> dishesNames22 = Arrays.asList(
+                국밥.getName(), 떡국.getName(), 수제비.getName(), 갈비탕.getName(), 삼계탕.getName(), 샤브샤브.getName(), 쌀국수.getName()
         );
-        List<Long> dishesIds23 = Arrays.asList(
-                떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 토스트.getId(), 핫도그.getId(), 샌드위치.getId()
+        List<String> dishesNames23 = Arrays.asList(
+                떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 토스트.getName(), 핫도그.getName(), 샌드위치.getName()
         );
-        List<Long> dishesIds24 = Arrays.asList(
-                떡갈비.getId(), 불고기.getId(), 소갈비.getId(), 삼겹살.getId(), 보쌈.getId(), 족발.getId(), 곱창.getId(), 치킨.getId(),
-                닭발.getId(), 게장.getId(), 생선찜.getId(), 생선구이.getId(), 조개구이.getId(), 감자탕.getId(), 삼계탕.getId(), 스테이크.getId(),
-                바비큐.getId(), 파스타.getId(), 깐풍새우.getId(), 깐쇼새우.getId()
+        List<String> dishesNames24 = Arrays.asList(
+                떡갈비.getName(), 불고기.getName(), 소갈비.getName(), 삼겹살.getName(), 보쌈.getName(), 족발.getName(), 곱창.getName(), 치킨.getName(),
+                닭발.getName(), 게장.getName(), 생선찜.getName(), 생선구이.getName(), 조개구이.getName(), 감자탕.getName(), 삼계탕.getName(), 스테이크.getName(),
+                바비큐.getName(), 파스타.getName(), 깐풍새우.getName(), 깐쇼새우.getName()
         );
-        List<Long> dishesIds25 = Arrays.asList(
-                백반.getId(), 김밥.getId(), 비빔밥.getId(), 컵밥.getId(), 메밀국수.getId(), 비빔국수.getId(), 잔치국수.getId(),
-                물냉면.getId(), 비빔냉면.getId(), 만두.getId(), 국밥.getId(), 떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(),
-                쫄면.getId(), 튀김_분식.getId(), 토스트.getId(), 핫도그.getId(), 샌드위치.getId(), 햄버거.getId(), 짜장면.getId(),
-                짬뽕.getId(), 볶음밥_중식.getId(), 짜장밥.getId(), 짬뽕밥.getId(), 군만두.getId(), 물만두.getId(), 부리또.getId(),
-                샐러드.getId()
+        List<String> dishesNames25 = Arrays.asList(
+                백반.getName(), 김밥.getName(), 비빔밥.getName(), 컵밥.getName(), 메밀국수.getName(), 비빔국수.getName(), 잔치국수.getName(),
+                물냉면.getName(), 비빔냉면.getName(), 만두.getName(), 국밥.getName(), 떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 라면.getName(),
+                쫄면.getName(), 튀김_분식.getName(), 토스트.getName(), 핫도그.getName(), 샌드위치.getName(), 햄버거.getName(), 짜장면.getName(),
+                짬뽕.getName(), 볶음밥_중식.getName(), 짜장밥.getName(), 짬뽕밥.getName(), 군만두.getName(), 물만두.getName(), 부리또.getName(),
+                샐러드.getName()
         );
-        List<Long> dishesIds26 = Arrays.asList(
-                비빔밥.getId(), 볶음밥_한식.getId(), 죽.getId(), 비빔국수.getId(), 김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(),
-                떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(), 토스트.getId(), 샌드위치.getId()
+        List<String> dishesNames26 = Arrays.asList(
+                비빔밥.getName(), 볶음밥_한식.getName(), 죽.getName(), 비빔국수.getName(), 김치찌개.getName(), 된장찌개.getName(), 순두부찌개.getName(),
+                떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 라면.getName(), 토스트.getName(), 샌드위치.getName()
         );
-        List<Long> dishesIds27 = Arrays.asList(
-                백반.getId(), 떡갈비.getId(), 불고기.getId(), 소갈비.getId(), 보쌈.getId(), 게장.getId(), 생선찜.getId(),
-                생선구이.getId(), 국밥.getId(), 갈비탕.getId(), 감자탕.getId(), 매운탕.getId(), 삼계탕.getId(), 김치찌개.getId(),
-                된장찌개.getId(), 순두부찌개.getId()
+        List<String> dishesNames27 = Arrays.asList(
+                백반.getName(), 떡갈비.getName(), 불고기.getName(), 소갈비.getName(), 보쌈.getName(), 게장.getName(), 생선찜.getName(),
+                생선구이.getName(), 국밥.getName(), 갈비탕.getName(), 감자탕.getName(), 매운탕.getName(), 삼계탕.getName(), 김치찌개.getName(),
+                된장찌개.getName(), 순두부찌개.getName()
         );
-        List<Long> dishesIds28 = Arrays.asList(
-                백반.getId(), 김밥.getId(), 비빔밥.getId(), 볶음밥_한식.getId(), 덮밥.getId(), 컵밥.getId(), 죽.getId(),
-                메밀국수.getId(), 비빔국수.getId(), 잔치국수.getId(), 칼국수.getId(), 물냉면.getId(), 비빔냉면.getId(), 밀면.getId(),
-                순대.getId(), 치킨.getId(), 만두.getId(), 생선구이.getId(), 회덮밥.getId(), 전.getId(), 국밥.getId(), 떡국.getId(),
-                수제비.getId(), 갈비탕.getId(), 김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(), 떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(),
-                라면.getId(), 튀김_분식.getId(), 초밥.getId(), 돈부리.getId(), 돈가스.getId(), 오코노미야끼.getId(), 타코야끼.getId(),
-                고로케.getId(), 야끼소바.getId(), 라멘.getId(), 우동.getId(), 냉소바.getId(), 짜장면.getId(), 짬뽕.getId(), 볶음밥_중식.getId(),
-                짜장밥.getId(), 짬뽕밥.getId(), 잡채밥.getId(), 군만두.getId(), 물만두.getId(), 딤섬.getId(), 마라샹궈.getId(), 마라탕.getId(),
-                쌀국수.getId(), 볶음쌀국수.getId(), 인도식카레.getId(), 타코.getId(), 부리또.getId(), 포케.getId(), 샐러드.getId()
+        List<String> dishesNames28 = Arrays.asList(
+                백반.getName(), 김밥.getName(), 비빔밥.getName(), 볶음밥_한식.getName(), 덮밥.getName(), 컵밥.getName(), 죽.getName(),
+                메밀국수.getName(), 비빔국수.getName(), 잔치국수.getName(), 칼국수.getName(), 물냉면.getName(), 비빔냉면.getName(), 밀면.getName(),
+                순대.getName(), 치킨.getName(), 만두.getName(), 생선구이.getName(), 회덮밥.getName(), 전.getName(), 국밥.getName(), 떡국.getName(),
+                수제비.getName(), 갈비탕.getName(), 김치찌개.getName(), 된장찌개.getName(), 순두부찌개.getName(), 떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(),
+                라면.getName(), 튀김_분식.getName(), 초밥.getName(), 돈부리.getName(), 돈가스.getName(), 오코노미야끼.getName(), 타코야끼.getName(),
+                고로케.getName(), 야끼소바.getName(), 라멘.getName(), 우동.getName(), 냉소바.getName(), 짜장면.getName(), 짬뽕.getName(), 볶음밥_중식.getName(),
+                짜장밥.getName(), 짬뽕밥.getName(), 잡채밥.getName(), 군만두.getName(), 물만두.getName(), 딤섬.getName(), 마라샹궈.getName(), 마라탕.getName(),
+                쌀국수.getName(), 볶음쌀국수.getName(), 인도식카레.getName(), 타코.getName(), 부리또.getName(), 포케.getName(), 샐러드.getName()
         );
-        List<Long> dishesIds29 = Arrays.asList(
-                잔치국수.getId(), 칼국수.getId(),  전.getId(), 국밥.getId(), 수제비.getId(), 김치찌개.getId(),
-                된장찌개.getId(), 순두부찌개.getId(), 부대찌개.getId(), 라면.getId(), 샤브샤브.getId(), 라멘.getId(), 우동.getId(),
-                나가사키짬뽕.getId(), 쌀국수.getId()
+        List<String> dishesNames29 = Arrays.asList(
+                잔치국수.getName(), 칼국수.getName(),  전.getName(), 국밥.getName(), 수제비.getName(), 김치찌개.getName(),
+                된장찌개.getName(), 순두부찌개.getName(), 부대찌개.getName(), 라면.getName(), 샤브샤브.getName(), 라멘.getName(), 우동.getName(),
+                나가사키짬뽕.getName(), 쌀국수.getName()
         );
-        List<Long> dishesIds30 = Arrays.asList(
-                떡갈비.getId(), 소갈비.getId(), 생선찜.getId(), 조개구이.getId(), 사시미.getId(), 감바스.getId(), 파스타.getId(),
-                리조또.getId(), 양꼬치.getId(), 스테이크.getId()
+        List<String> dishesNames30 = Arrays.asList(
+                떡갈비.getName(), 소갈비.getName(), 생선찜.getName(), 조개구이.getName(), 사시미.getName(), 감바스.getName(), 파스타.getName(),
+                리조또.getName(), 양꼬치.getName(), 스테이크.getName()
         );
-        List<Long> dishesIds31 = Arrays.asList(
-                삼겹살.getId(), 보쌈.getId(), 족발.getId(), 닭갈비.getId(), 곱창.getId(), 닭발.getId(), 전.getId(),
-                감자탕.getId(), 갈비탕.getId(), 닭도리탕.getId(), 매운탕.getId(), 김치찌개.getId(), 부대찌개.getId(), 순두부찌개.getId(),
-                샤브샤브.getId(), 물회.getId(),바비큐.getId(), 짜장면.getId(), 볶음밥_중식.getId(), 짜장밥.getId(), 짬뽕밥.getId(),
-                잡채밥.getId(), 마파두부.getId(), 탕수육.getId(), 깐풍기.getId(), 딤섬.getId(), 깐풍새우.getId(), 깐쇼새우.getId(),
-                마라탕.getId(), 훠궈.getId(), 마라샹궈.getId(), 딤섬.getId()
+        List<String> dishesNames31 = Arrays.asList(
+                삼겹살.getName(), 보쌈.getName(), 족발.getName(), 닭갈비.getName(), 곱창.getName(), 닭발.getName(), 전.getName(),
+                감자탕.getName(), 갈비탕.getName(), 닭도리탕.getName(), 매운탕.getName(), 김치찌개.getName(), 부대찌개.getName(), 순두부찌개.getName(),
+                샤브샤브.getName(), 물회.getName(),바비큐.getName(), 짜장면.getName(), 볶음밥_중식.getName(), 짜장밥.getName(), 짬뽕밥.getName(),
+                잡채밥.getName(), 마파두부.getName(), 탕수육.getName(), 깐풍기.getName(), 딤섬.getName(), 깐풍새우.getName(), 깐쇼새우.getName(),
+                마라탕.getName(), 훠궈.getName(), 마라샹궈.getName(), 딤섬.getName()
         );
-        List<Long> dishesIds32 = Arrays.asList(
-                백반.getId(), 잔치국수.getId(), 칼국수.getId(), 떡갈비.getId(), 불고기.getId(), 소갈비.getId(), 삼겹살.getId(),
-                제육볶음.getId(), 보쌈.getId(), 족발.getId(), 닭갈비.getId(), 곱창.getId(), 치킨.getId(), 국밥.getId(),
-                떡국.getId(), 갈비탕.getId(), 감자탕.getId(), 닭도리탕.getId(), 매운탕.getId(), 삼계탕.getId(), 김치찌개.getId(),
-                순두부찌개.getId(), 부대찌개.getId(), 덮밥.getId(), 돈가스.getId(), 회덮밥.getId(), 나가사키짬뽕.getId(),
-                짬뽕밥.getId(), 마파두부.getId(), 마라탕.getId(), 마라샹궈.getId()
+        List<String> dishesNames32 = Arrays.asList(
+                백반.getName(), 잔치국수.getName(), 칼국수.getName(), 떡갈비.getName(), 불고기.getName(), 소갈비.getName(), 삼겹살.getName(),
+                제육볶음.getName(), 보쌈.getName(), 족발.getName(), 닭갈비.getName(), 곱창.getName(), 치킨.getName(), 국밥.getName(),
+                떡국.getName(), 갈비탕.getName(), 감자탕.getName(), 닭도리탕.getName(), 매운탕.getName(), 삼계탕.getName(), 김치찌개.getName(),
+                순두부찌개.getName(), 부대찌개.getName(), 덮밥.getName(), 돈가스.getName(), 회덮밥.getName(), 나가사키짬뽕.getName(),
+                짬뽕밥.getName(), 마파두부.getName(), 마라탕.getName(), 마라샹궈.getName()
         );
-        List<Long> dishesIds33 = Arrays.asList(
-                쫄면.getId(), 물냉면.getId(), 비빔냉면.getId(), 물회.getId(), 샐러드.getId()
+        List<String> dishesNames33 = Arrays.asList(
+                쫄면.getName(), 물냉면.getName(), 비빔냉면.getName(), 물회.getName(), 샐러드.getName()
         );
-        List<Long> dishesIds34 = Arrays.asList(
-                마라탕.getId(), 마라샹궈.getId(), 인도식카레.getId(), 훠궈.getId()
+        List<String> dishesNames34 = Arrays.asList(
+                마라탕.getName(), 마라샹궈.getName(), 인도식카레.getName(), 훠궈.getName()
         );
-        List<Long> dishesIds35 = Arrays.asList(
-                김밥.getId(), 볶음밥_한식.getId(), 덮밥.getId(), 컵밥.getId(), 국밥.getId(), 치킨.getId(), 삼계탕.getId(),
-                된장찌개.getId(), 김치찌개.getId(), 라면.getId(), 튀김_분식.getId(), 부대찌개.getId(), 우동.getId(),
-                냉소바.getId(), 리조또.getId(), 파스타.getId(), 피자.getId(), 토스트.getId(), 핫도그 .getId(), 햄버거.getId(),
-                샌드위치.getId(), 우동.getId(), 탕수육.getId()
+        List<String> dishesNames35 = Arrays.asList(
+                김밥.getName(), 볶음밥_한식.getName(), 덮밥.getName(), 컵밥.getName(), 국밥.getName(), 치킨.getName(), 삼계탕.getName(),
+                된장찌개.getName(), 김치찌개.getName(), 라면.getName(), 튀김_분식.getName(), 부대찌개.getName(), 우동.getName(),
+                냉소바.getName(), 리조또.getName(), 파스타.getName(), 피자.getName(), 토스트.getName(), 핫도그 .getName(), 햄버거.getName(),
+                샌드위치.getName(), 우동.getName(), 탕수육.getName()
         );
-        List<Long> dishesIds36 = Arrays.asList(
-                삼겹살.getId(), 생선찜.getId(), 생선구이.getId(), 조개구이.getId(), 감자탕.getId(), 닭도리탕.getId(),
-                매운탕.getId(), 삼계탕.getId(), 불고기.getId(), 떡갈비.getId(), 곱창.getId(), 게장.getId(), 샤브샤브.getId(),
-                물회.getId(), 회덮밥.getId()
+        List<String> dishesNames36 = Arrays.asList(
+                삼겹살.getName(), 생선찜.getName(), 생선구이.getName(), 조개구이.getName(), 감자탕.getName(), 닭도리탕.getName(),
+                매운탕.getName(), 삼계탕.getName(), 불고기.getName(), 떡갈비.getName(), 곱창.getName(), 게장.getName(), 샤브샤브.getName(),
+                물회.getName(), 회덮밥.getName()
         );
-        List<Long> dishesIds37 = Arrays.asList(
-                샤브샤브.getId(), 초밥.getId(), 돈부리.getId(), 돈가스.getId(), 회덮밥.getId(), 물회.getId(), 사시미.getId(),
-                야끼소바.getId(),  오코노미야끼.getId(), 타코야끼.getId(), 고로케.getId(), 라멘.getId(), 우동.getId(),
-                냉소바.getId(), 나가사키짬뽕.getId()
+        List<String> dishesNames37 = Arrays.asList(
+                샤브샤브.getName(), 초밥.getName(), 돈부리.getName(), 돈가스.getName(), 회덮밥.getName(), 물회.getName(), 사시미.getName(),
+                야끼소바.getName(),  오코노미야끼.getName(), 타코야끼.getName(), 고로케.getName(), 라멘.getName(), 우동.getName(),
+                냉소바.getName(), 나가사키짬뽕.getName()
         );
-        List<Long> dishesIds38 = Arrays.asList(
-                짜장면.getId(), 짬뽕.getId(), 볶음밥_중식.getId(), 짜장밥.getId(), 짬뽕밥.getId(), 잡채밥.getId(),
-                마파두부.getId(), 탕수육.getId(), 깐풍기.getId(), 유린기.getId(), 군만두.getId(), 물만두.getId(), 깐풍새우.getId(),
-                깐쇼새우.getId(), 마라탕.getId(), 마라샹궈.getId(), 꿔바로우.getId()
+        List<String> dishesNames38 = Arrays.asList(
+                짜장면.getName(), 짬뽕.getName(), 볶음밥_중식.getName(), 짜장밥.getName(), 짬뽕밥.getName(), 잡채밥.getName(),
+                마파두부.getName(), 탕수육.getName(), 깐풍기.getName(), 유린기.getName(), 군만두.getName(), 물만두.getName(), 깐풍새우.getName(),
+                깐쇼새우.getName(), 마라탕.getName(), 마라샹궈.getName(), 꿔바로우.getName()
         );
-        List<Long> dishesIds39 = Arrays.asList(
-                떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 닭발.getId(), 라면.getId(), 곱창.getId(), 매운탕.getId()
+        List<String> dishesNames39 = Arrays.asList(
+                떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 닭발.getName(), 라면.getName(), 곱창.getName(), 매운탕.getName()
         );
-        List<Long> dishesIds40 = Arrays.asList(
-                김밥.getId(), 컵밥.getId(), 치킨.getId(), 국밥.getId(), 떡볶이_쌀떡.getId(), 떡볶이_밀떡.getId(), 라면.getId(),
-                쫄면.getId(), 튀김_분식.getId(), 우동.getId(), 햄버거.getId()
+        List<String> dishesNames40 = Arrays.asList(
+                김밥.getName(), 컵밥.getName(), 치킨.getName(), 국밥.getName(), 떡볶이_쌀떡.getName(), 떡볶이_밀떡.getName(), 라면.getName(),
+                쫄면.getName(), 튀김_분식.getName(), 우동.getName(), 햄버거.getName()
         );
-        List<Long> dishesIds41 = Arrays.asList(
-                국밥.getId(), 갈비탕.getId(), 감자탕.getId(), 매운탕.getId(), 삼계탕.getId(), 김치찌개.getId(), 된장찌개.getId(),
-                순두부찌개.getId(), 부대찌개.getId(), 돼지갈비찜.getId(), 등갈비김치찜.getId(), 고추장찌개.getId(),
-                차돌박이김치찌개.getId()
+        List<String> dishesNames41 = Arrays.asList(
+                국밥.getName(), 갈비탕.getName(), 감자탕.getName(), 매운탕.getName(), 삼계탕.getName(), 김치찌개.getName(), 된장찌개.getName(),
+                순두부찌개.getName(), 부대찌개.getName(), 돼지갈비찜.getName(), 등갈비김치찜.getName(), 고추장찌개.getName(),
+                차돌박이김치찌개.getName()
         );
-        List<Long> dishesIds42 = Arrays.asList(
-                물냉면.getId(), 비빔냉면.getId(), 밀면.getId(), 냉소바.getId()
+        List<String> dishesNames42 = Arrays.asList(
+                물냉면.getName(), 비빔냉면.getName(), 밀면.getName(), 냉소바.getName()
         );
-        List<Long> dishesIds43 = Arrays.asList(
-                비빔밥.getId(), 비빔냉면.getId(), 제육볶음.getId(), 닭갈비.getId(), 닭발.getId(), 육회.getId(), 감자탕.getId(),
-                닭도리탕.getId(), 매운탕.getId(), 김치찌개.getId(), 순두부찌개.getId(), 부대찌개.getId(), 떡볶이_밀떡.getId(),
-                떡볶이_쌀떡.getId(), 라면.getId(), 쫄면.getId(), 짬뽕.getId(), 깐풍새우.getId(), 깐쇼새우.getId(),
-                마라샹궈.getId(), 마라탕.getId(), 훠궈.getId(), 볶음쌀국수.getId(), 등갈비김치찜.getId(), 고추장찌개.getId(),
-                차돌박이김치찌개.getId()
+        List<String> dishesNames43 = Arrays.asList(
+                비빔밥.getName(), 비빔냉면.getName(), 제육볶음.getName(), 닭갈비.getName(), 닭발.getName(), 육회.getName(), 감자탕.getName(),
+                닭도리탕.getName(), 매운탕.getName(), 김치찌개.getName(), 순두부찌개.getName(), 부대찌개.getName(), 떡볶이_밀떡.getName(),
+                떡볶이_쌀떡.getName(), 라면.getName(), 쫄면.getName(), 짬뽕.getName(), 깐풍새우.getName(), 깐쇼새우.getName(),
+                마라샹궈.getName(), 마라탕.getName(), 훠궈.getName(), 볶음쌀국수.getName(), 등갈비김치찜.getName(), 고추장찌개.getName(),
+                차돌박이김치찌개.getName()
         );
-        List<Long> dishesIds44 = Arrays.asList(
-                김밥.getId(), 비빔밥.getId(), 볶음밥_한식.getId(), 죽.getId(), 메밀국수.getId(), 비빔국수.getId(),
-                잔치국수.getId(), 칼국수.getId(), 물냉면.getId(), 비빔냉면.getId(), 밀면.getId(), 전.getId(), 떡국.getId(),
-                수제비.getId(), 김치찌개.getId(), 된장찌개.getId(), 순두부찌개.getId(), 부대찌개.getId(), 떡볶이_밀떡.getId(),
-                떡볶이_쌀떡.getId(), 쫄면.getId(), 파스타.getId(), 마파두부.getId(), 포케.getId(), 샐러드.getId()
+        List<String> dishesNames44 = Arrays.asList(
+                김밥.getName(), 비빔밥.getName(), 볶음밥_한식.getName(), 죽.getName(), 메밀국수.getName(), 비빔국수.getName(),
+                잔치국수.getName(), 칼국수.getName(), 물냉면.getName(), 비빔냉면.getName(), 밀면.getName(), 전.getName(), 떡국.getName(),
+                수제비.getName(), 김치찌개.getName(), 된장찌개.getName(), 순두부찌개.getName(), 부대찌개.getName(), 떡볶이_밀떡.getName(),
+                떡볶이_쌀떡.getName(), 쫄면.getName(), 파스타.getName(), 마파두부.getName(), 포케.getName(), 샐러드.getName()
         );
-        List<Long> dishesIds45 = Arrays.asList(
-                백반.getId(), 김밥.getId(), 덮밥.getId(), 컵밥.getId(), 죽.getId(), 메밀국수.getId(), 떡갈비.getId(),
-                삼겹살.getId(), 육회.getId(), 만두.getId(), 회덮밥.getId(), 전.getId(), 초밥.getId(), 돈가스.getId(),
-                사시미.getId(), 타코야끼.getId(), 고로케.getId(), 토스트.getId(), 샌드위치.getId(), 햄버거.getId(), 군만두.getId(),
-                물만두.getId(), 딤섬.getId(), 타코.getId(), 부리또.getId(), 포케.getId(), 샐러드.getId()
+        List<String> dishesNames45 = Arrays.asList(
+                백반.getName(), 김밥.getName(), 덮밥.getName(), 컵밥.getName(), 죽.getName(), 메밀국수.getName(), 떡갈비.getName(),
+                삼겹살.getName(), 육회.getName(), 만두.getName(), 회덮밥.getName(), 전.getName(), 초밥.getName(), 돈가스.getName(),
+                사시미.getName(), 타코야끼.getName(), 고로케.getName(), 토스트.getName(), 샌드위치.getName(), 햄버거.getName(), 군만두.getName(),
+                물만두.getName(), 딤섬.getName(), 타코.getName(), 부리또.getName(), 포케.getName(), 샐러드.getName()
         );
 
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문1.getId(), dishesIds1));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문2.getId(), dishesIds2));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문3.getId(), dishesIds3));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문4.getId(), dishesIds4));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문5.getId(), dishesIds5));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문6.getId(), dishesIds6));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문7.getId(), dishesIds7));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문8.getId(), dishesIds8));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문9.getId(), dishesIds9));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문10.getId(), dishesIds10));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문11.getId(), dishesIds11));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문12.getId(), dishesIds12));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문13.getId(), dishesIds13));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문14.getId(), dishesIds14));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문15.getId(), dishesIds15));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문16.getId(), dishesIds16));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문17.getId(), dishesIds17));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문18.getId(), dishesIds18));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문19.getId(), dishesIds19));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문20.getId(), dishesIds20));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문21.getId(), dishesIds21));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문22.getId(), dishesIds22));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문23.getId(), dishesIds23));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문24.getId(), dishesIds24));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문25.getId(), dishesIds25));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문26.getId(), dishesIds26));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문27.getId(), dishesIds27));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문28.getId(), dishesIds28));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문29.getId(), dishesIds29));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문30.getId(), dishesIds30));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문31.getId(), dishesIds31));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문32.getId(), dishesIds32));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문33.getId(), dishesIds33));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문34.getId(), dishesIds34));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문35.getId(), dishesIds35));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문36.getId(), dishesIds36));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문37.getId(), dishesIds37));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문38.getId(), dishesIds38));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문39.getId(), dishesIds39));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문40.getId(), dishesIds40));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문41.getId(), dishesIds41));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문42.getId(), dishesIds42));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문43.getId(), dishesIds43));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문44.getId(), dishesIds44));
-        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문45.getId(), dishesIds45));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문1.getId(), dishesNames1));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문2.getId(), dishesNames2));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문3.getId(), dishesNames3));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문4.getId(), dishesNames4));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문5.getId(), dishesNames5));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문6.getId(), dishesNames6));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문7.getId(), dishesNames7));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문8.getId(), dishesNames8));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문9.getId(), dishesNames9));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문10.getId(), dishesNames10));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문11.getId(), dishesNames11));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문12.getId(), dishesNames12));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문13.getId(), dishesNames13));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문14.getId(), dishesNames14));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문15.getId(), dishesNames15));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문16.getId(), dishesNames16));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문17.getId(), dishesNames17));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문18.getId(), dishesNames18));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문19.getId(), dishesNames19));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문20.getId(), dishesNames20));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문21.getId(), dishesNames21));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문22.getId(), dishesNames22));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문23.getId(), dishesNames23));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문24.getId(), dishesNames24));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문25.getId(), dishesNames25));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문26.getId(), dishesNames26));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문27.getId(), dishesNames27));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문28.getId(), dishesNames28));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문29.getId(), dishesNames29));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문30.getId(), dishesNames30));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문31.getId(), dishesNames31));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문32.getId(), dishesNames32));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문33.getId(), dishesNames33));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문34.getId(), dishesNames34));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문35.getId(), dishesNames35));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문36.getId(), dishesNames36));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문37.getId(), dishesNames37));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문38.getId(), dishesNames38));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문39.getId(), dishesNames39));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문40.getId(), dishesNames40));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문41.getId(), dishesNames41));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문42.getId(), dishesNames42));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문43.getId(), dishesNames43));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문44.getId(), dishesNames44));
+        questionDishService.saveQuestionDishes(new QuestionDishDto.QuestionDishesPostRequest(질문45.getId(), dishesNames45));
     }
 
     private String createFilePath(String name) {

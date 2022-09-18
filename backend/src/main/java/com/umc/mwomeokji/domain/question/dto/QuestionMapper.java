@@ -13,6 +13,8 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface QuestionMapper {
 
+    Question toEntity(QuestionPostRequest questionPostRequest);
+
     default QuestionsNameResponse toQuestionsNameResponse(List<Question> questionsList) {
         return new QuestionsNameResponse(questionsList.stream().map(question -> question.getQuestion()).collect(Collectors.toList()));
     }

@@ -9,9 +9,11 @@ import com.umc.mwomeokji.domain.dish.dish.exception.NotFoundDishException;
 import com.umc.mwomeokji.domain.question.dao.QuestionRepository;
 import com.umc.mwomeokji.domain.question.domain.Question;
 import com.umc.mwomeokji.domain.question.exception.NotFoundQuestionException;
+import com.umc.mwomeokji.global.util.csv.QuestionDishReader;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,9 +30,16 @@ public class QuestionDishServiceImpl implements QuestionDishService{
     @Override
     public void saveQuestionDishes(QuestionDishesPostRequest request) {
         Question question = questionRepository.findById(request.getQuestionId()).orElseThrow(NotFoundQuestionException::new);
-        List<Dish> dishesList = request.getDishIds().stream().map(
-                id -> dishRepository.findById(id).orElseThrow(NotFoundDishException::new)
+        List<Dish> dishesList = request.getDishes().stream().map(
+                name -> dishRepository.findByName(name).orElseThrow(NotFoundDishException::new)
         ).collect(Collectors.toList());
         dishesList.forEach( dish -> questionDishRepository.save(QuestionDish.builder().question(question).dish(dish).build()));
+    }
+
+    @Override
+    public void saveQuestionDishesByCsv(MultipartFile file) {
+        QuestionDishReader questionDishReader = new QuestionDishReader(file);
+        List<QuestionDishesPostRequest> questionDishesPostRequestList = questionDishReader.getQuestionDishesPostRequest(questionDishReader.readAll());
+        questionDishesPostRequestList.forEach( dto -> saveQuestionDishes(dto));
     }
 }

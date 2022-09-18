@@ -8,36 +8,33 @@ body {
 }
 
 logo {
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 4.5rem;
 }
 
 main_logo {
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 .image {
   background-color: transparent;
-  width: 10px;
+  width: 6.25rem;
 }
 
-#start_botton {
-  margin-bottom: 0px;
-  bottom: -20px;
+start_button {
+  margin-top: 4.25rem;
+  margin-bottom: 5rem;
 }
 
 tutorial {
-  top: 50px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .gif {
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 texts {
   font-family: "NanumSquareAcr";
-  font-size: 14;
-  margin-bottom: 50px;
+  font-size: 0.875rem;
+  margin-top: 2.625rem;
 }

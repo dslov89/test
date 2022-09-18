@@ -9,40 +9,28 @@ body {
 }
 
 .container {
-  height: 10vh;
   display: flex;
   flex-direction: column;
 }
 
-cross_img {
-  position: relative;
-  right: 300px;
-  top: 10px;
-}
-
 main_text {
-  margin-top: 40px;
+  margin-top: 4.5rem;
 }
 
 small_text {
   margin: 0 auto;
-  font-size: 14px;
-  width: 300px;
+  font-size: 0.875rem;
+  width: 18.75rem;
   position: relative;
-  margin-top: 40px;
+  margin-top: 2rem;
   font-family: "NanumSquareAcr";
   color: gray;
 }
 
 main_logo {
-  margin-top: 40px;
+  margin-top: 4.625rem;
   text-align: center;
   position: relative;
-}
-
-#center {
-  text-align: center;
-  margin-top: 40px;
 }
 
 .image {
@@ -50,13 +38,16 @@ main_logo {
   border: 0ch;
 }
 
-#start_botton {
-  margin-bottom: 0px;
+start_button {
+  margin-bottom: 5rem;
   position: relative;
-  top: 50px;
+  margin-top: 6.5rem;
 }
 
 #logo_word {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  width: 0.75rem;
+  height: 0.563rem;
+}
+#start_button:hover {
+  cursor: pointer;
 }

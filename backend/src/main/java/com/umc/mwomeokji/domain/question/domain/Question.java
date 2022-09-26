@@ -23,7 +23,7 @@ public class Question extends BaseEntity {
     private String question;
 
     @OneToMany(mappedBy = "question", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, orphanRemoval = true)
-    private List<QuestionDish> questionDishList = new ArrayList<>();
+    private List<QuestionDish> questionDishes = new ArrayList<>();
 
     @Builder
     public Question(String question) {

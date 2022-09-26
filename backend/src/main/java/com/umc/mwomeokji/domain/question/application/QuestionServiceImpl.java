@@ -30,10 +30,10 @@ public class QuestionServiceImpl implements QuestionService{
     @Override
     public void saveQuestionByCsv(MultipartFile file) {
         QuestionCsvReader questionCsvReader = new QuestionCsvReader(file);
-        List<QuestionPostRequest> questionPostRequestList = questionCsvReader.getQuestionPostRequests(questionCsvReader.readAll());
-        List<Question> questionsList = questionPostRequestList.stream()
+        List<QuestionPostRequest> questionPostRequests = questionCsvReader.getQuestionPostRequests(questionCsvReader.readAll());
+        List<Question> questions = questionPostRequests.stream()
                 .map(request -> questionMapper.toEntity(request)).collect(Collectors.toList());
-        questionRepository.saveAll(questionsList);
+        questionRepository.saveAll(questions);
     }
 
     @Override
@@ -45,9 +45,9 @@ public class QuestionServiceImpl implements QuestionService{
     @Override
     @Transactional(readOnly = true)
     public List<QuestionAndDishesResponse> getQuestionAndDishes() {
-        List<Question> questionList = questionRepository.findAll();
-        List<QuestionAndDishesResponse> questionAndDishesResponseList = questionList.stream().map(question ->
-                        questionMapper.toQuestionAndDishesResponse(question, question.getQuestionDishList())).collect(Collectors.toList());
-        return questionAndDishesResponseList;
+        List<Question> questions = questionRepository.findAll();
+        List<QuestionAndDishesResponse> questionAndDishesResponses = questions.stream().map(question ->
+                        questionMapper.toQuestionAndDishesResponse(question, question.getQuestionDishes())).collect(Collectors.toList());
+        return questionAndDishesResponses;
     }
 }

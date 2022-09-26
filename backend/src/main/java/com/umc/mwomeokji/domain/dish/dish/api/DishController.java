@@ -25,18 +25,20 @@ public class DishController {
 
     @Operation(summary = "메뉴 저장 API", description = "새로운 메뉴를 저장하기 위한 API 입니다.")
     @PostMapping
-    public ResponseEntity<DishDetailsResponse> save(
+    public ResponseEntity<String> save(
             @Valid @RequestPart(name = "request") DishPostRequest request,
             @RequestPart(required = false, name = "image") MultipartFile multipartFile) {
-        return ResponseEntity.status(CREATED).body(dishService.saveDish(request, multipartFile));
+        dishService.saveDish(request, multipartFile);
+        return ResponseEntity.status(CREATED).body("성공적으로 저장되었습니다.");
     }
 
     @Operation(summary = "CSV 파일을 이용한 메뉴 저장 API", description = "CSV 파일을 이용하여 메뉴를 저장하기 위한 API 입니다.")
     @PostMapping("upload/csv")
-    public ResponseEntity<List<DishNameResponse>> saveDishesByCsv(
+    public ResponseEntity<String> saveDishesByCsv(
             @RequestPart(name = "file") MultipartFile file,
-            @RequestPart(name = "image") List<MultipartFile> image) {
-        return ResponseEntity.status(CREATED).body(dishService.saveDishByCsv(file, image));
+            @RequestPart(name = "image") List<MultipartFile> images) {
+        dishService.saveDishByCsv(file, images);
+        return ResponseEntity.status(CREATED).body("성공적으로 저장되었습니다.");
     }
 
     @Operation(summary = "메뉴 이름 조회 API", description = "저장된 모든 메뉴의 이름을 조회하기 위한 API 입니다.")
@@ -68,10 +70,10 @@ public class DishController {
                           "그렇지 않다면, 임의의 한 메뉴의 상세 정보를 조회합니다.")
     @GetMapping("/random")
     public ResponseEntity<DishDetailsResponse> getDishCategoriesRandom(
-            @Valid @RequestParam(value = "category", required = false) List<DishGetByCategoriesRequest> request) {
-        if (request == null) {
+            @Valid @RequestParam(value = "category", required = false) List<DishGetByCategoriesRequest> categories) {
+        if (categories == null) {
             return ResponseEntity.status(OK).body(dishService.getDishRandom());
         }
-        return ResponseEntity.status(OK).body(dishService.getDishCategoriesRandom(request));
+        return ResponseEntity.status(OK).body(dishService.getDishCategoriesRandom(categories));
     }
 }

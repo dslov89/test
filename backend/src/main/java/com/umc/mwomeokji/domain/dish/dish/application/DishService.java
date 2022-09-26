@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface DishService {
 
-    DishDetailsResponse saveDish(DishPostRequest request, MultipartFile multipartFile);
+    void saveDish(DishPostRequest request, MultipartFile multipartFile);
 
-    List<DishNameResponse> saveDishByCsv(MultipartFile file, List<MultipartFile> image);
+    void saveDishByCsv(MultipartFile file, List<MultipartFile> image);
 
     List<DishNameResponse> getAllDishesName();
 

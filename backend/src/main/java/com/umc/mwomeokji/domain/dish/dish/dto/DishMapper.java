@@ -24,8 +24,8 @@ public interface DishMapper {
 
     DishNameResponse toDishNameResponse(Dish dish);
 
-    default List<DishNameResponse> toDishNameResponseList(List<Dish> dish) {
-        return dish.stream().map(entity -> toDishNameResponse(entity)).collect(Collectors.toList());
+    default List<DishNameResponse> toDishNameResponses(List<Dish> dishes) {
+        return dishes.stream().map(entity -> toDishNameResponse(entity)).collect(Collectors.toList());
     }
 
     default DishDetailsResponse toDishDetailsResponse(Dish dish) {

@@ -30,16 +30,16 @@ public class QuestionDishServiceImpl implements QuestionDishService{
     @Override
     public void saveQuestionDishes(QuestionDishesPostRequest request) {
         Question question = questionRepository.findById(request.getQuestionId()).orElseThrow(NotFoundQuestionException::new);
-        List<Dish> dishesList = request.getDishes().stream().map(
+        List<Dish> dishes = request.getDishes().stream().map(
                 name -> dishRepository.findByName(name).orElseThrow(NotFoundDishException::new)
         ).collect(Collectors.toList());
-        dishesList.forEach( dish -> questionDishRepository.save(QuestionDish.builder().question(question).dish(dish).build()));
+        dishes.forEach( dish -> questionDishRepository.save(QuestionDish.builder().question(question).dish(dish).build()));
     }
 
     @Override
     public void saveQuestionDishesByCsv(MultipartFile file) {
         QuestionDishReader questionDishReader = new QuestionDishReader(file);
-        List<QuestionDishesPostRequest> questionDishesPostRequestList = questionDishReader.getQuestionDishesPostRequest(questionDishReader.readAll());
-        questionDishesPostRequestList.forEach( dto -> saveQuestionDishes(dto));
+        List<QuestionDishesPostRequest> questionDishesPostRequests = questionDishReader.getQuestionDishesPostRequest(questionDishReader.readAll());
+        questionDishesPostRequests.forEach( dto -> saveQuestionDishes(dto));
     }
 }

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMG</title>
+    <link rel="stylesheet" href="front_head/style.css" />
+    <link rel="stylesheet" href="front_main/main_main_sec.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <script src="front_head/includeHTML.js"></script>
+    <script src="main_main_sec.js"></script>
+</head>
+<body>
+  <div include-html="nav.html"></div>
+
+    <div class="main_main_sec">
+        <div>
+            <img id="main_main_sec_logo" src="front_main/img_main/main_main_logo.svg" alt = "logo">
+        </div>
+        <div>
+            <h1 id = "main_main_sec_logo2">뭐 먹지?</h1>
+        </div>
+        <div class="main_main_sec_tut">
+            <div class="main_main_sec_tut_box" id = "main_main_sec_tut_box1" >
+                <h2 class="main_main_sec_tut_text" id = "main_main_sec_tut_text1">스무고개</h2>
+                <img id="main_main_sec_tut_img1" src="front_main/img_main/main_main_sec_tut_box1.svg" alt = "twenty">
+            </div>
+            <div class="main_main_sec_tut_box" id = "main_main_sec_tut_box2">
+                <h2 class="main_main_sec_tut_text" id = "main_main_sec_tut_text2">가위바위보</h2>
+                <img id="main_main_sec_tut_img21" src="front_main/img_main/main_main_sec_tut_rps_s.svg" alt = "rps_s">
+                <img id="main_main_sec_tut_img22" src="front_main/img_main/main_main_sec_tut_rps_r.svg" alt = "rps_r">
+                <img id="main_main_sec_tut_img23" src="front_main/img_main/main_main_sec_tut_rps_p.svg" alt = "rps_p">
+            </div>
+            <div class="main_main_sec_tut_box" id = "main_main_sec_tut_box3">
+                <h2 class="main_main_sec_tut_text_eng" id = "main_main_sec_tut_text3-1">Pick </h2>
+                <h2 class="main_main_sec_tut_text" id = "main_main_sec_tut_text3-2">맛집</h2>
+                <img id="main_main_sec_tut_img3" src="front_main/img_main/main_main_sec_tut_rlist.svg" alt = "rlist">
+            </div>
+            <div class="main_main_sec_tut_box" id = "main_main_sec_tut_box4">
+                <h2 class="main_main_sec_tut_text_eng" id = "main_main_sec_tut_text4">What's your food?</h2>
+                <img id="main_main_sec_tut_img4" src="front_main/img_main/main_main_sec_tut_random.svg" alt = "random">
+            </div>
+        </div>
+       
+        <div class = "main_main_sec_tut_box6"></div>
+        <div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar1-1'></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar1-2' ></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar2-1'></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar2-2' ></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar2-3' ></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar3-1'></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar3-2' ></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar3-3' ></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar4-1'></div>
+            <div class = "main_main_sec_bar" id = 'main_main_sec_bar4-2' ></div>
+        </div>
+
+        <div id = "main_main_sec_tut_scroll" onscroll ="getScrollPoistion()" onclick="clickScroll()">
+            <div class="main_main_sec_tut_scroll_empty" ></div>
+        </div> 
+    </div>
+    <div include-html="foot.html"></div>
+    <script>
+      includeHTML();
+    </script>
+
+</body>
+</html>

@@ -17,67 +17,69 @@ body {
 }
 
 #rps_result_rps {
-  margin-top: 4vh;
-  margin-bottom: 1vh;
+  margin-top: 3.438rem;
+  margin-bottom: 1rem;
 }
 
 #rps_result_enjoy {
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 #rps_result_img_container {
-  margin: 2vh auto;
+  margin: 0 auto;
   display: inline-flex;
   flex-direction: row;
 }
 
 #rps_result_menu_container {
-  margin: 0 3vw;
+  margin: 0 2.75rem;
   display: inline-flex;
   flex-direction: column;
 }
 
 #rps_result_menu_img {
   margin: 0 auto;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   border: none;
   object-fit: cover;
-  width: 150px;
-  height: 120px;
+  width: 9.375rem;
+  height: 7.5rem;
 }
 
 #rps_result_menu {
-  margin: 1vh auto;
+  margin: 1rem auto;
   font-family: "NanumSquareAcr";
   font-weight: 800;
-  font-size: 4.6vh;
+  font-size: 2.188rem;
   color: #494646;
 }
 
 #rps_result_name {
   font-family: "NanumSquareAcr";
   font-weight: 700;
-  font-size: 3.2vh;
+  font-size: 1.5rem;
   color: #666666;
+  margin-top: 1.7rem;
 }
 
 #rps_result_name span {
   font-family: "NanumSquareAcr";
   font-weight: 800;
-  font-size: 3.2vh;
+  font-size: 1.5rem;
   color: #e06437;
 }
 
 #rps_result_name_deco {
   width: 220px;
   margin: 0 auto;
-  margin-top: 0.3vh;
+  margin-top: 0.125rem;
 }
 
 .share_button {
   margin: 0 auto;
-  margin-top: 3vh;
-  margin-bottom: 2vh;
+  margin-top: 3.563rem;
+  margin-bottom: 5rem;
 }
 
 .share_button img:hover {

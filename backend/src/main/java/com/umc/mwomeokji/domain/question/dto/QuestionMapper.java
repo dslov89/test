@@ -13,15 +13,17 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface QuestionMapper {
 
-    default QuestionsNameResponse toQuestionsNameResponse(List<Question> questionsList) {
-        return new QuestionsNameResponse(questionsList.stream().map(question -> question.getQuestion()).collect(Collectors.toList()));
+    Question toEntity(QuestionPostRequest questionPostRequest);
+
+    default QuestionsNameResponse toQuestionsNameResponse(List<Question> questions) {
+        return new QuestionsNameResponse(questions.stream().map(question -> question.getQuestion()).collect(Collectors.toList()));
     }
 
-    default QuestionAndDishesResponse toQuestionAndDishesResponse(Question question, List<QuestionDish> questionDishList) {
-        List<Dish> dishesList = questionDishList
+    default QuestionAndDishesResponse toQuestionAndDishesResponse(Question question, List<QuestionDish> questionDishes) {
+        List<Dish> dishes = questionDishes
                 .stream().map(questionDish -> questionDish.getDish()).collect(Collectors.toList());
-        List<DishDto.DishNameResponse> dishesNameResponseList = dishesList
+        List<DishDto.DishNameResponse> dishesNameResponses = dishes
                 .stream().map(dish -> new DishDto.DishNameResponse(dish.getId(), dish.getName())).collect(Collectors.toList());
-        return new QuestionAndDishesResponse(question.getQuestion(), dishesNameResponseList);
+        return new QuestionAndDishesResponse(question.getQuestion(), dishesNameResponses);
     }
 }

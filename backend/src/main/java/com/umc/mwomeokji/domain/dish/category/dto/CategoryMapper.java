@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
 
-    default CategoriesNameResponse toCategoriesNameResponse(List<Category> categoriesList) {
-        return new CategoriesNameResponse(categoriesList.stream().map(category -> category.getCategory()).collect(Collectors.toList()));
+    default CategoriesNameResponse toCategoriesNameResponse(List<Category> categories) {
+        return new CategoriesNameResponse(categories.stream().map(category -> category.getCategory()).collect(Collectors.toList()));
     }
 }

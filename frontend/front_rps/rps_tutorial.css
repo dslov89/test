@@ -12,7 +12,7 @@ body {
 
 .rps_tutorial_main_text {
   margin: 0 auto;
-  margin-top: 7vh;
+  margin-top: 4.5rem;
   text-align: center;
 }
 
@@ -25,14 +25,14 @@ body {
 .rps_tutorial_main_logo {
   margin: 0 auto;
   text-align: center;
-  margin-top: 2vh;
+  margin-top: 1.625rem;
 }
 
 .rps_tutorial_text {
-  margin: 2vh auto;
+  margin: 2.625rem auto;
   color: #494646;
   font-weight: 400;
-  font-size: 1.87vh;
+  font-size: 0.875rem;
   display: inline-block;
   white-space: nowrap;
   position: relative;
@@ -40,10 +40,11 @@ body {
 }
 
 #start_button {
+  margin: 0 auto;
   text-align: center;
   position: relative;
-  margin-top: 1vh;
-  margin-bottom: 2vh;
+  margin-top: 1.625rem;
+  margin-bottom: 5rem;
 }
 
 #start_button:hover {

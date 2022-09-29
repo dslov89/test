@@ -31,33 +31,31 @@ public class DishServiceImpl implements DishService{
     private final FileService fileService;
 
     @Override
-    public DishDetailsResponse saveDish(DishPostRequest request, MultipartFile multipartFile) {
+    public void saveDish(DishPostRequest request, MultipartFile multipartFile) {
         String imageUrl = fileService.uploadImage(multipartFile);
-        Dish dish = dishRepository.save(dishMapper.toEntity(request, imageUrl, findByCategory(request.getCategory())));
-        return dishMapper.toDishDetailsResponse(dish);
+        dishRepository.save(dishMapper.toEntity(request, imageUrl, findByCategory(request.getCategory())));
     }
 
     @Override
-    public List<DishNameResponse> saveDishByCsv(MultipartFile file, List<MultipartFile> images) {
+    public void saveDishByCsv(MultipartFile file, List<MultipartFile> images) {
         DishCsvReader dishCsvReader = new DishCsvReader(file);
-        List<DishPostRequest> dishPostRequestList = dishCsvReader.getDishPostRequests(dishCsvReader.readAll());
-        if (dishPostRequestList.size() != images.size()) {
+        List<DishPostRequest> dishPostRequests = dishCsvReader.getDishPostRequests(dishCsvReader.readAll());
+        if (dishPostRequests.size() != images.size()) {
             throw new NotEqualSizeException();
         }
         List<String> imageUrls = images.stream().map(image -> fileService.uploadImage(image)).collect(Collectors.toList());
-        List<Dish> dishesList = new ArrayList<>();
-        for (int i = 0; i < dishPostRequestList.size(); i++){
-            dishesList.add(dishMapper.toEntity(dishPostRequestList.get(i), imageUrls.get(i), findByCategory(dishPostRequestList.get(i).getCategory())));
+        List<Dish> dishes = new ArrayList<>();
+        for (int i = 0; i < dishPostRequests.size(); i++){
+            dishes.add(dishMapper.toEntity(dishPostRequests.get(i), imageUrls.get(i), findByCategory(dishPostRequests.get(i).getCategory())));
         }
-        dishRepository.saveAll(dishesList);
-        return dishMapper.toDishNameResponseList(dishesList);
+        dishRepository.saveAll(dishes);
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<DishNameResponse> getAllDishesName() {
-        List<Dish> dishesList = dishRepository.findAll();
-        return dishMapper.toDishNameResponseList(dishesList);
+        List<Dish> dishes = dishRepository.findAll();
+        return dishMapper.toDishNameResponses(dishes);
     }
 
     @Override
@@ -69,11 +67,8 @@ public class DishServiceImpl implements DishService{
     @Override
     @Transactional(readOnly = true)
     public DishDetailsResponse getDishDetails(DishGetByNameRequest request) {
-        List<Dish> dishesList = dishRepository.findByName(removeBlank(request.getName()));
-        if (dishesList.isEmpty()) {
-            throw new NotFoundDishException();
-        }
-        return dishMapper.toDishDetailsResponse(selectOneFromList(dishesList));
+        Dish dish = dishRepository.findByName(removeBlank(request.getName())).orElseThrow(NotFoundDishException::new);
+        return dishMapper.toDishDetailsResponse(dish);
     }
 
     @Override
@@ -93,13 +88,13 @@ public class DishServiceImpl implements DishService{
 
     @Override
     @Transactional(readOnly = true)
-    public DishDetailsResponse getDishCategoriesRandom(List<DishGetByCategoriesRequest> request) {
-        List<Dish> dishesList = new ArrayList<>();
-        request.forEach(category -> dishesList.addAll(getDishByCategory(category.getCategory())));
-        if (dishesList.isEmpty()) {
+    public DishDetailsResponse getDishCategoriesRandom(List<DishGetByCategoriesRequest> categories) {
+        List<Dish> dishes = new ArrayList<>();
+        categories.forEach(category -> dishes.addAll(getDishByCategory(category.getCategory())));
+        if (dishes.isEmpty()) {
             throw new NotFoundDishException();
         }
-        return dishMapper.toDishDetailsResponse(selectOneFromList(dishesList));
+        return dishMapper.toDishDetailsResponse(selectOneFromList(dishes));
     }
 
     private Category findByCategory(String categoryName) {
@@ -110,9 +105,9 @@ public class DishServiceImpl implements DishService{
         return str.replaceAll(" ", "");
     }
 
-    private Dish selectOneFromList(List<Dish> dishesList) {
-        double randomIdx = Math.random() * dishesList.size();
-        return dishesList.get((int)randomIdx);
+    private Dish selectOneFromList(List<Dish> dishes) {
+        double randomIdx = Math.random() * dishes.size();
+        return dishes.get((int)randomIdx);
     }
 
     private List<Dish> getDishByCategory(String categoryName) {
